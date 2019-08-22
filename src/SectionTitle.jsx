@@ -3,11 +3,11 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Divider from './Divider';
-import { TitleFont, LeftContentPadding } from './common-styles';
+import { TitleFont, SectionBase } from './common-styles';
 
 const Title = styled('div')`
   ${TitleFont};
-  ${LeftContentPadding};
+  margin: 0 auto;
   font-size: 2.5em;
   font-weight: bold;
 
@@ -16,6 +16,7 @@ const Title = styled('div')`
 
   @media screen and (min-width: 640px) {
     padding-top: 0.0875em;
+
     color: ${props => props.titleColor};
   }
 `;

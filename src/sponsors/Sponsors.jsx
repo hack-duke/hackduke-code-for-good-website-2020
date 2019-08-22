@@ -8,8 +8,7 @@ import {
   SectionRightColumn,
   SectionTextContent
 } from '../common-styles';
-import Button from '../Button';
-import { YELLOW_PRESSABLE } from '../materials';
+
 import SectionTitle from '../SectionTitle';
 
 import SponsorsLine from './sponsors-line.svg';
@@ -26,24 +25,7 @@ const Container = styled('div')`
 export default ({ id, titleColor }) => (
   <Container id={id}>
     <SectionTitle titleColor={titleColor}>Sponsors</SectionTitle>
-    <SectionContent columns={true}>
-      <SectionLeftColumn>
-        <SectionTextContent>
-          <p>A big thank you to all of our sponsors!</p>
-          <p>Interested in sponsoring?</p>
-          <p>
-            <Button
-              material={YELLOW_PRESSABLE}
-              href="mailto:sponsorship@hackduke.org"
-            >
-              Sponsor us
-            </Button>
-          </p>
-        </SectionTextContent>
-      </SectionLeftColumn>
-      <SectionRightColumn>
-        <SponsorLogos />
-      </SectionRightColumn>
-    </SectionContent>
+
+    <SponsorLogos />
   </Container>
 );

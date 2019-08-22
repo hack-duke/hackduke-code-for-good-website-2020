@@ -5,6 +5,9 @@ body,
   width: 100%;
   height: 100%;
 }
+.changeColor {
+  background: #acc0f9;
+}
 
 html {
   box-sizing: border-box;

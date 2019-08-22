@@ -4,10 +4,10 @@ import styled from 'react-emotion';
 export const MAX_WIDTH = '1400px';
 
 export const PrimaryFont = css`
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Cabin', monospace;
 `;
 export const TitleFont = css`
-  font-family: 'Larsseit', sans-serif;
+  font-family: 'Cabin', sans-serif;
 `;
 
 export const SecondaryText = css`
@@ -20,7 +20,7 @@ export const SectionBase = props => css`
   margin: auto;
   position: relative;
 
-  padding-left: 20px;
+  padding-left: 100%;
   padding-right: 20px;
   padding-top: 40px;
 
@@ -75,8 +75,9 @@ const FlexProps = css`
 `;
 
 export const SectionContent = styled('div')`
-  ${LeftContentPadding};
   ${props => props.columns && FlexProps};
+  width = 100%
+  margin: 0 auto
   margin-top: 25px;
 `;
 

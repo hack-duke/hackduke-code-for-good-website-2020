@@ -5,6 +5,7 @@ import Landing from './landing/Landing';
 import About from './about/About';
 import Tracks from './tracks/Tracks';
 import Schedule from './schedule/Schedule';
+import Campfire from './campfire/Campfire';
 import FAQs from './faqs/FAQs';
 import Sponsors from './sponsors/Sponsors';
 import Footer from './footer/Footer';
@@ -33,9 +34,15 @@ const sections = [
   },
   {
     title: 'Schedule',
-    id: 'schedule',
+    id: 'Schedule',
     titleColor: '#A94A64',
     Component: Schedule
+  },
+  {
+    title: 'Campfire',
+    id: 'Campfire',
+    titleColor: '#A94A64',
+    Component: Campfire
   },
   {
     title: 'FAQs',

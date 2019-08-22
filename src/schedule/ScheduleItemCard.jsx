@@ -11,7 +11,7 @@ const dateColLgWidth = '210px';
 const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
-  padding: 0;
+  float:right
   border-top: 6px solid ${props => props.color};
   background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
   ${ShadowItem};

@@ -5,6 +5,7 @@ import Home from './home-bg.svg';
 import HomeMobileTop from './home-bg-mobile-top.svg';
 import HomeMobileBottom from './home-bg-mobile-bottom.svg';
 import LogoImage from './hackduke-logo.svg';
+import TopMountains from './top-mountains.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
 import { PURPLE_PRESSABLE } from '../materials';
@@ -13,15 +14,14 @@ import Button from '../Button';
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 900,
-    backgroundImage: `url(${Home})`,
-    mobileBackgroundImage: `url(${HomeMobileTop}), url(${HomeMobileBottom})`
+    backgroundColor: '#afe0d0'
   })};
   display: flex;
   height: 100vh;
-
   @media screen and (min-width: 640px) {
     display: block;
     height: auto;
+    background-color: #afe0d0;
   }
 `;
 
@@ -31,7 +31,6 @@ const LandingContent = styled('div')`
   margin: auto 0;
   width: 100%;
   padding-bottom: 40px;
-
   @media screen and (min-width: 640px) {
     margin: 0;
     padding-top: 122px;
@@ -43,27 +42,33 @@ const Logo = styled('img')`
   width: 100%;
   margin-bottom: 1.5em;
   display: block;
-
   @media screen and (min-width: 480px) {
-    max-width: 315px;
+    max-width: 1000px;
   }
 `;
-
-const DateText = styled('div')`
-  padding-bottom: 1.5em;
+const Date = styled('div')`
+  padding-left: 1000px
+  margin-right: 100px
+  padding-bottom: 3em;
+  }
 `;
 
 export default ({ id }) => (
   <Container id={id}>
     <LandingContent>
-      <DateText>October 13th - 14th, 2018</DateText>
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
-      <Button
-        material={PURPLE_PRESSABLE}
-        href="https://hackduke-2018.devpost.com/submissions"
-      >
-        See Winners
-      </Button>
+      <div>
+        <Date>
+          <div>November 2-3 2019|Durham,</div>
+          <div>NC Come Code for Good with us!</div>
+        </Date>
+        <Button
+          material={PURPLE_PRESSABLE}
+          href="https://hackduke-2018.devpost.com/submissions"
+        >
+          Register
+        </Button>
+      </div>
     </LandingContent>
   </Container>
 );

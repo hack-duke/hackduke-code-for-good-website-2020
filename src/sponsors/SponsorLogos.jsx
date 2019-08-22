@@ -54,7 +54,7 @@ const LogoWrapper = styled('a')`
 `;
 
 const LogoImage = styled('img')`
-  width: 100%;
+  width: 50%;
   height: auto;
   max-height: 100%;
   object-fit: contain;

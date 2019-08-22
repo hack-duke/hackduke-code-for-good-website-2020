@@ -20,8 +20,7 @@ import scheduleData from './schedule-data';
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
-    extHeightPx: 4096,
-    backgroundImage: `url(${ScheduleLine}), url(${ScheduleLineExt})`
+    extHeightPx: 4096
   })};
 `;
 
@@ -83,28 +82,11 @@ export default class Schedule extends React.Component {
     return (
       <Container id={id}>
         <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
-        <SectionContent columns={true}>
-          <SectionLeftColumn sticky={true}>
-            <SectionTextContent>
-              {scheduleData.map(({ date, events }, i) => (
-                <Day
-                  active={i === selectedDayIndex}
-                  activeColor={titleColor}
-                  key={date}
-                  onClick={() => this.setState({ selectedDayIndex: i })}
-                >
-                  {formatDate(date)}
-                </Day>
-              ))}
-            </SectionTextContent>
-          </SectionLeftColumn>
-          <SectionRightColumn>
-            <ScheduleItemCard
-              titleColor={titleColor}
-              events={scheduleData[selectedDayIndex].events}
-            />
-          </SectionRightColumn>
-        </SectionContent>
+
+        <ScheduleItemCard
+          titleColor={titleColor}
+          events={scheduleData[selectedDayIndex].events}
+        />
       </Container>
     );
   }
