@@ -71,13 +71,13 @@ class NavContents extends React.PureComponent {
     const { activeItemID, navItems } = this.props;
     return (
       <NavItemsWrapper>
-        {navItems.map(({ title, id, titleColor }) => (
+        {navItems.map(({ title, id }) => (
           <AnchorLink
             offset={navHeightPx / 2}
             key={id}
             css={navItem({
               active: activeItemID === id,
-              color: titleColor
+              color: '#fff'
             })}
             href={`#${id}`}
           >
@@ -99,7 +99,7 @@ class NavContents extends React.PureComponent {
   }
 }
 
-const navBackgroundStyle = css`
+const navBackgroundStyle = ({ color }) => css`
   position: absolute;
   content: '';
   top: 0;
@@ -107,7 +107,7 @@ const navBackgroundStyle = css`
   right: 0;
   width: 100%;
   height: ${navHeightPx}px;
-  background-color: white;
+  background-color: ${color};
   z-index: -1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333), 0 0 40px rgba(0, 0, 0, 0.075);
 `;
@@ -115,8 +115,15 @@ const navBackgroundStyle = css`
 class NavBackground extends React.PureComponent {
   render() {
     // Scrolling optimization - bypass Emotion for background opacity
-    const { opacity } = this.props;
-    return <div className={navBackgroundStyle} style={{ opacity }} />;
+    const { opacity, navItems, activeItemID } = this.props;
+    return (
+      <div
+        className={navBackgroundStyle({
+          color: navItems.find(({ id }) => id == activeItemID).sectionColor
+        })}
+        style={{ opacity }}
+      />
+    );
   }
 }
 
@@ -145,7 +152,11 @@ export default class Navbar extends React.Component {
     return (
       <Nav>
         <NavContents activeItemID={activeItemID} {...this.props} />
-        <NavBackground opacity={navBackgroundOpacity} />
+        <NavBackground
+          opacity={navBackgroundOpacity}
+          activeItemID={activeItemID}
+          {...this.props}
+        />
       </Nav>
     );
   }

@@ -37,9 +37,9 @@ const CardText = styled('p')`
   font-size: 1.25em;
 `;
 
-export default ({ title, children, titleColor, textColor }) => (
-  <CardBase color={titleColor}>
-    <CardTitle color={titleColor}>{title}</CardTitle>
+export default ({ title, children, sectionColor, textColor }) => (
+  <CardBase color={sectionColor}>
+    <CardTitle color={sectionColor}>{title}</CardTitle>
     <CardText color={textColor}>{children}</CardText>
   </CardBase>
 );

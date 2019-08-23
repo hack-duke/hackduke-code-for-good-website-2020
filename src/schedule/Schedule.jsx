@@ -76,15 +76,15 @@ export default class Schedule extends React.Component {
   }
 
   render() {
-    const { id, titleColor } = this.props;
+    const { id, sectionColor } = this.props;
     const { selectedDayIndex } = this.state;
 
     return (
       <Container id={id}>
-        <SectionTitle titleColor={titleColor}>Schedule</SectionTitle>
+        <SectionTitle sectionColor={sectionColor}>Schedule</SectionTitle>
 
         <ScheduleItemCard
-          titleColor={titleColor}
+          sectionColor={sectionColor}
           events={scheduleData[selectedDayIndex].events}
         />
       </Container>

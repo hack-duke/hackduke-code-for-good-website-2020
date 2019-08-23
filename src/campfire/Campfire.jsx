@@ -23,8 +23,8 @@ const Container = styled('div')`
     background-image: url(${Fire});
   }
 `;
-export default ({ id, titleColor }) => (
+export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle titleColor={titleColor}>Campfire Stories</SectionTitle>
+    <SectionTitle sectionColor={sectionColor}>Campfire Stories</SectionTitle>
   </Container>
 );

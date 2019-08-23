@@ -22,9 +22,9 @@ const Container = styled('div')`
   padding-bottom: 90px;
 `;
 
-export default ({ id, titleColor }) => (
+export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle titleColor={titleColor}>Sponsors</SectionTitle>
+    <SectionTitle sectionColor={sectionColor}>Sponsors</SectionTitle>
 
     <SponsorLogos />
   </Container>

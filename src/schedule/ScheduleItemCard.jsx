@@ -94,13 +94,13 @@ const EventRow = styled('div')`
   }
 `;
 
-export default ({ titleColor, events }) => (
-  <CardBase color={titleColor}>
+export default ({ sectionColor, events }) => (
+  <CardBase color={sectionColor}>
     {events.map(({ time, name, locations }) => (
       <EventRow key={time + name}>
         <EventTime>{time}</EventTime>
         <EventDetails>
-          <EventDetailsText primary={true} primaryColor={titleColor}>
+          <EventDetailsText primary={true} primaryColor={sectionColor}>
             {name}
           </EventDetailsText>
           {locations &&

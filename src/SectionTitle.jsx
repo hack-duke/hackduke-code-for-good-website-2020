@@ -17,13 +17,13 @@ const Title = styled('div')`
   @media screen and (min-width: 640px) {
     padding-top: 0.0875em;
 
-    color: ${props => props.titleColor};
+    color: ${props => props.sectionColor};
   }
 `;
 
-export default ({ children, titleColor }) => (
+export default ({ children, sectionColor }) => (
   <React.Fragment>
-    <Title titleColor={titleColor}>{children}</Title>
-    <Divider color={titleColor} hideOnDesktop={true} />
+    <Title sectionColor={sectionColor}>{children}</Title>
+    <Divider color={sectionColor} hideOnDesktop={true} />
   </React.Fragment>
 );

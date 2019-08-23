@@ -17,43 +17,43 @@ const sections = [
   {
     title: 'Home',
     id: 'landing',
-    titleColor: '#5c5299',
+    sectionColor: '#5c5299',
     Component: Landing
   },
   {
     title: 'About',
     id: 'about',
-    titleColor: '#3a3d6d',
+    sectionColor: '#3a3d6d',
     Component: About
   },
   {
     title: 'Tracks',
     id: 'tracks',
-    titleColor: '#5f76cb',
+    sectionColor: '#5f76cb',
     Component: Tracks
   },
   {
     title: 'Schedule',
     id: 'Schedule',
-    titleColor: '#A94A64',
+    sectionColor: '#A94A64',
     Component: Schedule
   },
   {
     title: 'Campfire',
     id: 'Campfire',
-    titleColor: '#A94A64',
+    sectionColor: '#A94A64',
     Component: Campfire
   },
   {
     title: 'FAQs',
     id: 'faqs',
-    titleColor: '#f16a43',
+    sectionColor: '#f16a43',
     Component: FAQs
   },
   {
     title: 'Sponsors',
     id: 'sponsors',
-    titleColor: '#f8aa5b',
+    sectionColor: '#f8aa5b',
     Component: Sponsors
   }
 ];
@@ -61,8 +61,8 @@ const sections = [
 export default () => (
   <React.Fragment>
     <Navbar navItems={sections} />
-    {sections.map(({ title, id, titleColor, Component }) => (
-      <Component id={id} key={id} titleColor={titleColor} />
+    {sections.map(({ title, id, sectionColor, Component }) => (
+      <Component id={id} key={id} sectionColor={sectionColor} />
     ))}
     <Footer />
   </React.Fragment>

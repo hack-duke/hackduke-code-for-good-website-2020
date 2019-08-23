@@ -38,9 +38,9 @@ const Container = styled('div')`
 //   }
 // `;
 
-export default ({ id, titleColor }) => (
+export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle titleColor={titleColor}>About</SectionTitle>
+    <SectionTitle sectionColor={sectionColor}>About</SectionTitle>
   </Container>
 );
 // <SectionContent>
@@ -53,7 +53,7 @@ export default ({ id, titleColor }) => (
 //   <PrinciplesContainer>
 //     <PrinciplesCard
 //       title="Collaboration, not competition"
-//       titleColor="#3649A3"
+//       sectionColor="#3649A3"
 //     >
 //       The core principle behind hacking for social good is collaboration.
 //       HackDuke's project tracks provide various avenues for participants to
@@ -62,7 +62,7 @@ export default ({ id, titleColor }) => (
 //     </PrinciplesCard>
 //     <PrinciplesCard
 //       title="Using tech to further social good"
-//       titleColor="#A94A64"
+//       sectionColor="#A94A64"
 //     >
 //       HackDuke is not just about building meaningful projects. It's also an
 //       open forum to discuss, share and bring to life ideas that aim to make
@@ -72,7 +72,7 @@ export default ({ id, titleColor }) => (
 //     </PrinciplesCard>
 //     <PrinciplesCard
 //       title="Giving back to the community"
-//       titleColor="#FFAA5B"
+//       sectionColor="#FFAA5B"
 //     >
 //       HackDuke encourages students to venture beyond the classroom. Learn
 //       how your skills can be used to make a difference in other people's

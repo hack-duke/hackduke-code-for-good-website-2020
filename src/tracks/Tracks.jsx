@@ -68,9 +68,9 @@ const RightArrow = () => (
   <span className="icon-right-open" css={iconTranslate} />
 );
 
-export default ({ id, titleColor }) => (
+export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle titleColor={titleColor}>Tracks</SectionTitle>
+    <SectionTitle sectionColor={sectionColor}>Tracks</SectionTitle>
     <SectionContent columns={true}>
       <SectionLeftColumn>
         <SectionTextContent>

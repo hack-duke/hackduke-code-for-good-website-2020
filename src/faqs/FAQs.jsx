@@ -43,9 +43,9 @@ const SponsorshipLink = styled('a')`
   color: black !important;
 `;
 
-export default ({ id, titleColor }) => (
+export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle titleColor={titleColor}>FAQs</SectionTitle>
+    <SectionTitle sectionColor={sectionColor}>FAQs</SectionTitle>
     <SectionContent>
       <FAQContainer>
         <FAQColumn>
