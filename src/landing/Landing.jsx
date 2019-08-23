@@ -13,15 +13,13 @@ import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 900,
-    backgroundColor: '#afe0d0'
+    heightPx: 900
   })};
   display: flex;
   height: 100vh;
   @media screen and (min-width: 640px) {
     display: block;
     height: auto;
-    background-color: #afe0d0;
   }
 `;
 

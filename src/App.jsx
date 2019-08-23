@@ -17,7 +17,7 @@ const sections = [
   {
     title: 'Home',
     id: 'landing',
-    sectionColor: '#5c5299',
+    sectionColor: '#afe0d0',
     Component: Landing
   },
   {
