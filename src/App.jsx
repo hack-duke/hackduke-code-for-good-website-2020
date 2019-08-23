@@ -23,19 +23,19 @@ const sections = [
   {
     title: 'About',
     id: 'about',
-    sectionColor: '#3a3d6d',
+    sectionColor: '#ACC0F9',
     Component: About
   },
   {
     title: 'Tracks',
     id: 'tracks',
-    sectionColor: '#5f76cb',
+    sectionColor: '#FECA7D',
     Component: Tracks
   },
   {
     title: 'Schedule',
     id: 'Schedule',
-    sectionColor: '#A94A64',
+    sectionColor: '#2B9B99',
     Component: Schedule
   },
   {
@@ -47,13 +47,13 @@ const sections = [
   {
     title: 'FAQs',
     id: 'faqs',
-    sectionColor: '#f16a43',
+    sectionColor: '#3C257D',
     Component: FAQs
   },
   {
     title: 'Sponsors',
     id: 'sponsors',
-    sectionColor: '#f8aa5b',
+    sectionColor: '#0F1343',
     Component: Sponsors
   }
 ];

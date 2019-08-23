@@ -17,12 +17,11 @@ const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
     extHeightPx: 4096,
-    backgroundImage: 'url(${Map})',
-    backgroundColor: '#ACC0F9'
+    backgroundImage: 'url(${Map})'
   })};
   @media screen and (min-width: 1260px) {
     flex-direction: row;
-    background-color: #acc0f9;
+
     background-image: url(${Map});
   }
 `;
