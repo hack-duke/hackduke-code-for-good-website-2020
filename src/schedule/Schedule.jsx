@@ -7,7 +7,8 @@ import {
   SectionTextContent,
   SectionLeftColumn,
   SectionRightColumn,
-  PrimaryFont
+  PrimaryFont,
+  RightContentPadding
 } from '../common-styles';
 import SectionTitle from '../SectionTitle';
 
@@ -21,12 +22,16 @@ import ScheduleBackground from './schedule-bg-images.svg';
 import scheduleData from './schedule-data';
 
 const Container = styled('div')`
+<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   ${SectionBase({
     heightPx: 600,
     extHeightPx: 4096
   })};
+=======
+  ${RightContentPadding};
+>>>>>>> random stuff idk
 `;
 
 const Day = styled('h3')`
@@ -113,6 +118,7 @@ export default class Schedule extends React.Component {
 
     return (
       <Container id={id}>
+<<<<<<< HEAD
         <img src={ScheduleBackground} style={bgStyle} />
 
         <ScheduleContainer>
@@ -133,6 +139,14 @@ export default class Schedule extends React.Component {
             />
           </OneDay>
         </ScheduleContainer>
+=======
+        <SectionTitle sectionColor="white">Schedule</SectionTitle>
+
+        <ScheduleItemCard
+          sectionColor={sectionColor}
+          events={scheduleData[selectedDayIndex].events}
+        />
+>>>>>>> random stuff idk
       </Container>
     );
   }

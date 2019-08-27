@@ -13,8 +13,7 @@ const CardBase = styled('div')`
   flex-basis: 0;
   float:right
   border-top: 6px solid ${props => props.color};
-  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
-  ${ShadowItem};
+
   background-size: ${dateColSmWidth};
 
   @media screen and (min-width: 480px) {
@@ -30,10 +29,14 @@ const rowItemPadding = css`
   padding: 10px 15px;
 
   @media screen and (min-width: 480px) {
-    padding: 10px 20px;
+    padding: 3px 20px;
   }
   @media screen and (min-width: 900px) {
+<<<<<<< HEAD
     padding: 10px 20px;
+=======
+    padding: 5px 30px;
+>>>>>>> random stuff idk
   }
 `;
 
@@ -50,7 +53,12 @@ const EventTime = styled('div')`
 
   flex-grow: 0;
   flex-shrink: 0;
+<<<<<<< HEAD
   text-align: left;
+=======
+  text-color: white;
+  text-align: right;
+>>>>>>> random stuff idk
   font-weight: bold;
   ${rowItemPadding};
 `;
@@ -69,7 +77,7 @@ const EventDetailsText = styled('div')`
       font-weight: bold;
       margin-bottom: 0.33em;
       font-size: 1em;
-      color: ${props.primaryColor};
+      color: white;
     `};
 `;
 
@@ -98,9 +106,9 @@ export default ({ sectionColor, events }) => (
   <CardBase color={sectionColor}>
     {events.map(({ time, name, locations }) => (
       <EventRow key={time + name}>
-        <EventTime>{time}</EventTime>
+        <EventTime primaryColor="white">{time}</EventTime>
         <EventDetails>
-          <EventDetailsText primary={true} primaryColor={sectionColor}>
+          <EventDetailsText primary={true} primaryColor="white">
             {name}
           </EventDetailsText>
           {locations &&
