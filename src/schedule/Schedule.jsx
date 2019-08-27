@@ -7,7 +7,8 @@ import {
   SectionTextContent,
   SectionLeftColumn,
   SectionRightColumn,
-  PrimaryFont
+  PrimaryFont,
+  RightContentPadding
 } from '../common-styles';
 import SectionTitle from '../SectionTitle';
 
@@ -18,10 +19,7 @@ import ScheduleItemCard from './ScheduleItemCard';
 import scheduleData from './schedule-data';
 
 const Container = styled('div')`
-  ${SectionBase({
-    heightPx: 600,
-    extHeightPx: 4096
-  })};
+  ${RightContentPadding};
 `;
 
 const Day = styled('h3')`
@@ -81,7 +79,7 @@ export default class Schedule extends React.Component {
 
     return (
       <Container id={id}>
-        <SectionTitle sectionColor={sectionColor}>Schedule</SectionTitle>
+        <SectionTitle sectionColor="white">Schedule</SectionTitle>
 
         <ScheduleItemCard
           sectionColor={sectionColor}

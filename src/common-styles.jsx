@@ -4,7 +4,8 @@ import styled from 'react-emotion';
 export const MAX_WIDTH = '1400px';
 
 export const PrimaryFont = css`
-  font-family: 'Cabin', monospace;
+  font-family: 'Cabin', sans-serif;
+  color: white;
 `;
 export const TitleFont = css`
   font-family: 'Cabin', sans-serif;
@@ -12,7 +13,7 @@ export const TitleFont = css`
 
 export const SecondaryText = css`
   ${PrimaryFont};
-  color: #2b2b2b;
+  color: white;
 `;
 
 export const SectionBase = props => css`
@@ -54,6 +55,12 @@ export const SectionBase = props => css`
 export const LeftContentPadding = css`
   @media screen and (min-width: 640px) {
     padding-left: 20px;
+  }
+`;
+
+export const RightContentPadding = css`
+  @media screen and (min-width: 640px) {
+    padding-left: 600px;
   }
 `;
 
