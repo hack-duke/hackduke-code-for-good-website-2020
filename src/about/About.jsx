@@ -6,7 +6,8 @@ import SectionTitle from '../SectionTitle';
 import AboutSlide from './AboutSlide';
 import CenterContainer from './CenterContainer';
 
-import Map from './map.svg';
+import mapImg from './map.svg';
+import aboutTitleImg from './about-title.svg';
 
 const Container = styled('div')`
   ${SectionBase({
@@ -14,11 +15,18 @@ const Container = styled('div')`
     extHeightPx: 4096
   })};
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   @media screen and (min-width: 1260px) {
   }
+`;
+
+const AboutTitle = styled('img')`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const BodyContainer = styled('div')`
@@ -95,9 +103,9 @@ class About extends Component {
 
     return (
       <Container id={id}>
-        <SectionTitle sectionColor={sectionColor}>About</SectionTitle>
         <BodyContainer>
-          <MapImg src={Map} />
+          <AboutTitle src={aboutTitleImg} />
+          <MapImg src={mapImg} />
           <LeftArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
           >
