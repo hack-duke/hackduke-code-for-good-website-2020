@@ -2,18 +2,26 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import { SectionBase, SectionContent } from '../common-styles';
-import SectionTitle from '../SectionTitle';
 
-import FAQsLine from './faqs-line.svg';
-import FAQsLineExt from './faqs-line-ext.svg';
+import FAQTitleSVG from './faq-title.svg';
 import FAQItem from './FAQItem';
+
+import CloudLeftSVG from './cloud-left.svg';
+import CloudRightSVG from './cloud-right.svg';
 
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
-    extHeightPx: 4096,
-    backgroundImage: `url(${FAQsLine}), url(${FAQsLineExt})`
+    extHeightPx: 4096
+    // backgroundImage: `url(${FAQsLine}), url(${FAQsLineExt})`
   })};
+`;
+
+const FAQTitle = styled('div')`
+  width: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const FAQContainer = styled('div')`
@@ -43,9 +51,19 @@ const SponsorshipLink = styled('a')`
   color: black !important;
 `;
 
+const TitleImg = styled('img')`
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+
 export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle sectionColor={sectionColor}>FAQs</SectionTitle>
+    <FAQTitle>
+      <TitleImg src={CloudLeftSVG} />
+      <img src={FAQTitleSVG} />
+      <TitleImg src={CloudRightSVG} />
+    </FAQTitle>
     <SectionContent>
       <FAQContainer>
         <FAQColumn>
