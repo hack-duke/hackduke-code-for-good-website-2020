@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import { SectionBase } from '../common-styles';
 import SectionTitle from '../SectionTitle';
 import AboutSlide from './AboutSlide';
+import CenterContainer from './CenterContainer';
 
 import Map from './map.svg';
 
@@ -23,8 +24,6 @@ const Container = styled('div')`
 const BodyContainer = styled('div')`
   position: relative;
   width: 100%;
-  /* max-width: 800px; */
-  /* margin: 0 auto; */
 `;
 
 const MapImg = styled('img')`
@@ -42,6 +41,8 @@ const ArrowButton = styled('div')`
   top: 50%;
   cursor: pointer;
   transition: 0.3s ease;
+  color: #353535;
+  font-size: 25px;
 
   :hover {
     background-color: #ea7e69;
@@ -60,15 +61,22 @@ const RightArrowButton = styled(ArrowButton)`
 
 const SlideContainer = styled('div')`
   position: absolute;
-  top: 0;
+  width: 60%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
+  height: 100%;
 `;
 
 class About extends Component {
   state = {
     slideIdx: 0
+  };
+
+  changeToSlide = idx => {
+    this.setState({
+      slideIdx: idx < 0 ? 3 + idx : idx % 3
+    });
   };
 
   render() {
@@ -85,16 +93,29 @@ class About extends Component {
       );
     });
 
-    console.log(slideElems);
-
     return (
       <Container id={id}>
         <SectionTitle sectionColor={sectionColor}>About</SectionTitle>
         <BodyContainer>
           <MapImg src={Map} />
-          <LeftArrowButton />
-          <RightArrowButton />
-          <SlideContainer>{slideElems}</SlideContainer>
+          <LeftArrowButton
+            onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
+          >
+            <CenterContainer>&larr;</CenterContainer>
+          </LeftArrowButton>
+          <RightArrowButton
+            onClick={() => this.changeToSlide(this.state.slideIdx + 1)}
+          >
+            <CenterContainer>&rarr;</CenterContainer>
+          </RightArrowButton>
+
+          <SlideContainer>
+            <div
+              style={{ posiiton: 'relative', width: '100%', height: '100%' }}
+            >
+              {slideElems}
+            </div>
+          </SlideContainer>
         </BodyContainer>
       </Container>
     );

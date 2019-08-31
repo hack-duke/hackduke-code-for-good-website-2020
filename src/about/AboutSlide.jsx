@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 export default ({ img, text, currIdx, idx }) => {
-  console.log(currIdx);
-  console.log(idx);
+  console.log(currIdx, idx);
 
   return (
     <Container idx={idx} currIdx={currIdx}>
@@ -16,8 +15,11 @@ export default ({ img, text, currIdx, idx }) => {
 };
 
 const Container = styled('div')`
-  padding: 40px;
-  opacity: ${props => (props.currIdx == props.idx ? '1' : '0')};
+  transition: 0.5s ease;
+  opacity: ${props => (props.currIdx === props.idx ? '1' : '0')};
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const ImgContainer = styled('div')`
@@ -28,6 +30,7 @@ const ImgContainer = styled('div')`
 const SlideImg = styled('img')`
   object-fit: contain;
   width: 100%;
+  margin: 0 auto;
 `;
 
 const TextContainer = styled('div')``;
