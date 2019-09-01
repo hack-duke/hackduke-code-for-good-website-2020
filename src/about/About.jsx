@@ -8,6 +8,9 @@ import CenterContainer from './CenterContainer';
 
 import mapImg from './map.svg';
 import aboutTitleImg from './about-title.svg';
+import aboutSlide1 from './about-1.svg';
+import aboutSlide2 from './about-2.svg';
+import aboutSlide3 from './about-3.svg';
 
 const Container = styled('div')`
   ${SectionBase({
@@ -51,6 +54,7 @@ const ArrowButton = styled('div')`
   transition: 0.3s ease;
   color: #353535;
   font-size: 25px;
+  user-select: none;
 
   :hover {
     background-color: #ea7e69;
@@ -74,6 +78,28 @@ const SlideContainer = styled('div')`
   left: 50%;
   transform: translateX(-50%);
   height: 100%;
+`;
+
+const SliderButtonContainer = styled('div')`
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 125px;
+  justify-content: space-between;
+`;
+
+const SliderButton = styled('div')`
+  background-color: ${props =>
+    props.idx === props.currIdx ? '#EA7E69' : 'transparent'};
+  border: ${props =>
+    props.idx == props.currIdx ? 'none' : '3px solid #C4C4C4'};
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
 `;
 
 class About extends Component {
@@ -124,6 +150,23 @@ class About extends Component {
               {slideElems}
             </div>
           </SlideContainer>
+          <SliderButtonContainer>
+            <SliderButton
+              idx={0}
+              currIdx={this.state.slideIdx}
+              onClick={() => this.changeToSlide(0)}
+            />
+            <SliderButton
+              idx={1}
+              currIdx={this.state.slideIdx}
+              onClick={() => this.changeToSlide(1)}
+            />
+            <SliderButton
+              idx={2}
+              currIdx={this.state.slideIdx}
+              onClick={() => this.changeToSlide(2)}
+            />
+          </SliderButtonContainer>
         </BodyContainer>
       </Container>
     );
@@ -134,17 +177,21 @@ export default About;
 
 const slides = [
   {
-    img: 'https://avatars2.githubusercontent.com/u/8008350?s=460&v=4',
-    text: 'The god'
+    img: aboutSlide1,
+    title: 'Exploring the intersection between tech & social good',
+    text:
+      "The core principle behind hacking for social good is collaboration, and HackDuke's project tracks provide an avenue to collaborate with each other, with initiatives at their university and with community organizations."
   },
   {
-    img:
-      'http://cdn.akc.org/content/article-body-image/shiba_inu_cute_puppies.jpg',
-    text: 'Suh cyute'
+    img: aboutSlide2,
+    title: 'Collaboration not competition',
+    text:
+      "HackDuke is not just about building meaningful projects. It's also an open forum to discuss, share and bring to life ideas that aim to make a positive impact on social issues. Look forward to working with experts from non-profits and coding alongside mentors from tech companies!"
   },
   {
-    img:
-      'https://animemotivation.com/wp-content/uploads/2018/02/cute-anime-girl.jpg.webp',
-    text: 'For Daniel'
+    img: aboutSlide3,
+    title: 'Giving back',
+    text:
+      "HackDuke encourages students to venture beyond the classroom. Learn how your skills can be used to make a difference in other people's lives. Tracks enable members to collaborate while providing an alleyway to partnership with peers, local organizations, nonprofits and universities to continue working towards the cause."
   }
 ];

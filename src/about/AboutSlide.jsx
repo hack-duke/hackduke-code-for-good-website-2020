@@ -33,4 +33,6 @@ const SlideImg = styled('img')`
   margin: 0 auto;
 `;
 
-const TextContainer = styled('div')``;
+const TextContainer = styled('div')`
+  text-align: center;
+`;
