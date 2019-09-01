@@ -9,6 +9,7 @@ import TopMountainsImage from './top-mountains.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
 import { PURPLE_PRESSABLE } from '../materials';
+import { LandingBackground } from './landing-background.svg';
 import Button from '../Button';
 
 const Container = styled('div')`
@@ -19,7 +20,7 @@ const Container = styled('div')`
   height: 100vh;
 
   @media screen and (min-width: 640px) {
-    backgroundImage: ${TopMountainsImage}
+    backgroundImage: ${LandingBackground}
     display: block;
     height: auto;
   }
