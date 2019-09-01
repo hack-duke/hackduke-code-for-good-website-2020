@@ -3,7 +3,9 @@ import styled from 'react-emotion';
 
 import { SecondaryText, TitleFont } from '../common-styles';
 
-const FAQItem = styled('div')``;
+const FAQItem = styled('div')`
+  margin-bottom: 100px;
+`;
 
 const FAQTitle = styled('h2')`
   ${TitleFont};
