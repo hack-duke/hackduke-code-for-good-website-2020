@@ -7,12 +7,12 @@ export default styled('a')`
   padding: 16px 32px;
   color: white;
   display: inline-block;
-  margin-top: 8px;
-  margin-left: 800px;
+
   text-decoration: none;
   text-transform: uppercase;
   /* Todo convert to em */
   font-size: 16px;
+  margin-top: 20px;
   line-height: 20px;
   font-weight: bold;
   min-width: 180px;

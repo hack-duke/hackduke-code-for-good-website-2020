@@ -22,7 +22,7 @@ export const SectionBase = props => css`
   position: relative;
 
   padding-left: 100%;
-  padding-right: 20px;
+  padding-right: 0px;
   padding-top: 40px;
 
   :first-child {
@@ -60,7 +60,7 @@ export const LeftContentPadding = css`
 
 export const RightContentPadding = css`
   @media screen and (min-width: 640px) {
-    padding-left: 600px;
+    text-align: right;
   }
 `;
 
