@@ -31,7 +31,9 @@ const FAQTitle = styled('div')`
 const FAQContainer = styled('div')`
   display: flex;
   flex-direction: column;
-  padding: 0px 200px;
+  /* padding: 0px 150px; */
+  width: 75%;
+  margin: 0 auto;
   @media screen and (min-width: 1260px) {
     flex-direction: row;
   }
@@ -60,6 +62,31 @@ const TitleImg = styled('img')`
   }
 `;
 
+const MountainLeftImg = styled('img')`
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+
+const MountainTopRightImg = styled('img')`
+  position: absolute;
+  top: 21%;
+  left: 83%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+const MountainBottomRightImg = styled('img')`
+  position: absolute;
+  top: 60%;
+  left: 85%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
 export default ({ id, sectionColor }) => (
   <Container id={id} style={{ position: 'relative' }}>
     <FAQTitle>
@@ -67,10 +94,9 @@ export default ({ id, sectionColor }) => (
       <img src={FAQTitleSVG} />
       <TitleImg src={CloudRightSVG} />
     </FAQTitle>
-    <img
-      src={MountainLeftSVG}
-      style={{ position: 'absolute', top: '30%', left: '5%' }}
-    />
+    <MountainLeftImg src={MountainLeftSVG} />
+    <MountainTopRightImg src={MountainTopRightSVG} />
+    <MountainBottomRightImg src={MountainBottomRightSVG} />
     <SectionContent>
       <FAQContainer>
         <FAQColumn>
