@@ -35,4 +35,5 @@ const SlideImg = styled('img')`
 
 const TextContainer = styled('div')`
   text-align: center;
+  line-height: 20pt;
 `;
