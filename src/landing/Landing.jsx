@@ -14,18 +14,25 @@ import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 900
+    heightPx: 600,
+    extHeightPx: 4096,
+    backgroundImage: `url(${LandingBackground})`
   })};
+  @media screen and (min-width: 1260px) {
+    flex-direction: row;
+  }
+`;
+const BackgroundWrapper = styled('div')`
+  ${SectionBase};
   display: flex;
   height: 100vh;
 
   @media screen and (min-width: 640px) {
-    backgroundImage: ${LandingBackground}
-    display: block;
-    height: auto;
+    margin: 0;
+    padding-top: 122px;
+    padding-bottom: 0;
   }
 `;
-
 const LandingContent = styled('div')`
   ${SecondaryText};
   font-size: 1.5em;
@@ -74,6 +81,7 @@ const ButtonWrapper = styled('div')`
 export default ({ id }) => (
   <Container id={id}>
     <LandingContent>
+      <img src={LandingBackground} />
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
       <ButtonWrapper>
         <Date>

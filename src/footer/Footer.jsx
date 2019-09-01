@@ -14,7 +14,7 @@ import BottomPath from './bottom-path.svg';
 const FooterContainer = styled('div')`
   ${SectionBase({
     heightPx: 900,
-    backgroundImage: 'url(${BottomPath})'
+    backgroundImage: `url(${BottomPath})`
   })};
 
   @media screen and (min-width: 1260px) {
