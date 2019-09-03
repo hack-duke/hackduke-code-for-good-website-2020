@@ -2,24 +2,38 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import { SectionBase, SectionContent } from '../common-styles';
-import SectionTitle from '../SectionTitle';
 
-import FAQsLine from './faqs-line.svg';
-import FAQsLineExt from './faqs-line-ext.svg';
+import FAQTitleSVG from './faq-title.svg';
 import FAQItem from './FAQItem';
+
+import CloudLeftSVG from './cloud-left.svg';
+import CloudRightSVG from './cloud-right.svg';
+
+// import MountainsSVG from './mountains.svg';
+import MountainBottomRightSVG from './mountain-bottom-right.svg';
+import MountainTopRightSVG from './mountain-top-right.svg';
+import MountainLeftSVG from './mountain-left.svg';
 
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
-    extHeightPx: 4096,
-    backgroundImage: `url(${FAQsLine}), url(${FAQsLineExt})`
+    extHeightPx: 4096
   })};
+`;
+
+const FAQTitle = styled('div')`
+  width: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const FAQContainer = styled('div')`
   display: flex;
   flex-direction: column;
-
+  /* padding: 0px 150px; */
+  width: 75%;
+  margin: 0 auto;
   @media screen and (min-width: 1260px) {
     flex-direction: row;
   }
@@ -30,8 +44,7 @@ const FAQColumn = styled('div')`
   flex-basis: 0;
 
   @media screen and (min-width: 1260px) {
-    margin-right: 25px;
-
+    margin-right: 50px;
     :last-child {
       margin-right: 0;
     }
@@ -43,9 +56,47 @@ const SponsorshipLink = styled('a')`
   color: black !important;
 `;
 
+const TitleImg = styled('img')`
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+
+const MountainLeftImg = styled('img')`
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+
+const MountainTopRightImg = styled('img')`
+  position: absolute;
+  top: 21%;
+  left: 83%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
+const MountainBottomRightImg = styled('img')`
+  position: absolute;
+  top: 60%;
+  left: 85%;
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+`;
 export default ({ id, sectionColor }) => (
-  <Container id={id}>
-    <SectionTitle sectionColor={sectionColor}>FAQs</SectionTitle>
+  <Container id={id} style={{ position: 'relative' }}>
+    <FAQTitle>
+      <TitleImg src={CloudLeftSVG} />
+      <img src={FAQTitleSVG} />
+      <TitleImg src={CloudRightSVG} />
+    </FAQTitle>
+    <MountainLeftImg src={MountainLeftSVG} />
+    <MountainTopRightImg src={MountainTopRightSVG} />
+    <MountainBottomRightImg src={MountainBottomRightSVG} />
     <SectionContent>
       <FAQContainer>
         <FAQColumn>
@@ -65,6 +116,12 @@ export default ({ id, sectionColor }) => (
             You can participate as long as you're a student (undergraduate or
             graduate)! If you're a new grad, we'd love to have you too.
           </FAQItem>
+          <FAQItem title="I want to volunteer or mentor! How can I help?">
+            To help with logistics day of, sign up to volunteer. If you're
+            looking to mentor hackers with tech or track knowledge, come help
+            out as a mentor. Both mentors and volunteers will get a special
+            HackDuke T-shirt! (We are working on setting up the forms.)
+          </FAQItem>
         </FAQColumn>
         <FAQColumn>
           <FAQItem title="Who can I work with?">
@@ -79,14 +136,6 @@ export default ({ id, sectionColor }) => (
           <FAQItem title="What can I make?">
             We welcome all software and hardware hacks that align to our tracks
             for impact. We will also have lab space for hardware hackers.
-          </FAQItem>
-        </FAQColumn>
-        <FAQColumn>
-          <FAQItem title="I want to volunteer or mentor! How can I help?">
-            To help with logistics day of, sign up to volunteer. If you're
-            looking to mentor hackers with tech or track knowledge, come help
-            out as a mentor. Both mentors and volunteers will get a special
-            HackDuke T-shirt! (We are working on setting up the forms.)
           </FAQItem>
           <FAQItem title="Travel?">
             Anyone from across the nation is welcome to come! We will be

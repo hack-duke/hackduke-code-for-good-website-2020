@@ -76,8 +76,8 @@ const FlexProps = css`
 
 export const SectionContent = styled('div')`
   ${props => props.columns && FlexProps};
-  width = 100%
-  margin: 0 auto
+  width: 100%;
+  margin: 0 auto;
   margin-top: 25px;
 `;
 
