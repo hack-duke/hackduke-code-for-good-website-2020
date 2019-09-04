@@ -9,7 +9,7 @@ import TopMountainsImage from './top-mountains.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
 import { PURPLE_PRESSABLE } from '../materials';
-import { LandingBackground } from './landing-background.svg';
+import LandingBackground from './landing-background.svg';
 import Button from '../Button';
 
 const Container = styled('div')`
@@ -18,10 +18,12 @@ const Container = styled('div')`
     extHeightPx: 4096,
     backgroundImage: `url(${LandingBackground})`
   })};
-  @media screen and (min-width: 1260px) {
-    flex-direction: row;
-  }
 `;
+
+// @media screen and (min-width: 1260px) {
+//   flex-direction: row;
+// }
+
 const BackgroundWrapper = styled('div')`
   ${SectionBase};
   display: flex;
@@ -75,7 +77,7 @@ const ButtonWrapper = styled('div')`
 
   @media screen and (min-width: 480px) {
     max-width: 1000px;
-    margin-left: 800px;
+    margin-right: 5%;
   }
 `;
 export default ({ id }) => (
