@@ -21,6 +21,11 @@ const Container = styled('div')`
   background-size: contain;
   background-image: url(${LandingBackground});
   background-position: bottom center;
+  @media screen and (max-width: 1000px) {
+    background-image: None;
+    max-width: 1000px;
+    margin-right: 5%;
+  }
 `;
 
 // @media screen and (min-width: 1260px) {
@@ -40,11 +45,12 @@ const BackgroundWrapper = styled('div')`
 `;
 const LandingContent = styled('div')`
   ${SecondaryText};
+  position: relative;
   font-size: 1.5em;
   margin: auto 0;
   width: 100%;
   padding-bottom: 40px;
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
     margin: 0;
     padding-top: 122px;
     padding-bottom: 0;
@@ -54,7 +60,7 @@ const LandingContent = styled('div')`
 const Logo = styled('img')`
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 5em;
+  padding-bottom: 12em;
   display: block;
   @media screen and (min-width: 480px) {
     max-width: 1000px;
@@ -76,11 +82,14 @@ const TopMountains = styled('img')`
 `;
 const ButtonWrapper = styled('div')`
   width: 100%;
+  position: absolute;
+  bottom: 8em;
+  right: 0;
   margin-bottom: 1.5em;
   display: block;
 
   @media screen and (min-width: 480px) {
-    max-width: 1000px;
+    max-width: 500px;
     margin-right: 5%;
   }
 `;
