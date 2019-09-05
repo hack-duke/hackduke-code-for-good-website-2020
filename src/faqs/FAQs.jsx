@@ -82,7 +82,7 @@ const MountainTopRightImg = styled('img')`
 const MountainBottomRightImg = styled('img')`
   position: absolute;
   top: 60%;
-  left: 85%;
+  left: 84%;
   @media screen and (max-width: 1260px) {
     display: none;
   }
