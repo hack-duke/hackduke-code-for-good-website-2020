@@ -14,10 +14,12 @@ import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 600,
     extHeightPx: 4096,
     backgroundImage: `url(${LandingBackground})`
   })};
+  max-width: 100%
+  height: auto
+  background-position: 0 75%;
 `;
 
 // @media screen and (min-width: 1260px) {
@@ -83,7 +85,6 @@ const ButtonWrapper = styled('div')`
 export default ({ id }) => (
   <Container id={id}>
     <LandingContent>
-      <img src={LandingBackground} />
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
       <ButtonWrapper>
         <Date>
