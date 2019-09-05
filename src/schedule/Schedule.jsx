@@ -21,12 +21,14 @@ import ScheduleBackground from './schedule-bg-images.svg';
 import scheduleData from './schedule-data';
 
 const Container = styled('div')`
-  display: flex;
-  flex-direction: row;
   ${SectionBase({
-    heightPx: 600,
+    heightPx: 1600,
     extHeightPx: 4096
-  })};
+  })}
+
+  background-image: url(${ScheduleBackground});
+  background-position: 50% 10%;
+
 `;
 
 const Day = styled('h3')`
@@ -86,7 +88,7 @@ const DayTitle = styled('div')`
 
 var bgStyle = {
   marginLeft: -250
-  //verticalAlign: 'baseline'
+  //position: absolute
 };
 //NEW*****************************************
 
@@ -113,10 +115,10 @@ export default class Schedule extends React.Component {
 
     return (
       <Container id={id}>
-        <img src={ScheduleBackground} style={bgStyle} />
-
         <ScheduleContainer>
-          <img src={ScheduleTitle} />
+          <div style={{ display: 'inline-block' }}>
+            <img src={ScheduleTitle} />
+          </div>
           <OneDay>
             <DayTitle>Saturday, November 2nd</DayTitle>
             <ScheduleItemCard
