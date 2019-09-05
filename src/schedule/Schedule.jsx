@@ -15,9 +15,14 @@ import ScheduleLine from './schedule-line.svg';
 import ScheduleLineExt from './schedule-line-ext.svg';
 import ScheduleItemCard from './ScheduleItemCard';
 
+import ScheduleTitle from './schedule-title.svg';
+import ScheduleBackground from './schedule-bg-images.svg';
+
 import scheduleData from './schedule-data';
 
 const Container = styled('div')`
+  display: flex;
+  flex-direction: row;
   ${SectionBase({
     heightPx: 600,
     extHeightPx: 4096
@@ -58,6 +63,33 @@ const formatDate = date =>
     month: 'long'
   })} ${date.getDate()}`;
 
+//NEW*****************************************
+const ScheduleContainer = styled('div')`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 25%;
+`;
+
+const OneDay = styled('div')`
+  margin-top: 40px;
+`;
+
+const DayTitle = styled('div')`
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+`;
+
+var bgStyle = {
+  marginLeft: -250
+  //verticalAlign: 'baseline'
+};
+//NEW*****************************************
+
 export default class Schedule extends React.Component {
   state = {
     selectedDayIndex: 0
@@ -81,12 +113,26 @@ export default class Schedule extends React.Component {
 
     return (
       <Container id={id}>
-        <SectionTitle sectionColor={sectionColor}>Schedule</SectionTitle>
+        <img src={ScheduleBackground} style={bgStyle} />
 
-        <ScheduleItemCard
-          sectionColor={sectionColor}
-          events={scheduleData[selectedDayIndex].events}
-        />
+        <ScheduleContainer>
+          <img src={ScheduleTitle} />
+          <OneDay>
+            <DayTitle>Saturday, November 2nd</DayTitle>
+            <ScheduleItemCard
+              sectionColor={sectionColor}
+              events={scheduleData[0].events}
+            />
+          </OneDay>
+
+          <OneDay>
+            <DayTitle>Sunday, November 3rd</DayTitle>
+            <ScheduleItemCard
+              sectionColor={sectionColor}
+              events={scheduleData[1].events}
+            />
+          </OneDay>
+        </ScheduleContainer>
       </Container>
     );
   }

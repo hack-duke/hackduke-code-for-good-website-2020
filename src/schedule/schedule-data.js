@@ -15,70 +15,70 @@ export default [
         locations: ['Reynolds Theatre']
       },
       {
+        time: '12:30PM - 1:00PM',
+        name: 'Team Formation Mixer',
+        locations: ['Schiciano Foyer']
+      },
+      {
         time: '1:00PM - 2:00PM',
         name: 'Lunch',
         locations: ['Schiciano Atrium']
       },
       { time: '2:00PM', name: 'Hacking Commences' },
       {
-        time: '2:00PM - 2:30PM',
-        name: 'Team Formation Mixer',
-        locations: ['Schiciano Lobby']
-      },
-      {
-        time: '2:00PM - 8:00PM',
-        name: 'Frisbee, Football, Volleyball',
-        locations: ['Harrington Quad']
-      },
-      {
         time: '2:30PM - 3:30PM',
-        name: 'Intro to Hardware Hacking by August Ning',
+        name: 'Workshop 1 (Track-related)',
         locations: ['Hudson 201']
       },
       {
         time: '2:30PM - 3:30PM',
-        name: 'VR Workshop by Mark Steelman',
+        name: 'Workshop 2 (Track-related)',
         locations: ['Hudson 232']
       },
       {
-        time: '3:00PM - 3:30PM',
-        name: 'Health Track Kickoff with Jason Liu',
-        locations: ['Hudson 222']
+        time: '2:30PM - 3:30PM',
+        name: 'Workshop 3 (Track-related)',
+        locations: ['TBD']
       },
       {
-        time: '3:00PM - 4:30PM',
-        name: 'Javascript Workshop by Co-Lab',
-        locations: ['Hudson 216']
+        time: '2:30PM - 3:30PM',
+        name: 'Workshop 4 (Track-related)',
+        locations: ['TBD']
       },
       {
-        time: '3:30PM - 5:00PM',
+        time: '3:00PM - 5:00PM',
         name: 'Puppies!!!!!',
         locations: ['Harrington Quad']
       },
       {
         time: '4:30PM - 5:30PM',
-        name: 'API Workshop by Archana Ahlawat',
+        name: 'Workshop 5',
         locations: ['Hudson 115A']
       },
       {
         time: '4:45PM - 6:15PM',
-        name: 'Mobile Workshop by Co-Lab',
+        name: 'Workshop 6',
         locations: ['Hudson 216']
       },
       {
-        time: '6:30PM - 8:00PM',
+        time: '6:00PM - 7:00PM',
+        name: 'Mixer for Female-Identifying and Non-Binary Hackers',
+        locations: ['Innovation Co-Lab']
+      },
+      {
+        time: '7:00PM - 8:00PM',
         name: 'Dinner',
-        locations: ['Schiciano Atrium']
+        locations: ['Schiciano Foyer']
+      },
+      {
+        time: '8:30PM - 9:00PM',
+        name: 'Pie an Organizer',
+        locations: ['Schiciano Foyer']
       },
       {
         time: '8:00PM - 9:00PM',
         name: 'MLH Werewolf',
         locations: ['Schiciano Lobby']
-      },
-      {
-        time: '9:00PM - 10:00PM',
-        name: 'Mixer for Female-Identifying and Non-Binary Hackers',
-        locations: ['Innovation Co-Lab']
       },
       {
         time: '10:00PM - 11:00PM',
@@ -108,34 +108,44 @@ export default [
       {
         time: '9:00AM - 9:45AM',
         name: 'Breakfast',
-        locations: ['Schiciano Atrium']
+        locations: ['Schiciano Foyer']
       },
       {
-        time: '11:00AM - 11:30PM',
-        name:
-          'The Future of Healthcare Technology by Dr. Michael Kerzner (Duke Hospital)',
+        time: '11:00AM - 12:00PM',
+        name: 'Workshop 7',
         locations: ['Hudson 216']
       },
       {
         time: '11:00AM - 12:00PM',
-        name: 'Turning Hack into Startup by Kasper Kubica',
+        name: 'Workshop 8',
         locations: ['Hudson 222']
       },
 
       {
         time: '12:00PM - 1:30PM',
         name: 'Lunch',
-        locations: ['Schiciano Atrium']
+        locations: ['Schiciano Foyer']
       },
       { time: '1:30PM', name: 'Hacking Ends' },
+      { time: '2:00PM', name: 'Judging Begins' },
       {
-        time: '2:00PM - 4:00PM',
-        name: 'Judging & Demos',
-        locations: ['Schiciano Lobby']
+        time: '2:00PM - 2:45PM',
+        name: 'First Round Judging',
+        locations: ['CIEMAS Lobby']
+      },
+      {
+        time: '2:45PM - 3:30PM',
+        name: 'Finalist Demos',
+        locations: ['CIEMAS Lobby']
+      },
+      {
+        time: '3:30PM - 4:00PM',
+        name: 'Final Judging',
+        locations: ['CIEMAS Lobby']
       },
       {
         time: '4:00PM',
-        name: 'HackDuke Ends'
+        name: 'Judging Ends'
       },
       {
         time: '4:30PM - 5:30PM',
@@ -144,7 +154,7 @@ export default [
       },
       {
         time: '6:00PM',
-        name: 'VTech Bus Leaves',
+        name: 'Buses Leaves',
         locations: ['Science Drive']
       }
     ]

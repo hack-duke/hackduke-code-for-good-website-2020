@@ -33,7 +33,7 @@ const rowItemPadding = css`
     padding: 10px 20px;
   }
   @media screen and (min-width: 900px) {
-    padding: 10px 30px;
+    padding: 10px 20px;
   }
 `;
 
@@ -50,7 +50,7 @@ const EventTime = styled('div')`
 
   flex-grow: 0;
   flex-shrink: 0;
-  text-align: right;
+  text-align: left;
   font-weight: bold;
   ${rowItemPadding};
 `;
@@ -75,9 +75,9 @@ const EventDetailsText = styled('div')`
 
 const EventRow = styled('div')`
   display: flex;
+  font-size: 1.0333em;
   ${TitleFont};
   color: #2b2b2b;
-  font-size: 1.0333em;
 
   @media screen and (min-width: 480px) {
     font-size: 1.1em;
