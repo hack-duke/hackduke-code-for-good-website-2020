@@ -35,6 +35,8 @@ const AboutTitle = styled('img')`
 const BodyContainer = styled('div')`
   position: relative;
   width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
 `;
 
 const MapImg = styled('img')`
