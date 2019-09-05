@@ -22,7 +22,7 @@ export const SectionBase = props => css`
   position: relative;
 
   padding-left: 100%;
-  padding-right: 0px;
+  padding-right: 20px;
   padding-top: 40px;
 
   :first-child {
@@ -83,8 +83,8 @@ const FlexProps = css`
 
 export const SectionContent = styled('div')`
   ${props => props.columns && FlexProps};
-  width: 100%;
-  margin: 0 auto;
+  width = 100%
+  margin: 0 auto
   margin-top: 25px;
 `;
 
