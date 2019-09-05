@@ -13,16 +13,12 @@ import TrustBadgeImage from './mlh-trust-badge-2019.svg';
 import BottomPath from './bottom-path.svg';
 const FooterContainer = styled('div')`
   ${SectionBase({
-    heightPx: 900,
-    backgroundImage: `url(${BottomPath})`
+    heightPx: 900
   })};
 
+  background-image: url(${BottomPath});
+  background-size: cover;
   @media screen and (min-width: 1260px) {
-    flex-direction: row;
-    backgroundImage: 'url(${BottomPath})'
-    display: flex;
-    height: 100vh;
-
   }
 `;
 

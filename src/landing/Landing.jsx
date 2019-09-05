@@ -14,12 +14,13 @@ import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    extHeightPx: 4096,
-    backgroundImage: `url(${LandingBackground})`
+    extHeightPx: 4096
   })};
-  max-width: 100%
-  height: auto
-  background-position: 0 75%;
+  max-width: 100%;
+  height: auto;
+  background-size: contain;
+  background-image: url(${LandingBackground});
+  background-position: bottom center;
 `;
 
 // @media screen and (min-width: 1260px) {
@@ -52,7 +53,8 @@ const LandingContent = styled('div')`
 
 const Logo = styled('img')`
   width: 100%;
-  margin-bottom: 1.5em;
+  margin: 0 auto;
+  margin-bottom: 5em;
   display: block;
   @media screen and (min-width: 480px) {
     max-width: 1000px;
