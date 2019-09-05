@@ -7,7 +7,8 @@ import {
   SectionTextContent,
   SectionLeftColumn,
   SectionRightColumn,
-  PrimaryFont
+  PrimaryFont,
+  RightContentPadding
 } from '../common-styles';
 import SectionTitle from '../SectionTitle';
 
