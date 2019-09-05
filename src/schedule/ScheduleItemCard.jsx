@@ -50,7 +50,6 @@ const EventTime = styled('div')`
   flex-grow: 0;
   flex-shrink: 0;
   text-align: left;
-  text-color: white;
   font-weight: bold;
   ${rowItemPadding};
 `;
