@@ -60,7 +60,11 @@ export const LeftContentPadding = css`
 
 export const RightContentPadding = css`
   @media screen and (min-width: 640px) {
+<<<<<<< HEAD
     text-align: right;
+=======
+    padding-left: 600px;
+>>>>>>> 05cf9fb5d020609ee9be29e59a4d87f3cdc08b66
   }
 `;
 
