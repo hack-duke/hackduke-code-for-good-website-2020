@@ -51,6 +51,7 @@ const LogoWrapper = styled('a')`
   align-items: center;
   padding: 10px;
   padding-top: 0;
+  justify-content: center;
 `;
 
 const LogoImage = styled('img')`

@@ -14,24 +14,38 @@ import SectionTitle from '../SectionTitle';
 import SponsorsLine from './sponsors-line.svg';
 import SponsorLogos from './SponsorLogos';
 import TitleBox from './titlebox.svg';
+import LeftStarsSVG from './left-stars.svg';
+import RightStarsSVG from './right-stars.svg';
 
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 800
   })};
   padding-bottom: 90px;
+  margin: 0 auto;
 `;
-const Title = styled('div')`
+
+const SponsorTitle = styled('div')`
   width: 1000;
-  text-aligh: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 90px;
+`;
+
+const TitleImg = styled('img')`
+  @media screen and (max-width: 1260px) {
+    display: none;
   }
 `;
 
 export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <Title>
+    <SponsorTitle>
+      <TitleImg src={LeftStarsSVG} />
       <img src={TitleBox} />
-    </Title>
+      <TitleImg src={RightStarsSVG} />
+    </SponsorTitle>
 
     <SponsorLogos />
   </Container>
