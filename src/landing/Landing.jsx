@@ -21,6 +21,7 @@ const Container = styled('div')`
   background-size: contain;
   background-image: url(${LandingBackground});
   background-position: bottom center;
+  position: relative;
   @media screen and (max-width: 1000px) {
     background-image: None;
     max-width: 1000px;
@@ -45,7 +46,6 @@ const BackgroundWrapper = styled('div')`
 `;
 const LandingContent = styled('div')`
   ${SecondaryText};
-  position: relative;
   font-size: 1.5em;
   margin: auto 0;
   width: 100%;
@@ -65,6 +65,10 @@ const Logo = styled('img')`
   @media screen and (min-width: 480px) {
     max-width: 1000px;
   }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 0;
+  }
 `;
 const Date = styled('div')`
   padding-left: 1000px
@@ -81,16 +85,17 @@ const TopMountains = styled('img')`
   }
 `;
 const ButtonWrapper = styled('div')`
-  width: 100%;
   position: absolute;
-  bottom: 8em;
-  right: 0;
-  margin-bottom: 1.5em;
+  bottom: 30%;
   display: block;
+  right: 22%;
 
-  @media screen and (min-width: 480px) {
-    max-width: 500px;
-    margin-right: 5%;
+  @media screen and (max-width: 1000px) {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
   }
 `;
 export default ({ id }) => (
