@@ -13,6 +13,7 @@ export default styled('a')`
   text-transform: uppercase;
   /* Todo convert to em */
   font-size: 16px;
+  margin-top: 20px;
   line-height: 20px;
   font-weight: bold;
   min-width: 180px;

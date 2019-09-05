@@ -5,24 +5,38 @@ import Home from './home-bg.svg';
 import HomeMobileTop from './home-bg-mobile-top.svg';
 import HomeMobileBottom from './home-bg-mobile-bottom.svg';
 import LogoImage from './hackduke-logo.svg';
-import TopMountains from './top-mountains.svg';
+import TopMountainsImage from './top-mountains.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
 import { PURPLE_PRESSABLE } from '../materials';
+import LandingBackground from './landing-background.svg';
 import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 900
+    extHeightPx: 4096,
+    backgroundImage: `url(${LandingBackground})`
   })};
-  display: flex;
-  height: 100vh;
-  @media screen and (min-width: 640px) {
-    display: block;
-    height: auto;
-  }
+  max-width: 100%
+  height: auto
+  background-position: 0 75%;
 `;
 
+// @media screen and (min-width: 1260px) {
+//   flex-direction: row;
+// }
+
+const BackgroundWrapper = styled('div')`
+  ${SectionBase};
+  display: flex;
+  height: 100vh;
+
+  @media screen and (min-width: 640px) {
+    margin: 0;
+    padding-top: 122px;
+    padding-bottom: 0;
+  }
+`;
 const LandingContent = styled('div')`
   ${SecondaryText};
   font-size: 1.5em;
@@ -50,12 +64,29 @@ const Date = styled('div')`
   padding-bottom: 3em;
   }
 `;
+const TopMountains = styled('img')`
+  width: 10%;
+  margin-bottom: 1.5em;
+  display: block;
+  @media screen and (min-width: 480px) {
+    max-width: 500px;
+  }
+`;
+const ButtonWrapper = styled('div')`
+  width: 100%;
+  margin-bottom: 1.5em;
+  display: block;
 
+  @media screen and (min-width: 480px) {
+    max-width: 1000px;
+    margin-right: 5%;
+  }
+`;
 export default ({ id }) => (
   <Container id={id}>
     <LandingContent>
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
-      <div>
+      <ButtonWrapper>
         <Date>
           <div>November 2-3 2019|Durham,</div>
           <div>NC Come Code for Good with us!</div>
@@ -66,7 +97,7 @@ export default ({ id }) => (
         >
           Register
         </Button>
-      </div>
+      </ButtonWrapper>
     </LandingContent>
   </Container>
 );

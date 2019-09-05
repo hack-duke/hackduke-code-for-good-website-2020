@@ -32,11 +32,7 @@ const rowItemPadding = css`
     padding: 3px 20px;
   }
   @media screen and (min-width: 900px) {
-<<<<<<< HEAD
     padding: 10px 20px;
-=======
-    padding: 5px 30px;
->>>>>>> 05cf9fb5d020609ee9be29e59a4d87f3cdc08b66
   }
 `;
 
@@ -53,11 +49,8 @@ const EventTime = styled('div')`
 
   flex-grow: 0;
   flex-shrink: 0;
-  <<<<<<<HEAD
   text-align: left;
-  =======text-color: white;
-  text-align: right;
-  >>>>>>>05cf9fb5d020609ee9be29e59a4d87f3cdc08b66
+  text-color: white;
   font-weight: bold;
   ${rowItemPadding};
 `;
