@@ -133,7 +133,7 @@ class About extends Component {
       <Container id={id}>
         <BodyContainer>
           <AboutTitle src={aboutTitleImg} />
-          <MapImg src={mapImg} />
+          <MapImg src={mapImg} preserveAspectRatio="none" />
           <LeftArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
           >

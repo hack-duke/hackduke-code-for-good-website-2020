@@ -23,6 +23,17 @@ export const SecondaryText = css`
     background-position: left top, left ${props.heightPx - 1}px;
 */
 
+/*
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: ${props.mobileBackgroundImage || 'none'};
+*/
+
+/*
+    background-position: center top, center ${props.heightPx - 1}px;
+
+*/
+
 export const SectionBase = props => css`
   max-width: ${MAX_WIDTH};
   margin: auto;
@@ -31,10 +42,6 @@ export const SectionBase = props => css`
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 40px;
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: ${props.mobileBackgroundImage || 'none'};
 
   @media screen and (min-width: 640px) {
     min-height: ${props.heightPx}px;
@@ -45,7 +52,6 @@ export const SectionBase = props => css`
   }
 
   @media screen and (min-width: ${MAX_WIDTH}) {
-    background-position: center top, center ${props.heightPx - 1}px;
   }
 `;
 
