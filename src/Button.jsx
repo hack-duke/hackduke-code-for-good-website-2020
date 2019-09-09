@@ -8,11 +8,12 @@ export default styled('a')`
   color: white;
   display: inline-block;
   margin-top: 8px;
-  margin-left: 800px;
+  margin-right: 5%;
   text-decoration: none;
   text-transform: uppercase;
   /* Todo convert to em */
   font-size: 16px;
+  margin-top: 20px;
   line-height: 20px;
   font-weight: bold;
   min-width: 180px;
