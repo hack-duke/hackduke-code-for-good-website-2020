@@ -48,6 +48,7 @@ const LandingContent = styled('div')`
   ${SecondaryText};
   font-size: 1.5em;
   margin: auto 0;
+  color: #524f49;
   width: 100%;
   padding-bottom: 40px;
   @media screen and (max-width: 640px) {
@@ -73,7 +74,7 @@ const Logo = styled('img')`
 const Date = styled('div')`
   padding-left: 1000px
   margin-right: 100px
-  padding-bottom: 3em;
+  padding-bottom: 3em
   }
 `;
 const TopMountains = styled('img')`
@@ -104,12 +105,15 @@ export default ({ id }) => (
       <Logo alt="HackDuke: Code for Good" src={LogoImage} />
       <ButtonWrapper>
         <Date>
-          <div>November 2-3 2019|Durham,</div>
-          <div>NC Come Code for Good with us!</div>
+          <div>November 2-3 2019 | Durham, NC</div>
+          <div>
+            Come <b>Code for Good</b> with us!
+          </div>
         </Date>
         <Button
           material={PURPLE_PRESSABLE}
-          href="https://hackduke-2018.devpost.com/submissions"
+          href="https://hackduke.typeform.com/to/i83hAq"
+          target="_blank"
         >
           Register
         </Button>
