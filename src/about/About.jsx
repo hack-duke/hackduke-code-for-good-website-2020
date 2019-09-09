@@ -12,6 +12,8 @@ import aboutSlide1 from './about-1.svg';
 import aboutSlide2 from './about-2.svg';
 import aboutSlide3 from './about-3.svg';
 
+import newMap from './map.png';
+
 import leftArrow from './left-arrow.svg';
 import rightArrow from './right-arrow.svg';
 
@@ -44,10 +46,17 @@ const BodyContainer = styled('div')`
 `;
 
 const MapImg = styled('img')`
-  object-fit: contain;
   width: 100%;
-  transform: scaleY(1.1);
   transform-origin: top;
+  height: 750px;
+
+  @media screen and (max-width: 875px) {
+    height: 500px;
+  }
+
+  @media screen and (max-width: 550px) {
+    height: 500px;
+  }
 `;
 
 const ArrowButton = styled('div')`
@@ -94,12 +103,17 @@ const SlideContainer = styled('div')`
 
 const SliderButtonContainer = styled('div')`
   position: absolute;
-  bottom: 0px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   width: 125px;
   justify-content: space-between;
+
+  @media screen and (max-width: 550px) {
+    bottom: 50px;
+    width: 100px;
+  }
 `;
 
 const SliderButton = styled('div')`
@@ -144,7 +158,7 @@ class About extends Component {
       <Container id={id}>
         <BodyContainer>
           <AboutTitle src={aboutTitleImg} />
-          <MapImg src={mapImg} />
+          <MapImg src={newMap} />
           <LeftArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
           >

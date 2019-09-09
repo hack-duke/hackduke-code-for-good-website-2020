@@ -26,6 +26,10 @@ const Container = styled('div')`
 const ImgContainer = styled('div')`
   width: 100%;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 875px) {
+    display: none;
+  }
 `;
 
 const SlideImg = styled('img')`
@@ -44,4 +48,8 @@ const TextContainer = styled('div')`
   text-align: center;
   line-height: 20pt;
   font-family: 'Open Sans', sans-serif;
+
+  @media screen and (max-width: 550px) {
+    line-height: 15pt;
+  }
 `;
