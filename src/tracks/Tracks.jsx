@@ -23,7 +23,21 @@ import EducationSign from './icons/education-sign.svg';
 import EnergySign from './icons/energy-sign.svg';
 import HealthSign from './icons/health-sign.svg';
 
+import InequalityBox from './icons/inequality-box.svg';
+import EducationBox from './icons/education-box.svg';
+import EnergyBox from './icons/energy-box.svg';
+import HealthBox from './icons/health-box.svg';
+
+import CloseIcon from './icons/close-icon.svg';
+
 import WoodenPost from './icons/wooden-post.svg';
+
+import {
+  healthText,
+  educationText,
+  inequalityText,
+  energyText
+} from './Text.jsx';
 
 const Container = styled('div')`
   ${SectionBase({
@@ -72,13 +86,33 @@ const TrackSign = styled('div')`
   }
 `;
 
-const signStyle = {};
+const closeIcon = {};
+
 const TracksTitle = styled('div')`
   width: 1000;
   text-align: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+`;
+
+const TrackBox = styled('div')`
+  display: flex;
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  margin: 5%;
+  width: 25%;
+  min-width: 20%;
+`;
+
+const TrackContent = styled('div')`
+  padding: 8%;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  position: absolute;
+  color: white;
 `;
 
 export default ({ id, sectionColor }) => (
@@ -99,15 +133,33 @@ export default ({ id, sectionColor }) => (
       <TrackSign style={{ zIndex: 4 }}>
         <img src={HealthSign} />
       </TrackSign>
+      <TrackBox style={{ right: 0, top: '5%' }}>
+        <img src={HealthBox} />
+        <TrackContent> {healthText} </TrackContent>
+      </TrackBox>
+
       <TrackSign style={{ zIndex: 3 }}>
         <img src={EducationSign} />
       </TrackSign>
+      <TrackBox style={{ left: 0, top: '20%' }}>
+        <img src={EducationBox} />
+        <TrackContent> {educationText} </TrackContent>
+      </TrackBox>
       <TrackSign style={{ zIndex: 2 }}>
         <img src={InequalitySign} />
       </TrackSign>
+      <TrackBox style={{ left: 0, top: '60%' }}>
+        <img src={InequalityBox} />
+        <TrackContent> {inequalityText} </TrackContent>
+      </TrackBox>
+
       <TrackSign style={{ zIndex: 1 }}>
         <img src={EnergySign} />
       </TrackSign>
+      <TrackBox style={{ right: 0, top: '70%' }}>
+        <img src={EnergyBox} />
+        <TrackContent> {energyText} </TrackContent>
+      </TrackBox>
     </SectionContent>
   </Container>
 );
