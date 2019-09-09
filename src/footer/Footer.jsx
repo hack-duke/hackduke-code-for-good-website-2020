@@ -15,11 +15,16 @@ const FooterContainer = styled('div')`
   ${SectionBase({
     heightPx: 900
   })};
-
-  background-image: url(${BottomPath});
   background-size: cover;
+  background-image: url(${BottomPath});
+
   @media screen and (min-width: 1260px) {
   }
+
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 `;
 
 const MLHBadge = styled('a')`
@@ -57,8 +62,8 @@ const CenterContent = styled('div')`
 
 const SocialLinks = styled('div')`
   margin: auto;
-  padding-bottom: 12px;
   width: 300px;
+  padding-bottom: 12px;
 `;
 
 const footerLink = css`
@@ -81,39 +86,49 @@ const year = new Date().getFullYear();
 
 export default () => (
   <FooterContainer>
-    <CenterContainer>
-      <CenterContent>
-        <SocialLinks>
+    <div
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        paddingBottom: '100px'
+      }}
+    >
+      <CenterContainer>
+        <CenterContent>
+          <SocialLinks>
+            <a
+              aria-label="Contact Us"
+              href="mailto:hackers@hackduke.org"
+              className={cx(iconStyle, 'icon-mail-squared')}
+            />
+            <a
+              aria-label="Facebook"
+              href="https://www.facebook.com/hackduke"
+              target="_blank"
+              rel="noopener"
+              className={cx(iconStyle, 'icon-facebook-squared')}
+            />
+            <a
+              aria-label="Twitter"
+              href="https://twitter.com/hackduke"
+              target="_blank"
+              rel="noopener"
+              className={cx(iconStyle, 'icon-twitter-squared')}
+            />
+          </SocialLinks>
+          &copy; HackDuke {year} &mdash;{' '}
           <a
-            aria-label="Contact Us"
-            href="mailto:hackers@hackduke.org"
-            className={cx(iconStyle, 'icon-mail-squared')}
-          />
-          <a
-            aria-label="Facebook"
-            href="https://www.facebook.com/hackduke"
+            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
             target="_blank"
             rel="noopener"
-            className={cx(iconStyle, 'icon-facebook-squared')}
-          />
-          <a
-            aria-label="Twitter"
-            href="https://twitter.com/hackduke"
-            target="_blank"
-            rel="noopener"
-            className={cx(iconStyle, 'icon-twitter-squared')}
-          />
-        </SocialLinks>
-        &copy; HackDuke {year} &mdash;{' '}
-        <a
-          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-          target="_blank"
-          rel="noopener"
-          css={footerLink}
-        >
-          Code of Conduct
-        </a>
-      </CenterContent>
-    </CenterContainer>
+            css={footerLink}
+          >
+            Code of Conduct
+          </a>
+        </CenterContent>
+      </CenterContainer>
+    </div>
   </FooterContainer>
 );
