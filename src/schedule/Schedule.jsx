@@ -155,16 +155,7 @@ export default class Schedule extends React.Component {
   render() {
     const { id, sectionColor } = this.props;
 
-    const renderEvents = this.state.selectedDayIndex
-      ? scheduleData[0]
-      : scheduleData[1];
-    var whichDay = this.state.selectedDayIndex ? 'Sat, 11/2' : 'Sun, 11/3';
-    var dayArrow = this.state.selectedDayIndex ? (
-      <img src={Forward} />
-    ) : (
-      <img src={Backward} />
-    );
-    var switcher = this.state.selectedDayIndex ? 'see Sunday' : 'see Saturday';
+    const renderEvents = scheduleData[this.state.selectedDayIndex];
 
     return (
       <Container id={id}>
@@ -178,12 +169,6 @@ export default class Schedule extends React.Component {
             <RiverImg src={ScheduleBackground} />
 
             <OneDay>
-              {/* <DayTitle
-                onClick={this.toggleButton}
-                style={{ cursor: 'pointer' }}
-              >
-                {whichDay}
-              </DayTitle> */}
               <DayOptionContainer>
                 <DayOption
                   chosen={this.state.selectedDayIndex == 0}
