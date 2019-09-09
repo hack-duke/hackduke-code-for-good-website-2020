@@ -9,21 +9,25 @@ import {
 import SectionTitle from '../SectionTitle';
 
 import Fire from './fire.svg';
+import Heading from './campfire-heading.svg';
 
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
-    extHeightPx: 4096,
-    backgroundImage: 'url(${Fire})'
+    extHeightPx: 4096
   })};
   @media screen and (min-width: 1260px) {
     flex-direction: row;
-
-    background-image: url(${Fire});
   }
 `;
+
+const CampfireText = styled('div')``;
+
+const Campfire = <img src={Fire} alt="campfire" />;
+
 export default ({ id, sectionColor }) => (
-  <Container id={id}>
+  <Container id={id} style={{ position: 'relative' }}>
     <SectionTitle sectionColor={sectionColor}>Campfire Stories</SectionTitle>
+    {Campfire}
   </Container>
 );
