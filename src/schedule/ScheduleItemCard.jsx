@@ -12,7 +12,6 @@ const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
   float: right;
-  border-top: 6px solid ${props => props.color};
 
   background-size: ${dateColSmWidth};
 
@@ -31,8 +30,9 @@ const rowItemPadding = css`
   @media screen and (min-width: 480px) {
     padding: 3px 20px;
   }
+
   @media screen and (min-width: 900px) {
-    padding: 10px 20px;
+    padding: 3px 20px;
   }
 `;
 

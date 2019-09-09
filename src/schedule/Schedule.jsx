@@ -18,18 +18,16 @@ import ScheduleItemCard from './ScheduleItemCard';
 
 import ScheduleTitle from './schedule-title.svg';
 import ScheduleBackground from './schedule-bg-images.svg';
+import Forward from './forward-arrow.svg';
+import Backward from './back-arrow.svg';
 
 import scheduleData from './schedule-data';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 1600,
+    heightPx: 1500,
     extHeightPx: 4096
-  })}
-
-  background-image: url(${ScheduleBackground});
-  background-position: 50% 10%;
-
+  })} position: relative;
 `;
 
 const Day = styled('h3')`
@@ -70,8 +68,8 @@ const formatDate = date =>
 const ScheduleContainer = styled('div')`
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-left: 25%;
+  width: 70%;
+  align-items: flex-start;
 `;
 
 const OneDay = styled('div')`
@@ -87,6 +85,15 @@ const DayTitle = styled('div')`
   font-weight: bold;
 `;
 
+const RiverImg = styled('img')`
+  width: 40%;
+  height: 1000px;
+  position: absolute;
+  left: -150px;
+  top: 500px;
+  transform: translateY(-30%);
+`;
+
 var bgStyle = {
   marginLeft: -250
   //position: absolute
@@ -95,7 +102,7 @@ var bgStyle = {
 
 export default class Schedule extends React.Component {
   state = {
-    selectedDayIndex: 0
+    selectedDayIndex: true
   };
 
   componentDidMount() {
@@ -110,32 +117,53 @@ export default class Schedule extends React.Component {
     }
   }
 
+  toggleButton = () => {
+    this.setState((prevState, prevProps) => ({
+      selectedDayIndex: !prevState.selectedDayIndex
+    }));
+  };
+
   render() {
     const { id, sectionColor } = this.props;
-    const { selectedDayIndex } = this.state;
+
+    const renderEvents = this.state.selectedDayIndex
+      ? scheduleData[0]
+      : scheduleData[1];
+    var whichDay = this.state.selectedDayIndex
+      ? 'Saturday, 11/2'
+      : 'Sunday, 11/3';
+    var dayArrow = this.state.selectedDayIndex ? (
+      <img src={Forward} />
+    ) : (
+      <img src={Backward} />
+    );
+    var switcher = this.state.selectedDayIndex ? 'see Sunday' : 'see Saturday';
 
     return (
       <Container id={id}>
-        <ScheduleContainer>
-          <div style={{ display: 'inline-block' }}>
-            <img src={ScheduleTitle} />
-          </div>
-          <OneDay>
-            <DayTitle>Saturday, November 2nd</DayTitle>
-            <ScheduleItemCard
-              sectionColor={sectionColor}
-              events={scheduleData[0].events}
-            />
-          </OneDay>
+        <div
+          style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}
+        >
+          <ScheduleContainer>
+            <div style={{ display: 'inline-block' }}>
+              <img src={ScheduleTitle} />
+            </div>
+            <RiverImg src={ScheduleBackground} />
 
-          <OneDay>
-            <DayTitle>Sunday, November 3rd</DayTitle>
-            <ScheduleItemCard
-              sectionColor={sectionColor}
-              events={scheduleData[1].events}
-            />
-          </OneDay>
-        </ScheduleContainer>
+            <OneDay>
+              <DayTitle
+                onClick={this.toggleButton}
+                style={{ cursor: 'pointer' }}
+              >
+                {whichDay}
+              </DayTitle>
+              <ScheduleItemCard
+                sectionColor={sectionColor}
+                events={renderEvents.events}
+              />
+            </OneDay>
+          </ScheduleContainer>
+        </div>
       </Container>
     );
   }
