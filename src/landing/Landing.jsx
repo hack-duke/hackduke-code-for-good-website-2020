@@ -14,12 +14,19 @@ import Button from '../Button';
 
 const Container = styled('div')`
   ${SectionBase({
-    extHeightPx: 4096,
-    backgroundImage: `url(${LandingBackground})`
+    extHeightPx: 4096
   })};
-  max-width: 100%
-  height: auto
-  background-position: 0 75%;
+  max-width: 100%;
+  height: auto;
+  background-size: contain;
+  background-image: url(${LandingBackground});
+  background-position: bottom center;
+  position: relative;
+  @media screen and (max-width: 1000px) {
+    background-image: None;
+    max-width: 1000px;
+    margin-right: 5%;
+  }
 `;
 
 // @media screen and (min-width: 1260px) {
@@ -43,7 +50,7 @@ const LandingContent = styled('div')`
   margin: auto 0;
   width: 100%;
   padding-bottom: 40px;
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 640px) {
     margin: 0;
     padding-top: 122px;
     padding-bottom: 0;
@@ -52,10 +59,15 @@ const LandingContent = styled('div')`
 
 const Logo = styled('img')`
   width: 100%;
-  margin-bottom: 1.5em;
+  margin: 0 auto;
+  padding-bottom: 12em;
   display: block;
   @media screen and (min-width: 480px) {
     max-width: 1000px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 0;
   }
 `;
 const Date = styled('div')`
@@ -73,13 +85,17 @@ const TopMountains = styled('img')`
   }
 `;
 const ButtonWrapper = styled('div')`
-  width: 100%;
-  margin-bottom: 1.5em;
+  position: absolute;
+  bottom: 30%;
   display: block;
+  right: 22%;
 
-  @media screen and (min-width: 480px) {
-    max-width: 1000px;
-    margin-right: 5%;
+  @media screen and (max-width: 1000px) {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
   }
 `;
 export default ({ id }) => (

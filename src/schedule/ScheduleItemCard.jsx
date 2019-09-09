@@ -12,7 +12,9 @@ const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
   float: right;
-
+  border-top: 6px solid ${props => props.color};
+  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
+  ${ShadowItem};
   background-size: ${dateColSmWidth};
 
   @media screen and (min-width: 480px) {
@@ -28,7 +30,7 @@ const rowItemPadding = css`
   padding: 10px 15px;
 
   @media screen and (min-width: 480px) {
-    padding: 3px 20px;
+    padding: 10px 20px;
   }
 
   @media screen and (min-width: 900px) {
@@ -68,7 +70,7 @@ const EventDetailsText = styled('div')`
       font-weight: bold;
       margin-bottom: 0.33em;
       font-size: 1em;
-      color: white;
+      color: ${props.primaryColor};
     `};
 `;
 
@@ -97,9 +99,9 @@ export default ({ sectionColor, events }) => (
   <CardBase color={sectionColor}>
     {events.map(({ time, name, locations }) => (
       <EventRow key={time + name}>
-        <EventTime primaryColor="white">{time}</EventTime>
+        <EventTime>{time}</EventTime>
         <EventDetails>
-          <EventDetailsText primary={true} primaryColor="white">
+          <EventDetailsText primary={true} primaryColor={sectionColor}>
             {name}
           </EventDetailsText>
           {locations &&
