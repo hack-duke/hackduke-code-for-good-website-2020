@@ -30,6 +30,7 @@ const AboutTitle = styled('img')`
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 `;
 
 const BodyContainer = styled('div')`
@@ -42,6 +43,8 @@ const BodyContainer = styled('div')`
 const MapImg = styled('img')`
   object-fit: contain;
   width: 100%;
+  transform: scaleY(1.1);
+  transform-origin: top;
 `;
 
 const ArrowButton = styled('div')`
@@ -84,7 +87,7 @@ const SlideContainer = styled('div')`
 
 const SliderButtonContainer = styled('div')`
   position: absolute;
-  bottom: 70px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -125,6 +128,7 @@ class About extends Component {
           text={slide.text}
           idx={i}
           currIdx={this.state.slideIdx}
+          title={slide.title}
         />
       );
     });
@@ -133,7 +137,7 @@ class About extends Component {
       <Container id={id}>
         <BodyContainer>
           <AboutTitle src={aboutTitleImg} />
-          <MapImg src={mapImg} preserveAspectRatio="none" />
+          <MapImg src={mapImg} />
           <LeftArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
           >
