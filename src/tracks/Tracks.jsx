@@ -16,6 +16,7 @@ import { BLUE, RED, PURPLE, YELLOW } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import TrackCard from './TrackCard';
+import TracksTitleSVG from './TracksTitle.svg';
 
 import InequalitySign from './icons/inequality-sign.svg';
 import EducationSign from './icons/education-sign.svg';
@@ -72,10 +73,19 @@ const TrackSign = styled('div')`
 `;
 
 const signStyle = {};
+const TracksTitle = styled('div')`
+  width: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+`;
 
 export default ({ id, sectionColor }) => (
   <Container id={id}>
-    <SectionTitle sectionColor={sectionColor}>Tracks</SectionTitle>
+    <TracksTitle>
+      <img src={TracksTitleSVG} />
+    </TracksTitle>
     <SectionContent style={{ margin: '0 auto' }}>
       <div
         style={{

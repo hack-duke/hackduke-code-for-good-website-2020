@@ -38,12 +38,12 @@ const sections = [
     sectionColor: '#2B9B99',
     Component: Schedule
   },
-  {
-    title: 'Campfire',
-    id: 'Campfire',
-    sectionColor: '#A94A64',
-    Component: Campfire
-  },
+  // {
+  //   title: 'Campfire',
+  //   id: 'Campfire',
+  //   sectionColor: '#A94A64',
+  //   Component: Campfire
+  // },
   {
     title: 'FAQs',
     id: 'faqs',
