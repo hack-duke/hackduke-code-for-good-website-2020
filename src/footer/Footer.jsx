@@ -2,17 +2,24 @@ import React from 'react';
 import styled from 'react-emotion';
 import { cx, css } from 'emotion';
 
-import { TitleFont, HideOnMobile, MAX_WIDTH } from '../common-styles';
+import {
+  SectionBase,
+  TitleFont,
+  HideOnMobile,
+  MAX_WIDTH
+} from '../common-styles';
 
 import TrustBadgeImage from './mlh-trust-badge-2019.svg';
-
+import BottomPath from './bottom-path.svg';
 const FooterContainer = styled('div')`
-  display: block;
-  background-color: #3a3d6d;
-  display: flex;
-  flex-direction: row;
-  height: 225px;
-  padding: 0;
+  ${SectionBase({
+    heightPx: 900
+  })};
+
+  background-image: url(${BottomPath});
+  background-size: cover;
+  @media screen and (min-width: 1260px) {
+  }
 `;
 
 const MLHBadge = styled('a')`
