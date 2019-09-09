@@ -27,7 +27,7 @@ export const SectionBase = props => css`
   max-width: ${MAX_WIDTH};
 
   position: relative;
-
+  margin: auto;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 40px;
