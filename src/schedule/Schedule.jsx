@@ -69,10 +69,12 @@ const ScheduleContainer = styled('div')`
   flex-direction: column;
   width: 70%;
   align-items: flex-start;
+  margin-right: 50px;
 `;
 
 const OneDay = styled('div')`
   margin-top: 40px;
+  width: 100%;
 `;
 
 const DayTitle = styled('div')`
@@ -99,9 +101,31 @@ var bgStyle = {
 };
 //NEW*****************************************
 
+const DayOptionContainer = styled('div')`
+  display: flex;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+  overflow: hidden;
+`;
+
+const DayOption = styled('div')`
+  flex-grow: 1;
+  text-align: center;
+  padding: 1rem 0rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: ${props => (props.chosen ? 'black' : '#fff')};
+  background-color: ${props => (props.chosen ? '#fff' : 'transparent')};
+  font-weight: bold;
+  transition: 0.3s ease;
+  cursor: pointer;
+`;
+
 export default class Schedule extends React.Component {
   state = {
-    selectedDayIndex: true
+    selectedDayIndex: 0
   };
 
   componentDidMount() {
@@ -122,15 +146,19 @@ export default class Schedule extends React.Component {
     }));
   };
 
+  toggleChosen = selectedDayIndex => {
+    this.setState({
+      selectedDayIndex
+    });
+  };
+
   render() {
     const { id, sectionColor } = this.props;
 
     const renderEvents = this.state.selectedDayIndex
       ? scheduleData[0]
       : scheduleData[1];
-    var whichDay = this.state.selectedDayIndex
-      ? 'Saturday, 11/2'
-      : 'Sunday, 11/3';
+    var whichDay = this.state.selectedDayIndex ? 'Sat, 11/2' : 'Sun, 11/3';
     var dayArrow = this.state.selectedDayIndex ? (
       <img src={Forward} />
     ) : (
@@ -150,12 +178,26 @@ export default class Schedule extends React.Component {
             <RiverImg src={ScheduleBackground} />
 
             <OneDay>
-              <DayTitle
+              {/* <DayTitle
                 onClick={this.toggleButton}
                 style={{ cursor: 'pointer' }}
               >
                 {whichDay}
-              </DayTitle>
+              </DayTitle> */}
+              <DayOptionContainer>
+                <DayOption
+                  chosen={this.state.selectedDayIndex == 0}
+                  onClick={() => this.toggleChosen(0)}
+                >
+                  Sat, 11/2
+                </DayOption>
+                <DayOption
+                  chosen={this.state.selectedDayIndex == 1}
+                  onClick={() => this.toggleChosen(1)}
+                >
+                  Sun, 11/3
+                </DayOption>
+              </DayOptionContainer>
               <ScheduleItemCard
                 sectionColor={sectionColor}
                 events={renderEvents.events}
