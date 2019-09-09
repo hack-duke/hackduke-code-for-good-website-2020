@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import styled from 'react-emotion';
 
-export const MAX_WIDTH = '1400px';
+export const MAX_WIDTH = '2000px';
 
 export const PrimaryFont = css`
   font-family: 'Cabin', sans-serif;
@@ -23,35 +23,29 @@ export const SecondaryText = css`
     background-position: left top, left ${props.heightPx - 1}px;
 */
 
-/*
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: ${props.mobileBackgroundImage || 'none'};
-*/
-
-/*
-    background-position: center top, center ${props.heightPx - 1}px;
-
-*/
-
 export const SectionBase = props => css`
   max-width: ${MAX_WIDTH};
-  margin: auto;
+
   position: relative;
-  height: auto;
 
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 40px;
-  min-height: ${props.heightPx}px;
+
+  background-repeat: no-repeat;
+
+  background-image: ${props.mobileBackgroundImage || 'none'};
 
   @media screen and (min-width: 640px) {
+    min-height: ${props.heightPx}px;
+
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 87.5px;
   }
 
   @media screen and (min-width: ${MAX_WIDTH}) {
+    background-position: center top, center ${props.heightPx - 1}px;
   }
 `;
 

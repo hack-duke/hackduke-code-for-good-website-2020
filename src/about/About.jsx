@@ -12,6 +12,9 @@ import aboutSlide1 from './about-1.svg';
 import aboutSlide2 from './about-2.svg';
 import aboutSlide3 from './about-3.svg';
 
+import leftArrow from './left-arrow.svg';
+import rightArrow from './right-arrow.svg';
+
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 600,
@@ -74,6 +77,10 @@ const LeftArrowButton = styled(ArrowButton)`
 const RightArrowButton = styled(ArrowButton)`
   right: 0;
   transform: translate(50%, -50%);
+`;
+
+const ArrowIcon = styled('img')`
+  z-index: 2;
 `;
 
 const SlideContainer = styled('div')`
@@ -141,12 +148,12 @@ class About extends Component {
           <LeftArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx - 1)}
           >
-            <CenterContainer>&larr;</CenterContainer>
+            <ArrowIcon src={leftArrow} />
           </LeftArrowButton>
           <RightArrowButton
             onClick={() => this.changeToSlide(this.state.slideIdx + 1)}
           >
-            <CenterContainer>&rarr;</CenterContainer>
+            <ArrowIcon src={rightArrow} />
           </RightArrowButton>
 
           <SlideContainer>

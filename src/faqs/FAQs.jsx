@@ -75,6 +75,7 @@ const MountainTopRightImg = styled('img')`
   position: absolute;
   top: 21%;
   left: 83%;
+  overflow: hidden;
   @media screen and (max-width: 1260px) {
     display: none;
   }
@@ -83,7 +84,7 @@ const MountainBottomRightImg = styled('img')`
   position: absolute;
   top: 60%;
   left: 84%;
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: 1510px) {
     display: none;
   }
 `;
