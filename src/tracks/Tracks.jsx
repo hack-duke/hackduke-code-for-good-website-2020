@@ -86,7 +86,12 @@ const TrackSign = styled('div')`
   }
 `;
 
-const closeIcon = {};
+const CloseIconButton = styled('img')`
+  position: absolute;
+  z-index: 7;
+  margin: 5%;
+  width: 6%;
+`;
 
 const TracksTitle = styled('div')`
   width: 1000;
@@ -97,7 +102,6 @@ const TracksTitle = styled('div')`
 `;
 
 const TrackBox = styled('div')`
-  display: flex;
   z-index: 5;
   position: absolute;
   right: 0;
@@ -110,9 +114,10 @@ const TrackContent = styled('div')`
   padding: 8%;
   width: 100%;
   height: 100%;
-  z-index: 7;
+  z-index: 6;
   position: absolute;
   color: white;
+  margin-top: 5%;
 `;
 
 export default ({ id, sectionColor }) => (
@@ -134,6 +139,7 @@ export default ({ id, sectionColor }) => (
         <img src={HealthSign} />
       </TrackSign>
       <TrackBox style={{ right: 0, top: '5%' }}>
+        <CloseIconButton src={CloseIcon} style={{ right: '5%', top: '2%' }} />
         <img src={HealthBox} />
         <TrackContent> {healthText} </TrackContent>
       </TrackBox>
@@ -142,6 +148,8 @@ export default ({ id, sectionColor }) => (
         <img src={EducationSign} />
       </TrackSign>
       <TrackBox style={{ left: 0, top: '20%' }}>
+        <CloseIconButton src={CloseIcon} style={{ right: '7%', top: '1%' }} />
+
         <img src={EducationBox} />
         <TrackContent> {educationText} </TrackContent>
       </TrackBox>
@@ -149,6 +157,8 @@ export default ({ id, sectionColor }) => (
         <img src={InequalitySign} />
       </TrackSign>
       <TrackBox style={{ left: 0, top: '60%' }}>
+        <CloseIconButton src={CloseIcon} style={{ right: '5%', top: '2%' }} />
+
         <img src={InequalityBox} />
         <TrackContent> {inequalityText} </TrackContent>
       </TrackBox>
@@ -157,6 +167,8 @@ export default ({ id, sectionColor }) => (
         <img src={EnergySign} />
       </TrackSign>
       <TrackBox style={{ right: 0, top: '70%' }}>
+        <CloseIconButton src={CloseIcon} />
+
         <img src={EnergyBox} />
         <TrackContent> {energyText} </TrackContent>
       </TrackBox>
