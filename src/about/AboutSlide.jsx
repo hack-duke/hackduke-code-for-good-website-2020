@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-export default ({ img, text, currIdx, idx }) => {
+export default ({ img, text, title, currIdx, idx }) => {
   console.log(currIdx, idx);
 
   return (
@@ -9,6 +9,7 @@ export default ({ img, text, currIdx, idx }) => {
       <ImgContainer>
         <SlideImg src={img} />
       </ImgContainer>
+      <TextTitle>{title}</TextTitle>
       <TextContainer>{text}</TextContainer>
     </Container>
   );
@@ -25,6 +26,10 @@ const Container = styled('div')`
 const ImgContainer = styled('div')`
   width: 100%;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 875px) {
+    display: none;
+  }
 `;
 
 const SlideImg = styled('img')`
@@ -33,8 +38,18 @@ const SlideImg = styled('img')`
   margin: 0 auto;
 `;
 
+const TextTitle = styled('h2')`
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+`;
+
 const TextContainer = styled('div')`
   text-align: center;
   line-height: 20pt;
   font-family: 'Open Sans', sans-serif;
+
+  @media screen and (max-width: 550px) {
+    line-height: 15pt;
+  }
 `;
