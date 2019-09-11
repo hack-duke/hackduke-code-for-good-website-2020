@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import { css } from 'emotion';
 
 import { TitleFont } from '../common-styles';
+import './tracks-styles.css';
 
 import {
   SectionBase,
@@ -21,7 +22,9 @@ import TracksTitleSVG from './TracksTitle.svg';
 import InequalitySign from './icons/inequality-sign.svg';
 import EducationSign from './icons/education-sign.svg';
 import EnergySign from './icons/energy-sign.svg';
-import HealthSign from './icons/health-sign.svg';
+import healthsign from './icons/health-sign.svg';
+
+import HealthSign from './icons/HealthSign';
 
 import WoodenPost from './icons/wooden-post.svg';
 
@@ -67,9 +70,6 @@ const TrackSign = styled('div')`
   text-align: center;
   margin-top: -55pt;
   position: relative;
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 const signStyle = {};
@@ -96,9 +96,8 @@ export default ({ id, sectionColor }) => (
       >
         <img src={WoodenPost} />
       </div>
-      <TrackSign style={{ zIndex: 4 }}>
-        <img src={HealthSign} />
-      </TrackSign>
+      <HealthSign />
+
       <TrackSign style={{ zIndex: 3 }}>
         <img src={EducationSign} />
       </TrackSign>

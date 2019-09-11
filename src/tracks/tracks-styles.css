@@ -1,0 +1,4 @@
+.health-sign:hover {
+  fill: #da4567;
+  cursor: grabbing;
+}
