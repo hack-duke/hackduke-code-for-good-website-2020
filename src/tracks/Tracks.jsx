@@ -33,6 +33,7 @@ const Container = styled('div')`
     heightPx: 800
   })};
   position: relative;
+  margin-bottom: 150px;
 `;
 
 const TrackRow = styled('div')`

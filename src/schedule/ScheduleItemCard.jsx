@@ -12,10 +12,10 @@ const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
   float: right;
-  border-top: 6px solid ${props => props.color};
   background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
   ${ShadowItem};
   background-size: ${dateColSmWidth};
+  width: 100%;
 
   @media screen and (min-width: 480px) {
     background-size: ${dateColMedWidth};
