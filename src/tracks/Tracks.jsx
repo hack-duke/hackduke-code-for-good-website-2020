@@ -17,6 +17,7 @@ import { BLUE, RED, PURPLE, YELLOW } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import TrackCard from './TrackCard';
+import TrackBase from './TrackBase';
 import TracksTitleSVG from './TracksTitle.svg';
 
 import InequalitySign from './icons/inequality-sign.svg';
@@ -88,26 +89,11 @@ export default ({ id, sectionColor }) => (
       <img src={TracksTitleSVG} />
     </TracksTitle>
     <SectionContent style={{ margin: '0 auto' }}>
-      <div
-        style={{
-          position: 'absolute',
-          zIndex: 1,
-          left: '50%'
-        }}
-      >
-        <img src={WoodenPost} />
-      </div>
-      <HealthSign />
+      <TrackBase title="Education"> BLAH </TrackBase>
+      <TrackBase title="Health & Wellness"> BLAH </TrackBase>
 
-      <TrackSign style={{ zIndex: 3 }}>
-        <img src={EducationSign} />
-      </TrackSign>
-      <TrackSign style={{ zIndex: 2 }}>
-        <img src={InequalitySign} />
-      </TrackSign>
-      <TrackSign style={{ zIndex: 1 }}>
-        <img src={EnergySign} />
-      </TrackSign>
+      <TrackBase title="Energy & Environment"> BLAH </TrackBase>
+      <TrackBase title="Inequality"> BLAH </TrackBase>
     </SectionContent>
   </Container>
 );
