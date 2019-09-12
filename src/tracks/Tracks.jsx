@@ -17,6 +17,7 @@ import { BLUE, RED, PURPLE, YELLOW } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import TrackCard from './TrackCard';
+import TrackBase from './TrackBase';
 import TracksTitleSVG from './TracksTitle.svg';
 import ExpansionTrackSign from './TrackSign';
 
