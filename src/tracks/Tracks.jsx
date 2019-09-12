@@ -18,13 +18,7 @@ import SectionTitle from '../SectionTitle';
 
 import TrackCard from './TrackCard';
 import TracksTitleSVG from './TracksTitle.svg';
-
-import InequalitySign from './icons/inequality-sign.svg';
-import EducationSign from './icons/education-sign.svg';
-import EnergySign from './icons/energy-sign.svg';
-import healthsign from './icons/health-sign.svg';
-
-import HealthSign from './icons/HealthSign';
+import ExpansionTrackSign from './TrackSign';
 
 import WoodenPost from './icons/wooden-post.svg';
 
@@ -87,28 +81,36 @@ export default ({ id, sectionColor }) => (
     <TracksTitle>
       <img src={TracksTitleSVG} />
     </TracksTitle>
-    <SectionContent style={{ margin: '0 auto' }}>
+    <div style={{ margin: '0 auto', backgroundColor: '00FF00' }}>
       <div
         style={{
           position: 'absolute',
           zIndex: 1,
-          left: '50%'
+          left: '49%'
         }}
       >
         <img src={WoodenPost} />
       </div>
-      <HealthSign />
-
-      <TrackSign style={{ zIndex: 3 }}>
-        <img src={EducationSign} />
-      </TrackSign>
-      <TrackSign style={{ zIndex: 2 }}>
-        <img src={InequalitySign} />
-      </TrackSign>
-      <TrackSign style={{ zIndex: 1 }}>
-        <img src={EnergySign} />
-      </TrackSign>
-    </SectionContent>
+      <ExpansionTrackSign
+        title={'Education'}
+        details="This is bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
+      />
+      <br />
+      <ExpansionTrackSign
+        title={'Health'}
+        details="This is bullshit about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
+      />
+      <br />
+      <ExpansionTrackSign
+        title={'Innovation'}
+        details="This is innovation about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
+      />
+      <br />
+      <ExpansionTrackSign
+        title={'fghj'}
+        details="This is ldjfslkjfsdklfj sdfjsdklfj dsljfskld jfdkjfsld fjdsljfdsk  about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
+      />
+    </div>
   </Container>
 );
 

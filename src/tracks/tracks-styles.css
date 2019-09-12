@@ -1,4 +1,12 @@
-.health-sign:hover {
-  fill: #da4567;
-  cursor: grabbing;
+button.sign {
+  max-width: 800px;
+  max-height: 40px;
+  overflow-y: hidden;
+
+  /*Transition time is increased to accomodate the height */
+  transition: max-height 0.7s linear;
+}
+
+button.expanded {
+  max-height: 500px;
 }
