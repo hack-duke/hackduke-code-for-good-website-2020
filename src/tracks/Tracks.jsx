@@ -68,6 +68,12 @@ const TrackSign = styled('div')`
   position: relative;
 `;
 
+const PostContainer = styled('div')`
+  margin: 0 auto;
+  width: 35%;
+  position: relative;
+`;
+
 const signStyle = {};
 const TracksTitle = styled('div')`
   width: 1000;
@@ -77,40 +83,50 @@ const TracksTitle = styled('div')`
   margin-bottom: 50px;
 `;
 
+const woodenPost = (
+  <img
+    style={{
+      position: 'absolute',
+      zIndex: 1,
+      left: '49%',
+      marginTop: 15
+    }}
+    src={WoodenPost}
+  />
+);
+
 export default ({ id, sectionColor }) => (
   <Container id={id}>
     <TracksTitle>
       <img src={TracksTitleSVG} />
     </TracksTitle>
-    <div style={{ margin: '0 auto', backgroundColor: '00FF00' }}>
-      <div
+    <div
+      style={{
+        width: '100%',
+        backgroundColor: '#00F',
+        margin: 'auto'
+      }}
+    >
+      <PostContainer
         style={{
-          position: 'absolute',
-          zIndex: 1,
-          left: '49%'
+          float: 'left'
         }}
       >
-        <img src={WoodenPost} />
-      </div>
-      <ExpansionTrackSign
-        title={'Education'}
-        details="This is bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
-      />
-      <br />
-      <ExpansionTrackSign
-        title={'Health'}
-        details="This is bullshit about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
-      />
-      <br />
-      <ExpansionTrackSign
-        title={'Innovation'}
-        details="This is innovation about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
-      />
-      <br />
-      <ExpansionTrackSign
-        title={'fghj'}
-        details="This is ldjfslkjfsdklfj sdfjsdklfj dsljfskld jfdkjfsld fjdsljfdsk  about health balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh s bullshit about education balhhhh blahhhhhhhhhhh"
-      />
+        {woodenPost}
+        <TrackBase title="Health & Wellness" />
+        <br />
+        <TrackBase title="Education" />
+      </PostContainer>
+      <PostContainer
+        style={{
+          float: 'right'
+        }}
+      >
+        {woodenPost}
+        <TrackBase title="Inequality" />
+        <br />
+        <TrackBase title="Energy & Environment" />
+      </PostContainer>
     </div>
   </Container>
 );

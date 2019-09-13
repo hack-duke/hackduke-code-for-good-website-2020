@@ -12,10 +12,10 @@ const CardBase = styled('div')`
   padding: 25px;
   color: white;
   position: relative;
-  z-index: 1;
-  margin: 5%;
-  height: 200px;
-  width: 300px;
+  z-index: 2;
+  margin: 5pt;
+  width: 90%;
+  left: 5%;
 `;
 
 const Border = styled('div')`
@@ -28,7 +28,8 @@ const Border = styled('div')`
 `;
 
 const Title = styled('div')`
-  font-size: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
   padding: 5px 0 5px 0;
 `;
 
@@ -69,6 +70,12 @@ const trackDetails = {
 };
 
 export default class TrackBase extends React.PureComponent {
+  state = {
+    opened: false
+  };
+
+  toggleOpened = () => this.setState({ opened: !this.state.opened });
+
   render() {
     const { title, children } = this.props;
 
@@ -77,12 +84,17 @@ export default class TrackBase extends React.PureComponent {
     const y = offsetY[title];
     const details = trackDetails[title];
 
+    let { opened } = this.state;
+
     return (
-      <CardBase style={{ backgroundColor: bgColor }}>
-        <Border style={{ top: x, left: y }}>
-          <Title css={TitleFont}>{title}</Title>
-          <CardContent css={SecondaryText}>{details}</CardContent>
-        </Border>
+      <CardBase
+        style={{
+          backgroundColor: bgColor
+        }}
+      >
+        <Border onClick={this.toggleOpened} style={{ top: x, left: y }} />
+        <Title css={TitleFont}>{title}</Title>
+        {opened && <CardContent css={SecondaryText}>{details}</CardContent>}
       </CardBase>
     );
   }
