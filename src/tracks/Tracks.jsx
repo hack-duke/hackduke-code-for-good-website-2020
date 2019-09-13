@@ -3,7 +3,6 @@ import styled from 'react-emotion';
 import { css } from 'emotion';
 
 import { TitleFont } from '../common-styles';
-import './tracks-styles.css';
 
 import {
   SectionBase,
@@ -67,10 +66,10 @@ const TrackSign = styled('div')`
 const PostContainer = styled('div')`
   margin: 0 auto;
   width: 60%;
+  height: 400pt;
   position: relative;
 `;
 
-const signStyle = {};
 const TracksTitle = styled('div')`
   width: 1000;
   text-align: center;
@@ -80,10 +79,12 @@ const TracksTitle = styled('div')`
 `;
 
 const WoodenPost = styled('div')`
-  position: 'absolute',
-  z-index: 1,
-  left: 49%,
-  background-color: "#A7977C"
+  position: absolute;
+  z-index: 1;
+  left: 48%;
+  width: 4%;
+  height: 100%;
+  background-color: #a7977c;
 `;
 
 const Col50 = styled('div')`
@@ -106,7 +107,7 @@ export default ({ id, sectionColor }) => (
         margin: '10%'
       }}
     >
-      <Col50 style={{ left: '10%', top: '40%' }}>
+      <Col50 style={{ left: '10%', top: '30%' }}>
         <PostContainer>
           <WoodenPost />
           <TrackCard title="Health & Wellness" />
