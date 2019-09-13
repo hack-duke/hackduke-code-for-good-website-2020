@@ -17,9 +17,7 @@ import { BLUE, RED, PURPLE, YELLOW } from '../materials';
 import SectionTitle from '../SectionTitle';
 
 import TrackCard from './TrackCard';
-import TrackBase from './TrackBase';
 import TracksTitleSVG from './TracksTitle.svg';
-import ExpansionTrackSign from './TrackSign';
 
 const Container = styled('div')`
   ${SectionBase({
@@ -111,17 +109,17 @@ export default ({ id, sectionColor }) => (
       <Col50 style={{ left: '10%', top: '40%' }}>
         <PostContainer>
           <WoodenPost />
-          <TrackBase title="Health & Wellness" />
+          <TrackCard title="Health & Wellness" />
           <br />
-          <TrackBase title="Education" />
+          <TrackCard title="Education" />
         </PostContainer>
       </Col50>
       <Col50 style={{ right: '10%', top: '20%' }}>
         <PostContainer>
           <WoodenPost />
-          <TrackBase title="Inequality" />
+          <TrackCard title="Inequality" />
           <br />
-          <TrackBase title="Energy & Environment" />
+          <TrackCard title="Energy & Environment" />
         </PostContainer>
       </Col50>
     </div>
