@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import { css } from 'emotion';
 
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
+import AnimateHeight from 'react-animate-height';
 
 const zeroBottomMargin = css`
   margin-bottom: 0;
@@ -94,7 +95,9 @@ export default class TrackBase extends React.PureComponent {
       >
         <Border onClick={this.toggleOpened} style={{ top: x, left: y }} />
         <Title css={TitleFont}>{title}</Title>
-        {opened && <CardContent css={SecondaryText}>{details}</CardContent>}
+        <AnimateHeight duration={300} height={opened ? 'auto' : 0}>
+          <CardContent css={SecondaryText}>{details}</CardContent>
+        </AnimateHeight>
       </CardBase>
     );
   }
