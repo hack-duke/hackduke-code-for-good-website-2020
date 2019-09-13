@@ -17,9 +17,12 @@ const CardBase = styled('div')`
   margin: 5pt;
   width: 90%;
   left: 5%;
+  top: 0;
+  transition: top ease 0.25s;
   :hover {
     cursor: pointer;
     filter: brightness(105%);
+    top: -3px;
   }
 `;
 
