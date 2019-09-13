@@ -21,8 +21,6 @@ import TrackBase from './TrackBase';
 import TracksTitleSVG from './TracksTitle.svg';
 import ExpansionTrackSign from './TrackSign';
 
-import WoodenPost from './icons/wooden-post.svg';
-
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 800
@@ -70,7 +68,7 @@ const TrackSign = styled('div')`
 
 const PostContainer = styled('div')`
   margin: 0 auto;
-  width: 35%;
+  width: 60%;
   position: relative;
 `;
 
@@ -83,17 +81,18 @@ const TracksTitle = styled('div')`
   margin-bottom: 50px;
 `;
 
-const woodenPost = (
-  <img
-    style={{
-      position: 'absolute',
-      zIndex: 1,
-      left: '49%',
-      marginTop: 15
-    }}
-    src={WoodenPost}
-  />
-);
+const WoodenPost = styled('div')`
+  position: 'absolute',
+  z-index: 1,
+  left: 49%,
+  background-color: "#A7977C"
+`;
+
+const Col50 = styled('div')`
+  width: 50%;
+  display: inline-block;
+  position: absolute;
+`;
 
 export default ({ id, sectionColor }) => (
   <Container id={id}>
@@ -104,29 +103,27 @@ export default ({ id, sectionColor }) => (
       style={{
         width: '100%',
         backgroundColor: '#00F',
-        margin: 'auto'
+        justifyContent: 'center',
+        display: 'relative',
+        margin: '10%'
       }}
     >
-      <PostContainer
-        style={{
-          float: 'left'
-        }}
-      >
-        {woodenPost}
-        <TrackBase title="Health & Wellness" />
-        <br />
-        <TrackBase title="Education" />
-      </PostContainer>
-      <PostContainer
-        style={{
-          float: 'right'
-        }}
-      >
-        {woodenPost}
-        <TrackBase title="Inequality" />
-        <br />
-        <TrackBase title="Energy & Environment" />
-      </PostContainer>
+      <Col50 style={{ left: '10%', top: '40%' }}>
+        <PostContainer>
+          <WoodenPost />
+          <TrackBase title="Health & Wellness" />
+          <br />
+          <TrackBase title="Education" />
+        </PostContainer>
+      </Col50>
+      <Col50 style={{ right: '10%', top: '20%' }}>
+        <PostContainer>
+          <WoodenPost />
+          <TrackBase title="Inequality" />
+          <br />
+          <TrackBase title="Energy & Environment" />
+        </PostContainer>
+      </Col50>
     </div>
   </Container>
 );
