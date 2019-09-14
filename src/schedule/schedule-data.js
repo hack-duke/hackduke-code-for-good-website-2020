@@ -26,39 +26,14 @@ export default [
       },
       { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
       {
-        time: '2:30PM - 3:30PM',
-        name: 'Workshop 1 (Track-related)',
-        locations: ['Hudson 201']
-      },
-      {
-        time: '2:30PM - 3:30PM',
-        name: 'Workshop 2 (Track-related)',
-        locations: ['Hudson 232']
-      },
-      {
-        time: '2:30PM - 3:30PM',
-        name: 'Workshop 3 (Track-related)',
-        locations: ['TBD']
-      },
-      {
-        time: '2:30PM - 3:30PM',
-        name: 'Workshop 4 (Track-related)',
-        locations: ['TBD']
-      },
-      {
         time: '3:00PM - 5:00PM',
         name: 'Puppies!!!!!',
         locations: ['Harrington Quad']
       },
       {
-        time: '4:30PM - 5:30PM',
-        name: 'Workshop 5',
-        locations: ['Hudson 115A']
-      },
-      {
-        time: '4:45PM - 6:15PM',
-        name: 'Workshop 6',
-        locations: ['Hudson 216']
+        time: '3:00PM - 7:00PM',
+        name: 'Spikeball & Frisbee',
+        locations: ['Harrington Quad']
       },
       {
         time: '6:00PM - 7:00PM',
@@ -74,11 +49,6 @@ export default [
         time: '8:30PM - 9:00PM',
         name: 'Pie an Organizer',
         locations: ['Schiciano Foyer']
-      },
-      {
-        time: '8:00PM - 9:00PM',
-        name: 'MLH Werewolf',
-        locations: ['Schiciano Lobby']
       },
       {
         time: '10:00PM - 11:00PM',
@@ -111,22 +81,11 @@ export default [
         locations: ['Schiciano Foyer']
       },
       {
-        time: '11:00AM - 12:00PM',
-        name: 'Workshop 7',
-        locations: ['Hudson 216']
-      },
-      {
-        time: '11:00AM - 12:00PM',
-        name: 'Workshop 8',
-        locations: ['Hudson 222']
-      },
-
-      {
         time: '12:00PM - 1:30PM',
         name: 'Lunch',
         locations: ['Schiciano Foyer']
       },
-      { time: '1:30PM', name: 'Hacking Ends' },
+      { time: '1:30PM', name: 'Hacking Ends', locations: ['-'] },
       { time: '2:00PM', name: 'Judging Begins' },
       {
         time: '2:00PM - 2:45PM',

@@ -27,14 +27,14 @@ const CardBase = styled('div')`
 `;
 
 const rowItemPadding = css`
-  padding: 10px 15px;
+  padding: 5px 15px;
 
   @media screen and (min-width: 480px) {
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
 
   @media screen and (min-width: 900px) {
-    padding: 3px 20px;
+    padding: 5px 20px;
   }
 `;
 

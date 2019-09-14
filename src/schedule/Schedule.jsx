@@ -17,8 +17,6 @@ import ScheduleItemCard from './ScheduleItemCard';
 
 import ScheduleTitle from './schedule-title.svg';
 import ScheduleBackground from './schedule-bg-images.svg';
-import Forward from './forward-arrow.svg';
-import Backward from './back-arrow.svg';
 
 import scheduleData from './schedule-data';
 
@@ -104,8 +102,8 @@ var bgStyle = {
 const DayOptionContainer = styled('div')`
   display: flex;
   width: 100%;
-  border-radius: 30px;
-  border: 1px solid white;
+  border-radius: 4px;
+  border: 3px solid white;
   margin-bottom: 20px;
   overflow: hidden;
 `;
@@ -113,10 +111,10 @@ const DayOptionContainer = styled('div')`
 const DayOption = styled('div')`
   flex-grow: 1;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  color: ${props => (props.chosen ? 'black' : '#fff')};
+  color: ${props => (props.chosen ? '#2B9B99' : '#fff')};
   background-color: ${props => (props.chosen ? '#fff' : 'transparent')};
   font-weight: bold;
   transition: 0.3s ease;
