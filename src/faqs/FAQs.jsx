@@ -31,7 +31,6 @@ const FAQTitle = styled('div')`
 const FAQContainer = styled('div')`
   display: flex;
   flex-direction: column;
-  /* padding: 0px 150px; */
   width: 75%;
   margin: 0 auto;
   @media screen and (min-width: 1260px) {
