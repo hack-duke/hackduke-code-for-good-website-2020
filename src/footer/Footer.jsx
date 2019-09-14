@@ -92,7 +92,7 @@ export default () => (
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        paddingBottom: '100px'
+        paddingBottom: '350px'
       }}
     >
       <CenterContainer>

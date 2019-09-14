@@ -53,7 +53,7 @@ const FAQColumn = styled('div')`
 
 const SponsorshipLink = styled('a')`
   text-decoration: underline;
-  color: black !important;
+  color: white !important;
 `;
 
 const TitleImg = styled('img')`
@@ -108,20 +108,22 @@ export default ({ id, sectionColor }) => (
             sponsored API prizes as well.
           </FAQItem>
           <FAQItem title="When? Where?">
-            HackDuke starts Saturday, October 13th at 9:00 AM EST and ends on
-            Sunday, October 14th at 5:30 PM EST. It is hosted on Duke
+            HackDuke starts Saturday, November 2nd at 9:00 AM EST and ends on
+            Sunday, November 3rd at 5:30 PM EST. It is hosted on Duke
             University's West Campus, in and around the Fitzpatrick Engineering
             Building, Durham, NC 27705.
           </FAQItem>
           <FAQItem title="Who can participate?">
             You can participate as long as you're a student (undergraduate or
-            graduate)! If you're a new grad, we'd love to have you too.
+            graduate) over 18 years old! If you're a new grad, we'd love to have
+            you too.
           </FAQItem>
           <FAQItem title="I want to volunteer or mentor! How can I help?">
             To help with logistics day of, sign up to volunteer. If you're
             looking to mentor hackers with tech or track knowledge, come help
             out as a mentor. Both mentors and volunteers will get a special
-            HackDuke T-shirt! (We are working on setting up the forms.)
+            HackDuke T-shirt! We are currently working on setting up the forms,
+            but please email us if interested.
           </FAQItem>
         </FAQColumn>
         <FAQColumn>
@@ -148,7 +150,7 @@ export default ({ id, sectionColor }) => (
             <SponsorshipLink href="mailto:sponsorship@hackduke.org">
               sponsorship@hackduke.org
             </SponsorshipLink>
-            .
+            !
           </FAQItem>
         </FAQColumn>
       </FAQContainer>
