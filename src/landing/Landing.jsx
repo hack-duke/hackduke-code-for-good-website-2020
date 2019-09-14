@@ -8,7 +8,7 @@ import LogoImage from './hackduke-logo.svg';
 import TopMountainsImage from './top-mountains.svg';
 
 import { SectionBase, SecondaryText } from '../common-styles';
-import { PURPLE_PRESSABLE } from '../materials';
+import { BLUE_PRESSABLE } from '../materials';
 import LandingBackground from './landing-background.svg';
 import Button from '../Button';
 
@@ -111,7 +111,7 @@ export default ({ id }) => (
           </div>
         </Date>
         <Button
-          material={PURPLE_PRESSABLE}
+          material={BLUE_PRESSABLE}
           href="https://hackduke.typeform.com/to/i83hAq"
           target="_blank"
         >

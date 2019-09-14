@@ -1,5 +1,5 @@
 export const BLUE = {
-  background: '#3549a2',
+  background: '#717FFF',
   baseShadow:
     '0 1px 2px rgba(0, 47, 255, 0.05), 0 12.5px 40px rgba(0, 47, 255, 0.1)',
   hoverShadow: '0 24px 60px rgba(0, 47, 255, 0.07)'
@@ -7,7 +7,7 @@ export const BLUE = {
 
 export const BLUE_PRESSABLE = {
   ...BLUE,
-  pressedBackground: '#314081'
+  pressedBackground: '#9FB8F6'
 };
 
 export const RED = {
