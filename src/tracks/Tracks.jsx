@@ -18,6 +18,11 @@ import SectionTitle from '../SectionTitle';
 import TrackCard from './TrackCard';
 import TracksTitleSVG from './TracksTitle.svg';
 
+import Swirly1 from './Swirly1.svg';
+import Swirly2 from './Swirly2.svg';
+import Swirly3 from './Swirly3.svg';
+import Swirly4 from './Swirly4.svg';
+
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 800
@@ -93,6 +98,12 @@ const Col50 = styled('div')`
   position: absolute;
 `;
 
+const Swirly = styled('img')`
+  position: absolute;
+  z-index: 0;
+  width: 20%;
+`;
+
 export default ({ id, sectionColor }) => (
   <Container id={id}>
     <TracksTitle>
@@ -101,12 +112,19 @@ export default ({ id, sectionColor }) => (
     <div
       style={{
         width: '100%',
-        backgroundColor: '#00F',
         justifyContent: 'center',
         display: 'relative',
         margin: '10%'
       }}
     >
+      <Swirly
+        src={Swirly2}
+        style={{ right: '10%', top: '10%', width: '17%' }}
+      />
+      <Swirly src={Swirly4} style={{ left: '5%', top: '40%' }} />
+
+      <Swirly src={Swirly1} style={{ right: '12%', top: '55%' }} />
+
       <Col50 style={{ left: '10%', top: '30%' }}>
         <PostContainer>
           <WoodenPost />
