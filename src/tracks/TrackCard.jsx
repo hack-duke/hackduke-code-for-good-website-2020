@@ -5,6 +5,9 @@ import { css } from 'emotion';
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 import AnimateHeight from 'react-animate-height';
 
+import upArrow from './up-arrow.svg';
+import downArrow from './down-arrow.svg';
+
 const zeroBottomMargin = css`
   margin-bottom: 0;
 `;
@@ -77,6 +80,21 @@ const trackDetails = {
     'The Energy track encompasses a technical perspective to deal with large issues impacting energy use, allocation and environmental regulations. Example ideas include machine learning for resource extraction, the use of green energy and enforcing environmental policy.'
 };
 
+const ArrowIcon = props => {
+  return (
+    <img
+      src={props.open ? upArrow : downArrow}
+      style={{
+        position: 'absolute',
+        right: '0',
+        top: '0',
+        width: '4rem',
+        margin: '10px'
+      }}
+    />
+  );
+};
+
 export default class TrackCard extends React.PureComponent {
   state = {
     opened: false
@@ -101,6 +119,7 @@ export default class TrackCard extends React.PureComponent {
         }}
       >
         <Border onClick={this.toggleOpened} style={{ top: x, left: y }} />
+        <ArrowIcon open={opened} />
         <Title css={TitleFont}>{title}</Title>
         <AnimateHeight duration={300} height={opened ? 'auto' : 0}>
           <CardContent css={SecondaryText}>{details}</CardContent>
