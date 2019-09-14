@@ -68,6 +68,11 @@ const ScheduleContainer = styled('div')`
   width: 70%;
   align-items: flex-start;
   margin-right: 50px;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    margin-right: 0px;
+  }
 `;
 
 const OneDay = styled('div')`

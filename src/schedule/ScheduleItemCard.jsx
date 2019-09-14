@@ -24,6 +24,12 @@ const CardBase = styled('div')`
   @media screen and (min-width: 900px) {
     background-size: ${dateColLgWidth};
   }
+
+  @media screen and (max-width: 900px) {
+    background: #f8f8f8;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 `;
 
 const rowItemPadding = css`
@@ -47,6 +53,10 @@ const EventTime = styled('div')`
 
   @media screen and (min-width: 900px) {
     flex-basis: ${dateColLgWidth};
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-basis: 0;
   }
 
   flex-grow: 0;
@@ -92,6 +102,19 @@ const EventRow = styled('div')`
 
   :last-child > div {
     padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    :first-child > div {
+      padding-top: 0px;
+    }
+
+    :last-child > div {
+      padding-bottom: 0px;
+    }
   }
 `;
 
