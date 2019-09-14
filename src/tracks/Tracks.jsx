@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
@@ -69,10 +69,11 @@ const TrackSign = styled('div')`
 `;
 
 const PostContainer = styled('div')`
-  margin: 0 auto;
-  width: 60%;
-  height: 400pt;
+  width: 100%;
+  max-width: 700px;
+  height: 700px;
   position: relative;
+  margin: 0 auto;
 `;
 
 const TracksTitle = styled('div')`
@@ -92,58 +93,87 @@ const WoodenPost = styled('div')`
   background-color: #a7977c;
 `;
 
-const Col50 = styled('div')`
-  width: 50%;
-  display: inline-block;
-  position: absolute;
-`;
-
 const Swirly = styled('img')`
   position: absolute;
   z-index: 0;
   width: 20%;
 `;
 
-export default ({ id, sectionColor }) => (
-  <Container id={id}>
-    <TracksTitle>
-      <img src={TracksTitleSVG} />
-    </TracksTitle>
-    <div
-      style={{
-        width: '100%',
-        justifyContent: 'center',
-        display: 'relative',
-        margin: '10%'
-      }}
-    >
-      <Swirly
-        src={Swirly2}
-        style={{ right: '10%', top: '10%', width: '17%' }}
-      />
-      <Swirly src={Swirly4} style={{ left: '5%', top: '40%' }} />
+class Tracks extends Component {
+  state = {
+    openPost: -1
+  };
 
-      <Swirly src={Swirly1} style={{ right: '12%', top: '55%' }} />
+  changePost = postId => {
+    this.setState((prevState, prevProps) => {
+      if (prevState.openPost == postId) {
+        return {
+          openPost: -1
+        };
+      }
 
-      <Col50 style={{ left: '10%', top: '30%' }}>
-        <PostContainer>
-          <WoodenPost />
-          <TrackCard title="Health & Wellness" />
-          <br />
-          <TrackCard title="Education" />
-        </PostContainer>
-      </Col50>
-      <Col50 style={{ right: '10%', top: '20%' }}>
-        <PostContainer>
-          <WoodenPost />
-          <TrackCard title="Inequality" />
-          <br />
-          <TrackCard title="Energy & Environment" />
-        </PostContainer>
-      </Col50>
-    </div>
-  </Container>
-);
+      return {
+        openPost: postId
+      };
+    });
+  };
+
+  render() {
+    const { id, sectionColor } = this.props;
+
+    return (
+      <Container id={id}>
+        <TracksTitle>
+          <img src={TracksTitleSVG} />
+        </TracksTitle>
+        <div
+          style={{
+            width: '100%',
+            justifyContent: 'center',
+            display: 'relative'
+          }}
+        >
+          <Swirly
+            src={Swirly2}
+            style={{ right: '10%', top: '10%', width: '17%' }}
+          />
+          <Swirly src={Swirly4} style={{ left: '5%', top: '40%' }} />
+
+          <Swirly src={Swirly1} style={{ right: '12%', top: '55%' }} />
+
+          <PostContainer>
+            <WoodenPost />
+            <TrackCard
+              isOpen={this.state.openPost == 0}
+              title="Health & Wellness"
+              changePost={() => this.changePost(0)}
+            />
+            <br />
+            <TrackCard
+              isOpen={this.state.openPost == 1}
+              title="Education"
+              changePost={() => this.changePost(1)}
+            />
+            <br />
+            <TrackCard
+              isOpen={this.state.openPost == 2}
+              title="Inequality"
+              changePost={() => this.changePost(2)}
+            />
+            <br />
+            <TrackCard
+              isOpen={this.state.openPost == 3}
+              title="Energy & Environment"
+              changePost={() => this.changePost(3)}
+            />
+          </PostContainer>
+        </div>
+      </Container>
+    );
+  }
+}
+
+export default Tracks;
 
 // export default ({ id, sectionColor }) => (
 //   <Container id={id}>

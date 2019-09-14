@@ -80,37 +80,43 @@ const trackDetails = {
     'The Energy track encompasses a technical perspective to deal with large issues impacting energy use, allocation and environmental regulations. Example ideas include machine learning for resource extraction, the use of green energy and enforcing environmental policy.'
 };
 
-const ArrowIcon = props => {
-  return (
-    <img
-      src={props.open ? upArrow : downArrow}
-      style={{
-        position: 'absolute',
-        right: '0',
-        top: '0',
-        width: '4rem',
-        margin: '10px'
-      }}
-    />
-  );
-};
+// const ArrowIcon = props => {
+//   return (
+//     <img
+//       src={props.open ? upArrow : downArrow}
+//       style={{
+//         position: 'absolute',
+//         right: '0',
+//         top: '0',
+//         width: '4rem',
+//         margin: '10px'
+//       }}
+//     />
+//   );
+// };
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const ArrowIcon = styled('img')`
+  transition: 0.3s ease;
+  transform: ${props => (props.open ? 'rotate(180deg)' : 'none')};
+  width: 60px;
+`;
 
 export default class TrackCard extends React.PureComponent {
-  state = {
-    opened: false
-  };
-
-  toggleOpened = () => this.setState({ opened: !this.state.opened });
-
   render() {
-    const { title, children } = this.props;
+    const { title, children, isOpen, changePost } = this.props;
 
     const bgColor = bgColors[title];
     const x = offsetX[title];
     const y = offsetY[title];
     const details = trackDetails[title];
 
-    let { opened } = this.state;
+    console.log(isOpen);
 
     return (
       <CardBase
@@ -118,10 +124,12 @@ export default class TrackCard extends React.PureComponent {
           backgroundColor: bgColor
         }}
       >
-        <Border onClick={this.toggleOpened} style={{ top: x, left: y }} />
-        <ArrowIcon open={opened} />
-        <Title css={TitleFont}>{title}</Title>
-        <AnimateHeight duration={300} height={opened ? 'auto' : 0}>
+        <Border onClick={changePost} style={{ top: x, left: y }} />
+        <Header>
+          <Title css={TitleFont}>{title}</Title>
+          <ArrowIcon open={isOpen} src={upArrow} />
+        </Header>
+        <AnimateHeight duration={300} height={isOpen ? 'auto' : 0}>
           <CardContent css={SecondaryText}>{details}</CardContent>
         </AnimateHeight>
       </CardBase>
