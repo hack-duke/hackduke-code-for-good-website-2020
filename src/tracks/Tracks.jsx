@@ -71,7 +71,7 @@ const TrackSign = styled('div')`
 const PostContainer = styled('div')`
   width: 100%;
   max-width: 700px;
-  height: 800px;
+  height: 850px;
   position: relative;
   margin: 0 auto;
 `;
@@ -86,7 +86,7 @@ const TracksTitle = styled('div')`
 
 const WoodenPost = styled('div')`
   position: absolute;
-  margin-top: -40px;
+  margin-top: -20px;
   z-index: 1;
   left: 48%;
   width: 4%;

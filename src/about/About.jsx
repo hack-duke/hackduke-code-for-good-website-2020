@@ -27,9 +27,6 @@ const Container = styled('div')`
     extHeightPx: 4096
   })};
 
-  padding-top: 100px;
-  padding-bottom: 100px;
-
   @media screen and (min-width: 1260px) {
   }
 `;

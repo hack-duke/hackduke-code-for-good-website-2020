@@ -27,7 +27,7 @@ const Container = styled('div')`
     max-width: 1000px;
     margin-right: 5%;
     height: auto;
-    padding-top: 100px;
+    padding-top: 0px;
     padding-bottom: 60px;
   }
 `;
