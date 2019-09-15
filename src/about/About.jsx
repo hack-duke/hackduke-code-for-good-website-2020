@@ -45,6 +45,7 @@ const AboutTitle = styled('img')`
 const BodyContainer = styled('div')`
   position: relative;
   width: 100%;
+  height: 100%;
   max-width: 750px;
   margin: 0 auto;
 `;
@@ -114,8 +115,8 @@ const SliderButtonContainer = styled('div')`
   width: 125px;
   justify-content: space-between;
 
-  @media screen and (max-width: 550px) {
-    bottom: 50px;
+  @media screen and (max-width: 875px) {
+    bottom: 40px;
     width: 100px;
   }
 `;
@@ -154,6 +155,7 @@ class About extends Component {
           idx={i}
           currIdx={this.state.slideIdx}
           title={slide.title}
+          mobileImg={slide.mobileImg}
         />
       );
     });

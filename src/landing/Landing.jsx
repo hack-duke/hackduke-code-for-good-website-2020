@@ -17,8 +17,8 @@ const Container = styled('div')`
     extHeightPx: 4096
   })};
   max-width: 100%;
-  height: auto;
-  background-size: contain;
+  height: 850px;
+
   background-image: url(${LandingBackground});
   background-position: bottom center;
   position: relative;
@@ -28,10 +28,6 @@ const Container = styled('div')`
     margin-right: 5%;
   }
 `;
-
-// @media screen and (min-width: 1260px) {
-//   flex-direction: row;
-// }
 
 const BackgroundWrapper = styled('div')`
   ${SectionBase};
@@ -61,7 +57,8 @@ const LandingContent = styled('div')`
 const Logo = styled('img')`
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 12em;
+  /* padding-bottom: 12em; */
+  padding-top: 20px;
   display: block;
   @media screen and (min-width: 480px) {
     max-width: 1000px;
@@ -69,6 +66,8 @@ const Logo = styled('img')`
 
   @media screen and (max-width: 1000px) {
     padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 40px;
   }
 `;
 const Date = styled('div')`

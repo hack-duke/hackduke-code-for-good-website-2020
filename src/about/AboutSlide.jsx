@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-export default ({ img, text, title, currIdx, idx }) => {
-  console.log(currIdx, idx);
-
+export default ({ img, mobileImg, text, title, currIdx, idx }) => {
   return (
     <Container idx={idx} currIdx={currIdx}>
-      <ImgContainer>
-        <SlideImg src={img} />
-      </ImgContainer>
-      <TextTitle>{title}</TextTitle>
-      <TextContainer>{text}</TextContainer>
+      <div
+        style={{
+          position: 'relative',
+          height: '100%',
+          width: '100%',
+          top: '0',
+          left: '0'
+        }}
+      >
+        <ImgContainer>
+          <SlideImg src={img} />
+        </ImgContainer>
+        <TextTitle>{title}</TextTitle>
+        <TextContainer>{text}</TextContainer>
+        <MobileImg src={mobileImg} />
+      </div>
     </Container>
   );
 };
@@ -21,6 +30,9 @@ const Container = styled('div')`
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 `;
 
 const ImgContainer = styled('div')`
@@ -42,6 +54,10 @@ const TextTitle = styled('h2')`
   text-align: center;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
 `;
 
 const TextContainer = styled('div')`
@@ -51,5 +67,20 @@ const TextContainer = styled('div')`
 
   @media screen and (max-width: 550px) {
     line-height: 15pt;
+    font-size: 12px;
+  }
+`;
+
+const MobileImg = styled('img')`
+  position: absolute;
+  display: none;
+
+  @media screen and (max-width: 875px) {
+    display: block;
+    /* width: 100%; */
+    /* left: 0; */
+    right: 0;
+    bottom: 120px;
+    height: 100px;
   }
 `;

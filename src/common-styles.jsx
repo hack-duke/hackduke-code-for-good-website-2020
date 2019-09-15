@@ -28,14 +28,20 @@ export const SectionBase = props => css`
 
   position: relative;
 
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 
   background-repeat: no-repeat;
 
   background-image: ${props.mobileBackgroundImage || 'none'};
   margin: 0 auto;
+
+  @media screen and (min-width: 550px) {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+  }
 
   @media screen and (min-width: 640px) {
     min-height: ${props.heightPx}px;
