@@ -81,20 +81,34 @@ const ArrowButton = styled('div')`
   :hover {
     background-color: #ea7e69;
   }
+
+  @media screen and (max-width: 550px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const LeftArrowButton = styled(ArrowButton)`
   left: 0;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 550px) {
+    left: 5px;
+  }
 `;
 
 const RightArrowButton = styled(ArrowButton)`
   right: 0;
   transform: translate(50%, -50%);
+
+  @media screen and (max-width: 550px) {
+    right: 5px;
+  }
 `;
 
 const ArrowIcon = styled('img')`
   z-index: 2;
+  width: 100%;
 `;
 
 const SlideContainer = styled('div')`

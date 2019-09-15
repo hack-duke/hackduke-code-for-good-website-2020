@@ -30,7 +30,7 @@ export const SectionBase = props => css`
 
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 40px;
+  padding-top: 70px;
 
   background-repeat: no-repeat;
 

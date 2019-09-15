@@ -56,7 +56,7 @@ const TextTitle = styled('h2')`
   font-family: 'Open Sans', sans-serif;
 
   @media screen and (max-width: 550px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -67,7 +67,7 @@ const TextContainer = styled('div')`
 
   @media screen and (max-width: 550px) {
     line-height: 15pt;
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
