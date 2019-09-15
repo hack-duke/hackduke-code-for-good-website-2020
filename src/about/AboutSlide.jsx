@@ -77,7 +77,7 @@ const MobileImg = styled('img')`
 
   @media screen and (max-width: 875px) {
     display: block;
-    /* width: 100%; */
+    width: 100%;
     /* left: 0; */
     right: 0;
     bottom: 120px;

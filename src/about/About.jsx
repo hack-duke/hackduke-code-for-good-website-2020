@@ -127,7 +127,7 @@ const SliderButtonContainer = styled('div')`
   justify-content: space-between;
 
   @media screen and (max-width: 875px) {
-    bottom: 40px;
+    bottom: 50px;
     width: 100px;
   }
 `;
