@@ -27,8 +27,8 @@ const Container = styled('div')`
     max-width: 1000px;
     margin-right: 5%;
     height: auto;
-    padding-top: 0px;
-    padding-bottom: 60px;
+    /* padding-top: 60px;
+    padding-bottom: 60px; */
   }
 `;
 
@@ -50,10 +50,10 @@ const LandingContent = styled('div')`
   color: #524f49;
   width: 100%;
   padding-bottom: 40px;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1000px) {
     margin: 0;
-    padding-top: 122px;
-    padding-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 `;
 

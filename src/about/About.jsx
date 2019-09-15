@@ -23,7 +23,7 @@ import rightArrow from './right-arrow.svg';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 600,
+    heightPx: 800,
     extHeightPx: 4096
   })};
 
