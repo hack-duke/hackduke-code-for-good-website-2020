@@ -132,17 +132,16 @@ export default class Navbar extends React.Component {
   state = { activeItemID: this.props.navItems[0].id, scrollOffset: 0 };
 
   componentDidMount() {
-    this.widthMediaQuery = window.matchMedia(`(min-width: ${768}px)`);
-    this.widthMediaQuery.addListener(this.onWidthQueryResult);
-    this.onWidthQueryResult({ matches: this.widthMediaQuery.matches });
-    this._updateRootBackground();
+    window.addEventListener(
+      'scroll',
+      this.handleScroll,
+      detectPassiveEvents.hasSupport ? { capture: false, passive: true } : false
+    );
+    this.handleScroll();
   }
 
   componentWillUnmount() {
-    if (this.widthMediaQuery !== null) {
-      this.widthMediaQuery.removeListener(this.onWidthQueryResult);
-      this.onWidthQueryResult({ matches: false });
-    }
+    window.removeEventListener('scroll', this.handleScroll());
   }
 
   _updateRootBackground = () => {
