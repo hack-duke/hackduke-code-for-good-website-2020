@@ -9,7 +9,6 @@ import memoize from 'memoize-one';
 import { MAX_WIDTH, HideOnMobile, TitleFont } from '../common-styles';
 
 const navHeightPx = 72;
-const fullShadowScrollOffset = navHeightPx;
 
 const Nav = styled('div')`
   ${HideOnMobile};
@@ -115,21 +114,19 @@ const navBackgroundStyle = ({ color }) => css`
 
 class NavBackground extends React.PureComponent {
   render() {
-    // Scrolling optimization - bypass Emotion for background opacity
-    const { opacity, navItems, activeItemID } = this.props;
+    const { navItems, activeItemID } = this.props;
     return (
       <div
         className={navBackgroundStyle({
           color: navItems.find(({ id }) => id == activeItemID).sectionColor
         })}
-        style={{ opacity }}
       />
     );
   }
 }
 
 export default class Navbar extends React.Component {
-  state = { activeItemID: this.props.navItems[0].id, scrollOffset: 0 };
+  state = { activeItemID: this.props.navItems[0].id };
 
   componentDidMount() {
     window.addEventListener(
@@ -141,7 +138,7 @@ export default class Navbar extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll());
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   _updateRootBackground = () => {
@@ -153,19 +150,11 @@ export default class Navbar extends React.Component {
   };
 
   render() {
-    const { activeItemID, scrollOffset } = this.state;
-    const navBackgroundOpacity = Math.min(
-      scrollOffset / fullShadowScrollOffset,
-      1
-    );
+    const { activeItemID } = this.state;
     return (
       <Nav>
         <NavContents activeItemID={activeItemID} {...this.props} />
-        <NavBackground
-          opacity={navBackgroundOpacity}
-          activeItemID={activeItemID}
-          {...this.props}
-        />
+        <NavBackground activeItemID={activeItemID} {...this.props} />
       </Nav>
     );
   }
@@ -174,26 +163,7 @@ export default class Navbar extends React.Component {
     navItems.map(({ id }) => [id, document.getElementById(id)])
   );
 
-  widthMediaQuery = null;
-
-  onWidthQueryResult = ({ matches }) => {
-    if (matches) {
-      window.addEventListener(
-        'scroll',
-        this.handleScroll,
-        detectPassiveEvents.hasSupport ? { passive: false } : false
-      );
-      this.handleScroll();
-    } else {
-      window.removeEventListener('scroll', this.handleScroll);
-    }
-  };
-
   handleScroll = () => {
-    this.setState({
-      scrollOffset: window.scrollY
-    });
-
     for (const [id, itemRefNode] of [
       ...this.getItemRefNodes(this.props.navItems)
     ].reverse()) {
