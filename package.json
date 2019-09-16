@@ -21,7 +21,7 @@
     "husky": "^1.1.2",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
-    "react-static": "^5.9.8"
+    "react-static": "^5.9.12"
   },
   "dependencies": {
     "detect-passive-events": "^1.0.4",
@@ -32,7 +32,7 @@
     "react-animate-height": "^2.0.15",
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",
-    "serve": "^10.0.2"
+    "serve": "^10.1.2"
   },
   "husky": {
     "hooks": {
