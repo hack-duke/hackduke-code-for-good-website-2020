@@ -106,7 +106,7 @@ const navBackgroundStyle = ({ color }) => css`
   right: 0;
   width: 100%;
   height: ${navHeightPx}px;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   background-color: ${color};
   z-index: -1;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0333), 0 0 40px rgba(0, 0, 0, 0.075);
@@ -144,7 +144,7 @@ export default class Navbar extends React.Component {
   _updateRootBackground = () => {
     const { navItems } = this.props;
     const { activeItemID } = this.state;
-    document.getElementById('root').style.backgroundColor = navItems.find(
+    document.body.style.backgroundColor = navItems.find(
       ({ id }) => id == activeItemID
     ).sectionColor;
   };
