@@ -35,12 +35,8 @@ const CardBase = styled('div')`
 const rowItemPadding = css`
   padding: 5px 15px;
 
-  @media screen and (min-width: 480px) {
-    padding: 5px 20px;
-  }
-
-  @media screen and (min-width: 900px) {
-    padding: 5px 20px;
+  @media screen and (max-width: 900px) {
+    padding: 0px 15px;
   }
 `;
 
@@ -78,7 +74,6 @@ const EventDetailsText = styled('div')`
     props.primary &&
     css`
       font-weight: bold;
-      margin-bottom: 0.33em;
       font-size: 1em;
       color: ${props.primaryColor};
     `};

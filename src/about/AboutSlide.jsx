@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { TitleFont } from '../common-styles';
 
 export default ({ img, mobileImg, text, title, currIdx, idx }) => {
   return (
@@ -51,9 +52,8 @@ const SlideImg = styled('img')`
 `;
 
 const TextTitle = styled('h2')`
-  text-align: center;
+  ${TitleFont} text-align: center;
   font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
 
   @media screen and (max-width: 550px) {
     font-size: 18px;
@@ -61,9 +61,9 @@ const TextTitle = styled('h2')`
 `;
 
 const TextContainer = styled('div')`
-  text-align: center;
+  ${TitleFont} text-align: center;
   line-height: 20pt;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', serif; */
 
   @media screen and (max-width: 550px) {
     line-height: 15pt;
