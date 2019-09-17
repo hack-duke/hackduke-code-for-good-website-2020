@@ -23,6 +23,8 @@ import Swirly2 from './Swirly2.svg';
 import Swirly3 from './Swirly3.svg';
 import Swirly4 from './Swirly4.svg';
 
+import GrassPatch from './grass-patch.svg';
+
 const Container = styled('div')`
   ${SectionBase({
     heightPx: 800
@@ -139,9 +141,7 @@ class Tracks extends Component {
             style={{ right: '10%', top: '10%', width: '17%' }}
           />
           <Swirly src={Swirly4} style={{ left: '5%', top: '40%' }} />
-
           <Swirly src={Swirly1} style={{ right: '12%', top: '55%' }} />
-
           <PostContainer>
             <WoodenPost />
             <TrackCard
@@ -166,6 +166,17 @@ class Tracks extends Component {
               isOpen={this.state.openPost == 3}
               title="Energy & Environment"
               changePost={() => this.changePost(3)}
+            />
+            <img
+              src={GrassPatch}
+              style={{
+                position: 'absolute',
+                top: '100%',
+                marginTop: '-20%',
+                zIndex: 2,
+                width: '40%',
+                left: '30%'
+              }}
             />
           </PostContainer>
         </div>
