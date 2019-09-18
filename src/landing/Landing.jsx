@@ -25,7 +25,7 @@ const Container = styled('div')`
   @media screen and (max-width: 1000px) {
     background-image: None;
     max-width: 1000px;
-    margin-right: 5%;
+    /* margin-right: 5%; */
     height: auto;
     /* padding-top: 60px;
     padding-bottom: 60px; */
