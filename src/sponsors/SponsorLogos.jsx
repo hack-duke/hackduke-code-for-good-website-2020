@@ -117,9 +117,9 @@ export default () => (
         href="https://www.palantir.com/students/"
       />
       <Logo
-        alt="Appian"
-        src={AppianLogo}
-        href="https://careers.appian.com/careers-campus/"
+        alt="Duke Computer Science"
+        src={DukeCSLogo}
+        href="https://www.cs.duke.edu/"
       />
       <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
     </LogoRow>
@@ -133,11 +133,6 @@ export default () => (
         alt="Pratt School of Engineering"
         src={PrattLogo}
         href="https://pratt.duke.edu/"
-      />
-      <Logo
-        alt="Duke Computer Science"
-        src={DukeCSLogo}
-        href="https://www.cs.duke.edu/"
       />
     </LogoRow>
   </React.Fragment>

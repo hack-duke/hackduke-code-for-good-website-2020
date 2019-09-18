@@ -103,7 +103,7 @@ const Header = styled.div`
 
 const ArrowIcon = styled('img')`
   transition: 0.3s ease;
-  transform: ${props => (props.open ? 'rotate(180deg)' : 'none')};
+  transform: ${props => (props.open ? 'none' : 'rotate(180deg)')};
   width: 60px;
 `;
 

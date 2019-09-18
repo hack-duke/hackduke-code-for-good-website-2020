@@ -23,7 +23,7 @@ import Swirly2 from './Swirly2.svg';
 import Swirly3 from './Swirly3.svg';
 import Swirly4 from './Swirly4.svg';
 
-import GrassPatch from './grass-patch.svg';
+import GrassPatch from './grass-patch-4.svg';
 
 const Container = styled('div')`
   ${SectionBase({
@@ -172,10 +172,10 @@ class Tracks extends Component {
               style={{
                 position: 'absolute',
                 top: '100%',
-                marginTop: '-20%',
+                marginTop: '-12%',
                 zIndex: 2,
-                width: '40%',
-                left: '30%'
+                width: '30%',
+                left: '35%'
               }}
             />
           </PostContainer>
