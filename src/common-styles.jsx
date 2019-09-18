@@ -48,7 +48,7 @@ export const SectionBase = props => css`
 
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 87.5px;
+    padding-top: 120px;
   }
 
   @media screen and (min-width: ${MAX_WIDTH}) {
