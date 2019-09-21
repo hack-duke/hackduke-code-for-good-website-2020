@@ -114,7 +114,7 @@ export default ({ id }) => (
         </Date>
         <Button
           material={BLUE_PRESSABLE}
-          href="https://hackduke.typeform.com/to/i83hAq"
+          href="https://hackduke.org/apply"
           target="_blank"
         >
           Register
