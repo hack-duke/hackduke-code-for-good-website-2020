@@ -85,7 +85,7 @@ const OneDay = styled('div')`
 `;
 
 const DayTitle = styled('div')`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-align: left;
   font-size: 35px;
   color: #fff;
@@ -121,7 +121,7 @@ const DayOption = styled('div')`
   flex-grow: 1;
   text-align: center;
   padding: 0.5rem 0rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: 20px;
   color: ${props => (props.chosen ? '#2B9B99' : '#fff')};
   background-color: ${props => (props.chosen ? '#fff' : 'transparent')};
