@@ -10,7 +10,7 @@ export default {
       <Head>
         <title>HackDuke</title>
         <link
-          href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
+          href="https://fonts.googleapis.com/css?family=Cabin"
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="/hackduke-favicon.png" />

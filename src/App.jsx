@@ -18,24 +18,28 @@ const sections = [
     title: 'Home',
     id: 'landing',
     sectionColor: '#afe0d0',
+    navTheme: 'dark',
     Component: Landing
   },
   {
     title: 'About',
     id: 'about',
     sectionColor: '#ACC0F9',
+    navTheme: 'dark',
     Component: About
   },
   {
     title: 'Tracks',
     id: 'tracks',
     sectionColor: '#FECA7D',
+    navTheme: 'dark',
     Component: Tracks
   },
   {
     title: 'Schedule',
     id: 'Schedule',
     sectionColor: '#2B9B99',
+    navTheme: 'light',
     Component: Schedule
   },
   // {
@@ -48,12 +52,14 @@ const sections = [
     title: 'FAQs',
     id: 'faqs',
     sectionColor: '#3C257D',
+    navTheme: 'light',
     Component: FAQs
   },
   {
     title: 'Sponsors',
     id: 'sponsors',
     sectionColor: '#0F1343',
+    navTheme: 'light',
     Component: Sponsors
   }
 ];

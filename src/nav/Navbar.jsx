@@ -31,7 +31,7 @@ const NavItemsWrapper = styled('div')`
 
 const navItem = ({ active, color }) => css`
   ${TitleFont};
-  color: ${active ? color : '#2b2b2b'};
+  color: ${active ? color : `${color}99`};
   height: 100%;
   font-size: 1.1em;
   line-height: ${navHeightPx}px;
@@ -76,7 +76,11 @@ class NavContents extends React.PureComponent {
             key={id}
             css={navItem({
               active: activeItemID === id,
-              color: '#fff'
+              color:
+                navItems.find(({ id }) => id == activeItemID).navTheme ===
+                'light'
+                  ? '#ffffff'
+                  : '#44413c'
             })}
             href={`#${id}`}
           >
