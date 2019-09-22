@@ -1,5 +1,6 @@
 html,
-body {
+body,
+#app {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -9,8 +10,8 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  transition: background-color 0.5s;
+#root {
+  transition: background-color 0.3s;
 }
 
 *,
