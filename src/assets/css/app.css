@@ -10,6 +10,8 @@ html {
 }
 
 body {
+  /* Workaround: prevent initial fade */
+  background-color: #afe0d0;
   transition: background-color 0.5s;
 }
 
