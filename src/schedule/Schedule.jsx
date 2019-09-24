@@ -22,7 +22,7 @@ import scheduleData from './schedule-data';
 
 const Container = styled('div')`
   ${SectionBase({
-    heightPx: 1000,
+    heightPx: 1150,
     extHeightPx: 4096
   })} position: relative;
 `;
