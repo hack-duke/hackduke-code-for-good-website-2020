@@ -73,7 +73,7 @@ const TrackSign = styled('div')`
 const PostContainer = styled('div')`
   width: 100%;
   max-width: 700px;
-  height: 850px;
+  height: 950px;
   position: relative;
   margin: 0 auto;
 `;
@@ -166,6 +166,12 @@ class Tracks extends Component {
               isOpen={this.state.openPost == 3}
               title="Energy & Environment"
               changePost={() => this.changePost(3)}
+            />
+            <br />
+            <TrackCard
+              isOpen={this.state.openPost == 4}
+              title="Nonprofit"
+              changePost={() => this.changePost(4)}
             />
             <img
               src={GrassPatch}

@@ -52,21 +52,24 @@ const bgColors = {
   'Health & Wellness': '#2B9B99',
   Education: '#E68560',
   Inequality: '#678BE1',
-  'Energy & Environment': '#C06880'
+  'Energy & Environment': '#84c2ae',
+  Nonprofit: '#C06880'
 };
 
 const offsetY = {
   'Health & Wellness': '7px',
   Education: '-9px',
   Inequality: '6px',
-  'Energy & Environment': '-8px'
+  'Energy & Environment': '-8px',
+  Nonprofit: '7px'
 };
 
 const offsetX = {
   'Health & Wellness': '8px',
   Education: '7px',
   Inequality: '-9px',
-  'Energy & Environment': '-7px'
+  'Energy & Environment': '-7px',
+  Nonprofit: '7px'
 };
 
 const trackDetails = {
@@ -77,23 +80,10 @@ const trackDetails = {
   Inequality:
     'The Inequality track targets problems regarding both social and economic inequality. Whether it is creating solutions to bridge the income gap, or finding ways to reduce disparities in gender or race, this track is built on the principle that everyone should have the capacity to reach their full potential.',
   'Energy & Environment':
-    'The Energy track encompasses a technical perspective to deal with large issues impacting energy use, allocation and environmental regulations. Example ideas include machine learning for resource extraction, the use of green energy and enforcing environmental policy.'
+    'The Energy track encompasses a technical perspective to deal with large issues impacting energy use, allocation and environmental regulations. Example ideas include machine learning for resource extraction, the use of green energy and enforcing environmental policy.',
+  Nonprofit:
+    'The nonprofits track allows hackers to work directly and contribute to the needs of local nonprofit organizations. At the beginning of the weekend, non-profits will present about their various projects. Over the next 24 hours, teams will collaborate and consult with the non-profits to innovate and present their ideas at the end. The non-profits will then decide which hack is the most useful. One unique feature is that the winners of each project will qualify for funding provided by HackDuke and can choose to continue working on the hack throughout the year.'
 };
-
-// const ArrowIcon = props => {
-//   return (
-//     <img
-//       src={props.open ? upArrow : downArrow}
-//       style={{
-//         position: 'absolute',
-//         right: '0',
-//         top: '0',
-//         width: '4rem',
-//         margin: '10px'
-//       }}
-//     />
-//   );
-// };
 
 const Header = styled.div`
   display: flex;
