@@ -112,23 +112,18 @@ export default () => (
     </LogoRow>
     <LogoRow>
       <Logo
-        alt="Palantir"
-        src={PalantirLogo}
-        href="https://www.palantir.com/students/"
-      />
-      <Logo
         alt="Duke Computer Science"
         src={DukeCSLogo}
         href="https://www.cs.duke.edu/"
       />
-      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
-    </LogoRow>
-    <LogoRow>
       <Logo
         alt="Fuqua School of Business"
         src={FuquaLogo}
         href="https://www.fuqua.duke.edu/"
       />
+      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
+    </LogoRow>
+    <LogoRow>
       <Logo
         alt="Pratt School of Engineering"
         src={PrattLogo}
