@@ -16,7 +16,7 @@ const CardBase = styled('div')`
   padding: 25px;
   color: white;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   margin: 5pt;
   width: 90%;
   left: 5%;
