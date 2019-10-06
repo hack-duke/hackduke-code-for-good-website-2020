@@ -120,11 +120,17 @@ export default ({ id, sectionColor }) => (
             you too.
           </FAQItem>
           <FAQItem title="I want to volunteer or mentor! How can I help?">
-            To help with logistics day of, sign up to volunteer. If you're
-            looking to mentor hackers with tech or track knowledge, come help
-            out as a mentor. Both mentors and volunteers will get a special
-            HackDuke T-shirt! We are currently working on setting up the forms,
-            but please email us if interested.
+            To help with logistics day of,{' '}
+            <SponsorshipLink href="https://docs.google.com/forms/d/e/1FAIpQLSeOZ0ZuFcGknWby-nsjv6cJq0vnr1bZcidHDk3G_EgK0k1BDA/viewform">
+              sign up to volunteer
+            </SponsorshipLink>
+            {'. '}
+            If you're looking to mentor hackers with tech or track knowledge,{' '}
+            <SponsorshipLink href="mailto:hackers@hackduke.org">
+              email us
+            </SponsorshipLink>
+            {'! '}
+            Both mentors and volunteers will get a special HackDuke T-shirt!
           </FAQItem>
         </FAQColumn>
         <FAQColumn>
