@@ -117,7 +117,7 @@ export default ({ id }) => (
           href="https://hackduke.org/apply"
           target="_blank"
         >
-          Register
+          Apply
         </Button>
       </ButtonWrapper>
     </LandingContent>
