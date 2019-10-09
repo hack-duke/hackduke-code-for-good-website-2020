@@ -26,6 +26,16 @@ export default [
       },
       { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
       {
+        time: '2:00PM',
+        name: 'Workshop Session 1',
+        locations: ['Hudson Hall, Room TBD']
+      },
+      {
+        time: '3:00PM',
+        name: 'Workshop Session 2',
+        locations: ['Hudson Hall, Room TBD']
+      },
+      {
         time: '3:00PM - 5:00PM',
         name: 'Puppies!!!!!',
         locations: ['Harrington Quad']
@@ -34,6 +44,11 @@ export default [
         time: '3:00PM - 7:00PM',
         name: 'Spikeball & Frisbee',
         locations: ['Harrington Quad']
+      },
+      {
+        time: '4:00PM',
+        name: 'Workshop Session 3',
+        locations: ['Hudson Hall, Room TBD']
       },
       {
         time: '6:00PM - 7:00PM',
@@ -79,6 +94,11 @@ export default [
         time: '9:00AM - 9:45AM',
         name: 'Breakfast',
         locations: ['Schiciano Foyer']
+      },
+      {
+        time: '11:00AM',
+        name: 'Workshop Session 4',
+        locations: ['Hudson Hall, Room TBD']
       },
       {
         time: '12:00PM - 1:30PM',
