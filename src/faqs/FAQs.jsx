@@ -158,9 +158,12 @@ export default ({ id, sectionColor }) => (
           <FAQItem title="Travel?">
             We will be sending two buses: one to UVA and VTech, and one to
             Georgia Tech, UNC and NC State. The max capacity of each bus is 60
-            people. More details will be provided in the next few weeks. Travel
-            reimbursements will be taken on a case-by-case basis but carpoolers
-            will be given priority.
+            people. More details will be provided in the next few weeks.{' '}
+            <SponsorshipLink href="https://hackduke.typeform.com/to/qBjLYb">
+              Travel reimbursements
+            </SponsorshipLink>{' '}
+            will be taken on a case-by-case basis but carpoolers will be given
+            priority.
           </FAQItem>
         </FAQColumn>
       </FAQContainer>
