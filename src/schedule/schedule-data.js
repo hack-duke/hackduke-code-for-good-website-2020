@@ -12,7 +12,7 @@ export default [
       {
         time: '11:00AM - 12:30PM',
         name: 'Opening Ceremony',
-        locations: ['Reynolds Theatre']
+        locations: ['Page Auditorium']
       },
       {
         time: '12:30PM - 1:00PM',
