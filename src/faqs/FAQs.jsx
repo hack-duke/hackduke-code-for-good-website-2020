@@ -120,11 +120,24 @@ export default ({ id, sectionColor }) => (
             you too.
           </FAQItem>
           <FAQItem title="I want to volunteer or mentor! How can I help?">
-            To help with logistics day of, sign up to volunteer. If you're
-            looking to mentor hackers with tech or track knowledge, come help
-            out as a mentor. Both mentors and volunteers will get a special
-            HackDuke T-shirt! We are currently working on setting up the forms,
-            but please email us if interested.
+            To help with logistics day of,{' '}
+            <SponsorshipLink href="https://docs.google.com/forms/d/e/1FAIpQLSeOZ0ZuFcGknWby-nsjv6cJq0vnr1bZcidHDk3G_EgK0k1BDA/viewform">
+              sign up to volunteer
+            </SponsorshipLink>
+            {'. '}
+            If you're looking to mentor hackers with tech or track knowledge,{' '}
+            <SponsorshipLink href="mailto:hackers@hackduke.org">
+              email us
+            </SponsorshipLink>
+            {'! '}
+            Both mentors and volunteers will get a special HackDuke T-shirt!
+          </FAQItem>
+          <FAQItem title="How can I become a sponsor?">
+            Email us at{' '}
+            <SponsorshipLink href="mailto:sponsorship@hackduke.org">
+              sponsorship@hackduke.org
+            </SponsorshipLink>
+            !
           </FAQItem>
         </FAQColumn>
         <FAQColumn>
@@ -134,24 +147,23 @@ export default ({ id, sectionColor }) => (
             friend by talking to each other, our mentors and our experts!
           </FAQItem>
           <FAQItem title="Anything I should remember to bring?">
-            Bring your own ethernet cables (or you can just use WiFi) and bring
-            any Nerf gun arsenal you have!
+            Bring your laptop, chargers, ethernet cables (or use WiFi),
+            toiletries/sleeping bags if you plan to stay the night, any Nerf gun
+            arsenal you may have, as well as a spirit to Code for Good!
           </FAQItem>
           <FAQItem title="What can I make?">
             We welcome all software and hardware hacks that align to our tracks
             for impact. We will also have lab space for hardware hackers.
           </FAQItem>
           <FAQItem title="Travel?">
-            Anyone from across the nation is welcome to come! We will be
-            providing buses for certain universities. Travel reimbursements will
-            be provided in case by case scenarios.
-          </FAQItem>
-          <FAQItem title="How can I become a sponsor?">
-            Email us at{' '}
-            <SponsorshipLink href="mailto:sponsorship@hackduke.org">
-              sponsorship@hackduke.org
-            </SponsorshipLink>
-            !
+            We will be sending two buses: one to UVA and VTech, and one to
+            Georgia Tech, UNC and NC State. The max capacity of each bus is 60
+            people. More details will be provided in the next few weeks.{' '}
+            <SponsorshipLink href="https://hackduke.typeform.com/to/qBjLYb">
+              Travel reimbursements
+            </SponsorshipLink>{' '}
+            will be taken on a case-by-case basis but carpoolers will be given
+            priority.
           </FAQItem>
         </FAQColumn>
       </FAQContainer>

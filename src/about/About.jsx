@@ -8,10 +8,12 @@ import CenterContainer from './CenterContainer';
 
 import mapImg from './map.svg';
 import aboutTitleImg from './about-title.svg';
+import aboutSlide0 from './about-2.svg';
 import aboutSlide1 from './about-1.svg';
 import aboutSlide2 from './about-2.svg';
 import aboutSlide3 from './about-3.svg';
 
+import mobileAbout0 from './mobile-about-2.svg';
 import mobileAbout1 from './mobile-about-1.svg';
 import mobileAbout2 from './mobile-about-2.svg';
 import mobileAbout3 from './mobile-about-3.svg';
@@ -151,7 +153,7 @@ class About extends Component {
 
   changeToSlide = idx => {
     this.setState({
-      slideIdx: idx < 0 ? 3 + idx : idx % 3
+      slideIdx: idx < 0 ? 4 + idx : idx % 4
     });
   };
 
@@ -210,6 +212,11 @@ class About extends Component {
               currIdx={this.state.slideIdx}
               onClick={() => this.changeToSlide(2)}
             />
+            <SliderButton
+              idx={3}
+              currIdx={this.state.slideIdx}
+              onClick={() => this.changeToSlide(3)}
+            />
           </SliderButtonContainer>
         </BodyContainer>
       </Container>
@@ -220,6 +227,13 @@ class About extends Component {
 export default About;
 
 const slides = [
+  {
+    img: aboutSlide0,
+    mobileImg: mobileAbout0,
+    title: 'What is HackDuke?',
+    text:
+      "HackDuke is the nation's premier hackathon for tech and social good. We unite students that are passionate about changing the intention and narrative behind how technology is used today to create meaningful hacks in a 24-hour sprint. Come learn, come discuss, and come code for good!"
+  },
   {
     img: aboutSlide1,
     mobileImg: mobileAbout1,
