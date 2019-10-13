@@ -140,7 +140,7 @@ export default () => (
         src={StickerMuleLogo}
         href="https://stickermule.com/"
       />
-      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/career/" />
+      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
     </LogoRow>
     <LogoRow>
       <Logo
