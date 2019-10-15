@@ -7,7 +7,7 @@ import WolframLogo from './img/wolfram.svg';
 
 import FuquaLogo from './img/fuqua.svg';
 import PrattLogo from './img/pratt.svg';
-import IIDLogo from './img/iid.png';
+import IIDLogo from './img/iiD_logo.svg';
 
 import GlobalBankersLogo from './img/gbankers.png';
 import CapitalOneLogo from './img/capital-one.svg';
@@ -30,6 +30,8 @@ import MastercardLogo from './img/mastercard.svg';
 import GSKLogo from './img/gsk.svg';
 import ZuoraLogo from './img/zuora-logo.svg';
 import LineageLogo from './img/lineage_logo.svg';
+import UizardLogo from './img/uizard.svg';
+import JuvoLogo from './img/juvo.png';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -78,37 +80,67 @@ export default () => (
   <React.Fragment>
     <LogoRow>
       <Logo
-        alt="Facebook"
-        src={FacebookLogo}
-        href="https://www.facebook.com/careers/students-and-grads/"
+        alt="Pratt School of Engineering"
+        src={PrattLogo}
+        href="https://pratt.duke.edu/"
       />
       <Logo
         alt="Houzz"
         src={HouzzLogo}
         href="https://www.houzz.com/jobs#career"
       />
-      <Logo
-        alt="Mastercard"
-        src={MastercardLogo}
-        href="https://www.mastercard.us/en-us/about-mastercard/careers/internships-college-hires.html"
-      />
     </LogoRow>
     <LogoRow>
+      <Logo
+        alt="Capitol One"
+        src={CapitalOneLogo}
+        href="https://campus.capitalone.com/"
+      />
+      <Logo
+        alt="Facebook"
+        src={FacebookLogo}
+        href="https://www.facebook.com/careers/students-and-grads/"
+      />
       <Logo
         alt="GSK"
         src={GSKLogo}
         href="https://us.gsk.com/en-us/careers/apprentices-students-and-graduates/internships-and-co-ops/"
       />
+    </LogoRow>
+    <LogoRow>
       <Logo
         alt="Lineage Logistics"
         src={LineageLogo}
         href="https://lineagelogistics.com/careers"
       />
       <Logo
+        alt="Mastercard"
+        src={MastercardLogo}
+        href="https://www.mastercard.us/en-us/about-mastercard/careers/internships-college-hires.html"
+      />
+      <Logo
         alt="Zuora"
         src={ZuoraLogo}
         href="https://www.zuora.com/about/careers/"
       />
+    </LogoRow>
+    <LogoRow>
+      <Logo alt="Rhodes iiD" src={IIDLogo} href="https://uizard.io/career/" />
+      <Logo
+        alt="Appian"
+        src={AppianLogo}
+        href="https://www.appian.com/careers/"
+      />
+      <Logo alt="Juvo" src={JuvoLogo} href="https://juvo.com/careers/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
+      <Logo
+        alt="StickerMule"
+        src={StickerMuleLogo}
+        href="https://stickermule.com/"
+      />
+      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -120,14 +152,6 @@ export default () => (
         alt="Fuqua School of Business"
         src={FuquaLogo}
         href="https://www.fuqua.duke.edu/"
-      />
-      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
-    </LogoRow>
-    <LogoRow>
-      <Logo
-        alt="Pratt School of Engineering"
-        src={PrattLogo}
-        href="https://pratt.duke.edu/"
       />
     </LogoRow>
   </React.Fragment>
