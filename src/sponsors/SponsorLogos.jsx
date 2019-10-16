@@ -32,6 +32,7 @@ import ZuoraLogo from './img/zuora-logo.svg';
 import LineageLogo from './img/lineage_logo.svg';
 import UizardLogo from './img/uizard.svg';
 import JuvoLogo from './img/juvo.png';
+import SpikeballLogo from './img/spikeball.svg';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -153,6 +154,7 @@ export default () => (
         src={FuquaLogo}
         href="https://www.fuqua.duke.edu/"
       />
+      <Logo alt="Spikeball" src={SpikeballLogo} href="https://spikeball.com/" />
     </LogoRow>
   </React.Fragment>
 );
