@@ -2,28 +2,29 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import AppianLogo from './img/appian-logo.svg';
-import ScimedLogo from './img/scimed.png';
-import WolframLogo from './img/wolfram.svg';
 
 import FuquaLogo from './img/fuqua.svg';
 import PrattLogo from './img/pratt.svg';
 import IIDLogo from './img/iiD_logo.svg';
+import CodeplusLogo from './img/codeplus.svg';
+import ColabLogo from './img/co-lab.svg';
+import OITLogo from './img/oit.svg';
+import ECELogo from './img/ece.svg';
+import MEMSLogo from './img/mems.svg';
+import ISSLogo from './img/iss.svg';
+import BiostatLogo from './img/biostat.png';
+import DUMLLogo from './img/duke-ml.svg';
 
-import GlobalBankersLogo from './img/gbankers.png';
 import CapitalOneLogo from './img/capital-one.svg';
-
-import MicrosoftLogo from './img/microsoft-logo.svg';
-import OptumLogo from './img/optum-logo.svg';
-import InnovationCoLabLogo from './img/innovation-colab.png';
 
 import FacebookLogo from './img/fb-family.svg';
 import GoogleLogo from './img/google-logo.svg';
-import PalantirLogo from './img/palantir-logo.svg';
 
 import StickerMuleLogo from './img/stickermule.svg';
 import EpicLogo from './img/epic_logo.png';
 import DukeCSLogo from './img/duke-cs-logo.svg';
 import ZwelisLogo from './img/zwelis-logo.png';
+import CitadelLogo from './img/citadel.svg';
 
 import HouzzLogo from './img/houzz.svg';
 import MastercardLogo from './img/mastercard.svg';
@@ -33,6 +34,12 @@ import LineageLogo from './img/lineage_logo.svg';
 import UizardLogo from './img/uizard.svg';
 import JuvoLogo from './img/juvo.png';
 import SpikeballLogo from './img/spikeball.svg';
+import LinodeLogo from './img/linode.svg';
+import TastyTradeLogo from './img/tastytrade.svg';
+import CIFLogo from './img/CIF.png';
+import CrossCommLogo from './img/crosscomm.png';
+import SmartcarLogo from './img/smartcar.svg';
+import GoogleCloudLogo from './img/google-cloud.svg';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -98,21 +105,17 @@ export default () => (
         href="https://campus.capitalone.com/"
       />
       <Logo
-        alt="Facebook"
-        src={FacebookLogo}
-        href="https://www.facebook.com/careers/students-and-grads/"
-      />
-      <Logo
         alt="GSK"
         src={GSKLogo}
         href="https://us.gsk.com/en-us/careers/apprentices-students-and-graduates/internships-and-co-ops/"
       />
     </LogoRow>
+
     <LogoRow>
       <Logo
-        alt="Lineage Logistics"
-        src={LineageLogo}
-        href="https://lineagelogistics.com/careers"
+        alt="Facebook"
+        src={FacebookLogo}
+        href="https://www.facebook.com/careers/students-and-grads/"
       />
       <Logo
         alt="Mastercard"
@@ -120,28 +123,53 @@ export default () => (
         href="https://www.mastercard.us/en-us/about-mastercard/careers/internships-college-hires.html"
       />
       <Logo
+        alt="Lineage Logistics"
+        src={LineageLogo}
+        href="https://lineagelogistics.com/careers"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="Citadel"
+        src={CitadelLogo}
+        href="https://www.citadel.com/careers/students/"
+      />
+      <Logo
         alt="Zuora"
         src={ZuoraLogo}
         href="https://www.zuora.com/about/careers/"
       />
+      <Logo
+        alt="Duke Electrical and Computer Engineering"
+        src={ECELogo}
+        href="https://ece.duke.edu/"
+      />
     </LogoRow>
     <LogoRow>
-      <Logo alt="Rhodes iiD" src={IIDLogo} href="https://uizard.io/career/" />
+      <Logo
+        alt="Duke Office of Information Technology"
+        src={OITLogo}
+        href="https://oit.duke.edu/"
+      />
+      <Logo
+        alt="Duke Code +"
+        src={CodeplusLogo}
+        href="https://codeplus.duke.edu/"
+      />
+      <Logo alt="Rhodes iiD" src={IIDLogo} href="https://bigdata.duke.edu/" />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="Duke Innovation Co-lab"
+        src={ColabLogo}
+        href="https://colab.duke.edu/"
+      />
+      <Logo alt="Juvo" src={JuvoLogo} href="https://juvo.com/careers/" />
       <Logo
         alt="Appian"
         src={AppianLogo}
         href="https://www.appian.com/careers/"
       />
-      <Logo alt="Juvo" src={JuvoLogo} href="https://juvo.com/careers/" />
-    </LogoRow>
-    <LogoRow>
-      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
-      <Logo
-        alt="StickerMule"
-        src={StickerMuleLogo}
-        href="https://stickermule.com/"
-      />
-      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
     </LogoRow>
     <LogoRow>
       <Logo
@@ -154,7 +182,65 @@ export default () => (
         src={FuquaLogo}
         href="https://www.fuqua.duke.edu/"
       />
+      <Logo
+        alt="Duke Information Science and Studies"
+        src={ISSLogo}
+        href="https://iss-staging.trinity.duke.edu/"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo alt="Epic" src={EpicLogo} href="https://careers.epic.com/" />
+      <Logo alt="Linode" src={LinodeLogo} href="https://www.linode.com/" />
+      <Logo
+        alt="Duke Mechanical Engineering & Materials Science"
+        src={MEMSLogo}
+        href="https://mems.duke.edu/"
+      />
+    </LogoRow>
+
+    <LogoRow>
+      <Logo
+        alt="Duke Biostatistics and Bioinformatics"
+        src={BiostatLogo}
+        href="https://biostat.duke.edu/"
+      />
+      <Logo
+        alt="TastyTrade"
+        src={TastyTradeLogo}
+        href="https://www.linode.com/"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="Coding it Forward"
+        src={CIFLogo}
+        href="https://www.codingitforward.com/fellowship"
+      />
+      <Logo alt="Smartcar" src={SmartcarLogo} href="https://www.smartcar.io/" />
+      <Logo
+        alt="CrossComm"
+        src={CrossCommLogo}
+        href="https://www.crosscomm.com/"
+      />
+      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
+    </LogoRow>
+    <LogoRow>
       <Logo alt="Spikeball" src={SpikeballLogo} href="https://spikeball.com/" />
+      <Logo
+        alt="StickerMule"
+        src={StickerMuleLogo}
+        href="http://hackp.ac/mlh-stickermule-hackathons"
+      />
+      <Logo
+        alt="Google Cloud"
+        src={GoogleCloudLogo}
+        href="https://cloud.google.com/"
+      />
+      <Logo
+        alt="Duke Undergraduate Machine Learning"
+        src={DUMLLogo}
+        href="https://dukeml.org/"
+      />
     </LogoRow>
   </React.Fragment>
 );
