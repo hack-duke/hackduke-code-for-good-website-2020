@@ -1,4 +1,4 @@
-# hackduke-code-for-good-website-2018
+# hackduke-code-for-good-website-2019
 
 [![Build Status](https://img.shields.io/travis-ci/hack-duke/hackduke-code-for-good-website-2018.svg?style=flat-square)](https://travis-ci.org/hack-duke/hackduke-code-for-good-website-2018)
 

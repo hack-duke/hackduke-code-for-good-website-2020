@@ -122,6 +122,11 @@ export default [
         name: 'Lunch',
         locations: ['Schiciano Foyer']
       },
+      {
+        time: '1:00pm - 2:00PM',
+        name: 'Duke ML Keynote: Dr. Usama Fayyad',
+        locations: ['Gross Hall, Ahmadieh Family Auditorium']
+      },
       { time: '1:30PM', name: 'Hacking Ends', locations: ['-'] },
       { time: '2:00PM', name: 'Judging Begins' },
       {
