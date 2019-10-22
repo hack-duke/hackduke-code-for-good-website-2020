@@ -222,7 +222,6 @@ export default () => (
         src={CrossCommLogo}
         href="https://www.crosscomm.com/"
       />
-      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
     </LogoRow>
     <LogoRow>
       <Logo alt="Spikeball" src={SpikeballLogo} href="https://spikeball.com/" />
