@@ -35,12 +35,14 @@ export default [
       {
         time: '2:00PM',
         name: 'Workshop Session 1',
-        locations: ['Hudson Hall, Room TBD']
+        locations: ['Hudson Hall, Room TBD'],
+        modalText: 'example modal text 1'
       },
       {
         time: '3:00PM',
         name: 'Workshop Session 2',
-        locations: ['Hudson Hall, Room TBD']
+        locations: ['Hudson Hall, Room TBD'],
+        modalText: 'example modal text 2'
       },
       {
         time: '3:00PM - 5:00PM',

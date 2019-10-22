@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
 import { TitleFont, ShadowItem } from '../common-styles';
+import ScheduleModal from './ScheduleModal';
 
 const dateColSmWidth = '168px';
 const dateColMedWidth = '190px';
@@ -71,6 +72,10 @@ const EventDetailsText = styled('div')`
   font-size: 0.9em;
   color: #555;
   ${props =>
+    props.hasModal &&
+    css`
+      cursor: pointer;
+    `} ${props =>
     props.primary &&
     css`
       font-weight: bold;
@@ -113,21 +118,56 @@ const EventRow = styled('div')`
   }
 `;
 
-export default ({ sectionColor, events }) => (
-  <CardBase color={sectionColor}>
-    {events.map(({ time, name, locations }) => (
-      <EventRow key={time + name}>
-        <EventTime>{time}</EventTime>
-        <EventDetails>
-          <EventDetailsText primary={true} primaryColor={sectionColor}>
-            {name}
-          </EventDetailsText>
-          {locations &&
-            locations.map(loc => (
-              <EventDetailsText key={loc}>{loc}</EventDetailsText>
-            ))}
-        </EventDetails>
-      </EventRow>
-    ))}
-  </CardBase>
-);
+class ScheduleItemCard extends Component {
+  state = {
+    modalText: undefined
+  };
+
+  render() {
+    const sectionColor = this.props.sectionColor;
+    const events = this.props.events;
+
+    return (
+      <div>
+        <CardBase color={sectionColor}>
+          {events.map(({ time, name, locations, modalText }) => (
+            <EventRow key={time + name}>
+              <EventTime>{time}</EventTime>
+              <EventDetails>
+                <EventDetailsText
+                  primary={true}
+                  primaryColor={sectionColor}
+                  onClick={() => {
+                    console.log(modalText);
+                    this.setState({
+                      modalText
+                    });
+                  }}
+                  hasModal={!!modalText}
+                >
+                  {name}
+                </EventDetailsText>
+                {locations &&
+                  locations.map(loc => (
+                    <EventDetailsText key={loc}>{loc}</EventDetailsText>
+                  ))}
+              </EventDetails>
+            </EventRow>
+          ))}
+        </CardBase>
+        {this.state.modalText && (
+          <ScheduleModal
+            closeModal={() => {
+              this.setState({
+                modalText: undefined
+              });
+            }}
+            text={this.state.modalText}
+          />
+        )}
+      </div>
+    );
+  }
+}
+
+export default ScheduleItemCard;
