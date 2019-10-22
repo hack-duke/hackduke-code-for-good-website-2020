@@ -15,7 +15,7 @@ export default [
         locations: ['Page Auditorium']
       },
       {
-        time: '12:30AM - 1:00PM',
+        time: '12:30PM - 1:00PM',
         name: 'Track Talks',
         locations: [
           'Scichiano A - Education, Scichiano B - Health, Hudson 207 - Energy, Hudson 208 - InequalityHudson 208 - Nonprofit'
