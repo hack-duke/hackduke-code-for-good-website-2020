@@ -207,7 +207,7 @@ export default () => (
       <Logo
         alt="TastyTrade"
         src={TastyTradeLogo}
-        href="https://www.linode.com/"
+        href="https://www.tastytrade.com"
       />
     </LogoRow>
     <LogoRow>
