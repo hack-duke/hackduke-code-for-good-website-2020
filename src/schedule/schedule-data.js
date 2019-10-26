@@ -12,13 +12,31 @@ export default [
       {
         time: '11:00AM - 12:15PM',
         name: 'Opening Ceremony',
-        locations: ['Page Auditorium']
+        locations: ['Page Auditorium'],
+        modalText: [
+          {
+            title: 'Opening Speaker',
+            name: 'Capital One: Jason Valentino',
+            loc: 'Page Auditorium'
+          }
+        ]
       },
       {
         time: '12:30PM - 1:00PM',
         name: 'Track Talks',
         locations: [
-          'Scichiano A - Education, Scichiano B - Health, Hudson 207 - Energy, Hudson 208 - InequalityHudson 208 - Nonprofit'
+          'Scichiano A - Education, Scichiano B - Health, Hudson 207 - Energy, Hudson 208 - Inequality, Hudson 208 - Nonprofit'
+        ],
+        modalText: [
+          { title: 'Education Track', loc: 'Scichiano A' },
+          { title: 'Health Track', name: 'GSK', loc: 'Scichiano B' },
+          { title: 'Energy Track', name: 'Margaret', loc: 'Hudson 207' },
+          { title: 'Inequality Track', name: 'Juvo', loc: 'Hudson 208' },
+          {
+            title: 'Nonprofit Track',
+            name: 'HD Team: Kyle Ryan, Rachel Dodell',
+            loc: 'Hudson 208'
+          }
         ]
       },
       {
@@ -36,13 +54,42 @@ export default [
         time: '2:00PM',
         name: 'Workshop Session 1',
         locations: ['Hudson Hall, Room TBD'],
-        modalText: 'example modal text 1'
+        modalText: [
+          {
+            title: 'Database Workshop',
+            name: 'Co-lab: Danai Adkisson',
+            loc: 'Hudson 216'
+          },
+          {
+            title:
+              'Ethical Artificial Intelligence: A Lightning Talk with Ethical Tech',
+            name: 'Ethical Tech: Justin Sherman, Joanne Kim, Kam Kara-Pabani',
+            loc: 'Hudson 218'
+          },
+          {
+            title: 'CSS Deep Dive: Grid',
+            name: 'Co-Lab: Sandra Bermond',
+            loc: 'Hudson 212'
+          },
+          {
+            title: 'Intro to Front-end: HTML, CSS, Javascript',
+            name: 'Grant Kim',
+            loc: 'Hudson 218'
+          }
+        ]
       },
       {
         time: '3:00PM',
         name: 'Workshop Session 2',
         locations: ['Hudson Hall, Room TBD'],
-        modalText: 'example modal text 2'
+        modalText: [
+          {
+            title: 'How to host your web app on GCP!',
+            name: 'Smartcar: Helena Merk',
+            loc: 'Hudson 216'
+          },
+          { title: 'React Workshop', name: 'Christina Li', loc: 'Hudson 218' }
+        ]
       },
       {
         time: '3:00PM - 5:00PM',
@@ -57,7 +104,19 @@ export default [
       {
         time: '4:00PM',
         name: 'Workshop Session 3',
-        locations: ['Hudson Hall, Room TBD']
+        locations: ['Hudson Hall, Room TBD'],
+        modalText: [
+          {
+            title: 'Working Effectively as a Team',
+            name: 'Bobby Wang',
+            loc: 'Hudson 212'
+          },
+          {
+            title: 'Intro to AR/VR Development (Workshop)',
+            name: 'CrossCom: Don Shin',
+            loc: 'Hudson 218'
+          }
+        ]
       },
       {
         time: '6:00PM - 7:00PM',
@@ -117,7 +176,14 @@ export default [
       {
         time: '10:00AM - 12:00PM',
         name: 'Workshops',
-        locations: ['Locations TBA']
+        locations: ['Locations TBA'],
+        modalText: [
+          {
+            title: 'Interview Advice for the Real World',
+            name: 'Civis Analytics: Erik Zimmer, Sara Rogers',
+            loc: 'Hudson 216'
+          }
+        ]
       },
       {
         time: '12:00PM - 1:30PM',

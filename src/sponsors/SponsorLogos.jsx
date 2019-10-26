@@ -207,7 +207,7 @@ export default () => (
       <Logo
         alt="TastyTrade"
         src={TastyTradeLogo}
-        href="https://www.linode.com/"
+        href="https://www.tastytrade.com"
       />
     </LogoRow>
     <LogoRow>
@@ -222,6 +222,7 @@ export default () => (
         src={CrossCommLogo}
         href="https://www.crosscomm.com/"
       />
+      <Logo alt="Uizard" src={UizardLogo} href="https://uizard.io/" />
     </LogoRow>
     <LogoRow>
       <Logo alt="Spikeball" src={SpikeballLogo} href="https://spikeball.com/" />
