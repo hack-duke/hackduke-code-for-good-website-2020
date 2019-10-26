@@ -4,17 +4,26 @@ import styled from 'react-emotion';
 export default ({ closeModal, text }) => {
   return (
     <Veil>
-      <Container>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end'
-          }}
-        >
-          <ExitButton onClick={closeModal}>x</ExitButton>
-        </div>
-        <ModalText>{text}</ModalText>
-      </Container>
+      <div style={{ height: '100%', width: '100%', paddingLeft: '20%' }}>
+        <Container>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              marginBottom: '-30px'
+            }}
+          >
+            <ExitButton onClick={closeModal}>x</ExitButton>
+          </div>
+          {text.map(({ title, name, loc }) => (
+            <div>
+              <ModalTextTitle>{title}</ModalTextTitle>
+              <ModalTextName>{name}</ModalTextName>
+              <ModalTextLoc>{loc}</ModalTextLoc>
+            </div>
+          ))}
+        </Container>
+      </div>
     </Veil>
   );
 };
@@ -32,7 +41,7 @@ const Veil = styled('div')`
 
 const Container = styled('div')`
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background-color: white;
   border-radius: 6px;
@@ -49,8 +58,26 @@ const ExitButton = styled('p')`
   user-select: none;
 `;
 
-const ModalText = styled('p')`
-  font-size: 20px;
-  padding: 20px;
+const ModalTextTitle = styled('h1')`
+  font-size: 1.15em;
   font-family: sans-serif;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 4px;
+`;
+
+const ModalTextName = styled('h2')`
+  font-size: 0.8em;
+  font-family: sans-serif;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 4px;
+`;
+
+const ModalTextLoc = styled('p')`
+  font-size: 0.8em;
+  font-family: sans-serif;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 18px;
 `;
