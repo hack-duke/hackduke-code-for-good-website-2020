@@ -3,6 +3,7 @@ import { renderStylesToString } from 'emotion-server';
 
 export default {
   inlineCss: true,
+  plugins: ['react-static-plugin-react-router'],
   renderToHtml: (render, Comp) =>
     renderStylesToString(render(React.createElement(Comp))),
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
