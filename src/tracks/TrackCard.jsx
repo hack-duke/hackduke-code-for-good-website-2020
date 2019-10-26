@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import { css } from 'emotion';
 
+import { Link } from 'react-router-dom';
 import { SecondaryText, ShadowItem, TitleFont } from '../common-styles';
 import AnimateHeight from 'react-animate-height';
 
@@ -36,6 +37,7 @@ const Border = styled('div')`
   width: 100%;
   height: 100%;
   padding: 10px 0 10px 10px;
+  pointer-events: none;
 `;
 
 const Title = styled('div')`
@@ -99,7 +101,7 @@ const ArrowIcon = styled('img')`
 
 export default class TrackCard extends React.PureComponent {
   render() {
-    const { title, children, isOpen, changePost } = this.props;
+    const { title, children, isOpen, changePost, hasButton } = this.props;
 
     const bgColor = bgColors[title];
     const x = offsetX[title];
@@ -114,15 +116,31 @@ export default class TrackCard extends React.PureComponent {
           backgroundColor: bgColor
         }}
       >
-        <Border onClick={changePost} style={{ top: x, left: y }} />
+        <Border style={{ top: x, left: y }} />
         <Header>
           <Title css={TitleFont}>{title}</Title>
-          <ArrowIcon open={isOpen} src={upArrow} />
+          <ArrowIcon open={isOpen} src={upArrow} onClick={changePost} />
         </Header>
         <AnimateHeight duration={300} height={isOpen ? 'auto' : 0}>
-          <CardContent css={SecondaryText}>{details}</CardContent>
+          <CardContent css={SecondaryText}>
+            <p>{details}</p>
+            {/* {hasButton && 
+            <Link to='/non-profits'>
+              <ButtonLink>Learn More</ButtonLink>
+            </Link>} */}
+          </CardContent>
         </AnimateHeight>
       </CardBase>
     );
   }
 }
+
+const ButtonLink = styled('div')`
+  display: inline-block;
+  border-radius: 3px;
+  padding: 5px 7.5px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  z-index: 3;
+`;
