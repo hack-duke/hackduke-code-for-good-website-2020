@@ -122,13 +122,8 @@ export default class TrackCard extends React.PureComponent {
           <ArrowIcon open={isOpen} src={upArrow} onClick={changePost} />
         </Header>
         <AnimateHeight duration={300} height={isOpen ? 'auto' : 0}>
-          <CardContent css={SecondaryText}>
-            <p>{details}</p>
-            {/* {hasButton && 
-            <Link to='/non-profits'>
-              <ButtonLink>Learn More</ButtonLink>
-            </Link>} */}
-          </CardContent>
+          <CardContent css={SecondaryText}>{details}</CardContent>
+          {/* {hasButton && <ButtonLink>Learn More</ButtonLink>} */}
         </AnimateHeight>
       </CardBase>
     );
@@ -136,11 +131,10 @@ export default class TrackCard extends React.PureComponent {
 }
 
 const ButtonLink = styled('div')`
-  display: inline-block;
-  border-radius: 3px;
   padding: 5px 7.5px;
   background-color: white;
   color: black;
+  display: inline-block;
   margin-top: 10px;
-  z-index: 3;
+  border-radius: 3px;
 `;
