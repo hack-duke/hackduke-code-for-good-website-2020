@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-
+// import {Nonprofits} from './nonprofits/Nonprofits.jsx';
 // Export your top level component as JSX (for static rendering)
 export default App;
 
