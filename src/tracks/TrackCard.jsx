@@ -83,7 +83,7 @@ const trackDetails = {
   'Energy & Environment':
     'The Energy track encompasses a technical perspective to deal with large issues impacting energy use, allocation and environmental regulations. Example ideas include machine learning for resource extraction, the use of green energy and enforcing environmental policy.',
   Nonprofit:
-    'The nonprofits track allows hackers to work directly and contribute to the needs of local nonprofit organizations. At the beginning of the weekend, non-profits will present about their various projects. Over the next 24 hours, teams will collaborate and consult with the non-profits to innovate and present their ideas at the end. The non-profits will then decide which hack is the most useful. One unique feature is that the winners of each project will qualify for funding provided by HackDuke and can choose to continue working on the hack throughout the year.'
+    'The Nonprofits track allows hackers to work directly fix problems and contribute to the needs of local nonprofit organizations. Over the weekend, teams will collaborate and consult with the non-profits to innovate and present their ideas at the end. The winners of each project (decided by nonprofits or their representatives) will qualify for funding provided by HackDuke and can choose to continue working on the hack throughout the year.'
 };
 
 const Header = styled.div`
@@ -122,7 +122,22 @@ export default class TrackCard extends React.PureComponent {
         </Header>
         <AnimateHeight duration={300} height={isOpen ? 'auto' : 0}>
           <CardContent css={SecondaryText}>{details}</CardContent>
-          {/* {hasButton && <ButtonLink>Learn More</ButtonLink>} */}
+
+          <ButtonLink css={SecondaryText}>
+            <a
+              href="https://docs.google.com/document/d/1MOaTtjx0gjo4Guc5dSWXf68Iod2SphnDSFgeV6gGbDo/edit?usp=sharing"
+              target="_blank"
+              style={{
+                textDecoration: 'none',
+                color: 'white',
+                cursor: 'pointer'
+              }}
+            >
+              {title == 'Nonprofit'
+                ? "See this year's problem statements →"
+                : null}
+            </a>
+          </ButtonLink>
         </AnimateHeight>
       </CardBase>
     );
@@ -130,10 +145,9 @@ export default class TrackCard extends React.PureComponent {
 }
 
 const ButtonLink = styled('div')`
-  padding: 5px 7.5px;
-  background-color: white;
-  color: black;
-  display: inline-block;
-  margin-top: 10px;
-  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 30px;
+  text-decoration: none;
 `;
