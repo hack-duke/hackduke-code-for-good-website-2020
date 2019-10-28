@@ -120,7 +120,7 @@ export default [
       },
       {
         time: '6:00PM - 7:00PM',
-        name: 'Mixer for Female-Identifying and Non-Binary Hackers',
+        name: 'Houzz Mixer for Female-Identifying and Non-Binary Hackers',
         locations: ['Innovation Co-Lab']
       },
       {
@@ -137,11 +137,6 @@ export default [
         time: '8:00PM - 9:00PM',
         name: 'MLH Minigame',
         locations: ['CIEMAS 1st Floor']
-      },
-      {
-        time: '9:00PM - 10:00PM',
-        name: 'WIT Mixer',
-        locations: ['Location TBA']
       },
       {
         time: '10:00PM - 10:45PM',
