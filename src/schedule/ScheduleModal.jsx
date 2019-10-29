@@ -15,11 +15,13 @@ export default ({ closeModal, text }) => {
           >
             <ExitButton onClick={closeModal}>x</ExitButton>
           </div>
-          {text.map(({ title, name, loc }) => (
+          {text.map(({ title, name, loc, speakerBlurb, workshop }) => (
             <div>
               <ModalTextTitle>{title}</ModalTextTitle>
-              <ModalTextName>{name}</ModalTextName>
-              <ModalTextLoc>{loc}</ModalTextLoc>
+              <ModalTextSub>{loc}</ModalTextSub>
+              <ModalTextBody>{workshop}</ModalTextBody>
+              <ModalTextSub>Speaker: {name}</ModalTextSub>
+              <ModalTextBody>{speakerBlurb}</ModalTextBody>
             </div>
           ))}
         </Container>
@@ -59,24 +61,27 @@ const ExitButton = styled('p')`
 `;
 
 const ModalTextTitle = styled('h1')`
-  font-size: 1.15em;
+  font-size: 1.5em;
+  font-family: 'Cabin', sans-serif;
+  color: #34357b;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 4px;
+`;
+
+const ModalTextSub = styled('h2')`
+  font-size: 0.9em;
+  color: #303242B;
   font-family: sans-serif;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 4px;
 `;
 
-const ModalTextName = styled('h2')`
-  font-size: 0.8em;
+const ModalTextBody = styled('p')`
+  font-size: 0.9em;
   font-family: sans-serif;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 4px;
-`;
-
-const ModalTextLoc = styled('p')`
-  font-size: 0.8em;
-  font-family: sans-serif;
+  color: #555;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 18px;
