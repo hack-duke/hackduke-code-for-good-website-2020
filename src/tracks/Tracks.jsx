@@ -172,6 +172,7 @@ class Tracks extends Component {
               isOpen={this.state.openPost == 4}
               title="Nonprofit"
               changePost={() => this.changePost(4)}
+              hasButton={true}
             />
             <img
               src={GrassPatch}

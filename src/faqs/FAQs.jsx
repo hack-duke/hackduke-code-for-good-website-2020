@@ -105,8 +105,8 @@ export default ({ id, sectionColor }) => (
           <FAQItem title="Prizes?">
             Yes, but there's a little twist! The grand prizes are donations
             under your name to charities and causes! There will be grand prize
-            winners for each track, novice track and many other company
-            sponsored API prizes as well.
+            winners for each track, novice prizes and many other company
+            sponsored prizes as well.
           </FAQItem>
           <FAQItem title="When? Where?">
             HackDuke starts Saturday, November 2nd at 9:00 AM EST and ends on
@@ -167,6 +167,11 @@ export default ({ id, sectionColor }) => (
             <SponsorshipLink href="https://hackduke.typeform.com/to/qBjLYb">
               here.
             </SponsorshipLink>{' '}
+          </FAQItem>
+          <FAQItem title="Isn't Datathon on the same day?">
+            Yes, but you can definitely participate in both and we encourage you
+            to! Any projects done using Datathon's dataset can be submitted to
+            our Energy & Environment track on Sunday.
           </FAQItem>
         </FAQColumn>
       </FAQContainer>

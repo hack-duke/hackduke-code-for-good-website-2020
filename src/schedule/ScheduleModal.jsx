@@ -4,17 +4,28 @@ import styled from 'react-emotion';
 export default ({ closeModal, text }) => {
   return (
     <Veil>
-      <Container>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end'
-          }}
-        >
-          <ExitButton onClick={closeModal}>x</ExitButton>
-        </div>
-        <ModalText>{text}</ModalText>
-      </Container>
+      <div style={{ height: '100%', width: '100%', paddingLeft: '20%' }}>
+        <Container>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              marginBottom: '-30px'
+            }}
+          >
+            <ExitButton onClick={closeModal}>x</ExitButton>
+          </div>
+          {text.map(({ title, name, loc, speakerBlurb, workshop }) => (
+            <div>
+              <ModalTextTitle>{title}</ModalTextTitle>
+              <ModalTextSub>{loc}</ModalTextSub>
+              <ModalTextBody>{workshop}</ModalTextBody>
+              <ModalTextSub>Speaker: {name}</ModalTextSub>
+              <ModalTextBody>{speakerBlurb}</ModalTextBody>
+            </div>
+          ))}
+        </Container>
+      </div>
     </Veil>
   );
 };
@@ -32,7 +43,7 @@ const Veil = styled('div')`
 
 const Container = styled('div')`
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background-color: white;
   border-radius: 6px;
@@ -49,8 +60,29 @@ const ExitButton = styled('p')`
   user-select: none;
 `;
 
-const ModalText = styled('p')`
-  font-size: 20px;
-  padding: 20px;
+const ModalTextTitle = styled('h1')`
+  font-size: 1.5em;
+  font-family: 'Cabin', sans-serif;
+  color: #34357b;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 4px;
+`;
+
+const ModalTextSub = styled('h2')`
+  font-size: 0.9em;
+  color: #303242B;
   font-family: sans-serif;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 4px;
+`;
+
+const ModalTextBody = styled('p')`
+  font-size: 0.9em;
+  font-family: sans-serif;
+  color: #555;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 18px;
 `;
