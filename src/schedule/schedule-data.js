@@ -150,7 +150,7 @@ export default [
       },
       {
         time: '6:00PM - 7:00PM',
-        name: 'Mixer for Female-Identifying and Non-Binary Hackers',
+        name: 'Mixer for Female-Identifying and Non-Binary Hackers with Houzz',
         locations: ['Innovation Co-Lab']
       },
       {
