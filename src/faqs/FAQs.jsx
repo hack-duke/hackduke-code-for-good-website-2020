@@ -142,9 +142,10 @@ export default ({ id, sectionColor }) => (
         </FAQColumn>
         <FAQColumn>
           <FAQItem title="Who can I work with?">
-            Anyone! Get to know your fellow programmers better from your own and
-            other schools! The only request that we have is that you make a new
-            friend by talking to each other, our mentors and our experts!
+            Anyone, in a team of three to five! Get to know your fellow
+            programmers better from your own and other schools! The only request
+            that we have is that you make a new friend by talking to each other,
+            our mentors and our experts!
           </FAQItem>
           <FAQItem title="Anything I should remember to bring?">
             Bring your laptop, chargers, ethernet cables (or use WiFi),
