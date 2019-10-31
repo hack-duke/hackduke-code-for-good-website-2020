@@ -15,8 +15,8 @@ export default [
         locations: ['Page Auditorium'],
         modalText: [
           {
-            title: 'Opening Speaker',
-            name: 'Capital One: Jason Valentino',
+            title: 'Opening Ceremony',
+            name: 'Jason Valentino (Capital One)',
             loc: 'Page Auditorium'
           }
         ]
@@ -252,7 +252,6 @@ export default [
         locations: ['Gross Hall, Ahmadieh Family Auditorium']
       },
       { time: '1:30PM', name: 'Hacking Ends', locations: ['-'] },
-      { time: '2:00PM', name: 'Judging Begins' },
       {
         time: '2:00PM - 4:00PM',
         name: 'Judging',
@@ -261,7 +260,15 @@ export default [
       {
         time: '4:30PM - 5:30PM',
         name: 'Closing Ceremony',
-        locations: ['Page Auditorium']
+        locations: ['Page Auditorium'],
+        modalText: [
+          {
+            title: 'Closing Ceremony',
+            name: 'Symonne Singleton (Code for America)',
+            loc: 'Page Auditorium', 
+            speakerBlurb:'Symonne earned her BA in History at Duke in 2017. She is now a Software Engineer at Code for America, where she works on creating technology to address the consequences of mass incarceration and clear criminal records across the country.
+          }
+        ]
       },
       {
         time: '6:00PM',
