@@ -141,7 +141,8 @@ export default [
           },
           {
             title: 'Machine Learning Workshop in Tensorflow.js with Mastercard',
-            loc: '5-6pm, Hudson 212'
+            loc: '5-6pm, Hudson 212',
+            workshop:'Machine learning doesn’t have to involve renting expensive compute and waiting hours to train your model. Join Mastercard engineers Eric and Jordan as they present an introduction to Tensorflow.js, a popular package for training machine learning models in the browser. They will go over use-cases for machine learning on the frontend and walk through a simple demo app.'
           },
           {
             title: 'React Workshop',
