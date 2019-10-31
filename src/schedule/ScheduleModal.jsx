@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 export default ({ closeModal, text }) => {
   return (
     <Veil>
-      <div style={{ height: '100%', width: '100%', paddingLeft: '20%' }}>
+      <div style={{ height: '100%', width: '100%', paddingLeft: '10%' }}>
         <Container>
           <div
             style={{
@@ -43,10 +43,11 @@ const Veil = styled('div')`
 
 const Container = styled('div')`
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 100%;
   background-color: white;
   border-radius: 6px;
+  overflow-y: auto;
 `;
 
 const ExitButton = styled('p')`
