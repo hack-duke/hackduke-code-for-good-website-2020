@@ -19,9 +19,11 @@ export default ({ closeModal, text }) => {
             <div>
               <ModalTextTitle>{title}</ModalTextTitle>
               <ModalTextSub>{loc}</ModalTextSub>
-              <ModalTextBody>{workshop}</ModalTextBody>
-              <ModalTextSub>Speaker: {name}</ModalTextSub>
-              <ModalTextBody>{speakerBlurb}</ModalTextBody>
+              <ModalTextBody>{workshop ? workshop : null}</ModalTextBody>
+              <ModalTextSub>{name ? 'Speaker: ' + name : null}</ModalTextSub>
+              <ModalTextBody>
+                {speakerBlurb ? speakerBlurb : null}
+              </ModalTextBody>
             </div>
           ))}
         </Container>
