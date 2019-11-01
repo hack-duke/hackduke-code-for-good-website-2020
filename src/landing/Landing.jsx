@@ -114,10 +114,10 @@ export default ({ id }) => (
         </Date>
         <Button
           material={BLUE_PRESSABLE}
-          href="https://hackduke.org/apply"
+          href="https://dayof.hackduke.org/"
           target="_blank"
         >
-          Apply
+          Day-of Info
         </Button>
       </ButtonWrapper>
     </LandingContent>

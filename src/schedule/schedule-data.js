@@ -142,7 +142,8 @@ export default [
           {
             title: 'Machine Learning Workshop in Tensorflow.js with Mastercard',
             loc: '5-6pm, Hudson 212',
-            workshop:'Machine learning doesn’t have to involve renting expensive compute and waiting hours to train your model. Join Mastercard engineers Eric and Jordan as they present an introduction to Tensorflow.js, a popular package for training machine learning models in the browser. They will go over use-cases for machine learning on the frontend and walk through a simple demo app.'
+            workshop:
+              'Machine learning doesn’t have to involve renting expensive compute and waiting hours to train your model. Join Mastercard engineers Eric and Jordan as they present an introduction to Tensorflow.js, a popular package for training machine learning models in the browser. They will go over use-cases for machine learning on the frontend and walk through a simple demo app.'
           },
           {
             title: 'React Workshop',
@@ -266,8 +267,9 @@ export default [
           {
             title: 'Closing Ceremony',
             name: 'Symonne Singleton (Code for America)',
-            loc: 'Page Auditorium', 
-            speakerBlurb:'Symonne earned her BA in History at Duke in 2017. She is now a Software Engineer at Code for America, where she works on creating technology to address the consequences of mass incarceration and clear criminal records across the country.
+            loc: 'Page Auditorium',
+            speakerBlurb:
+              'Symonne earned her BA in History at Duke in 2017. She is now a Software Engineer at Code for America, where she works on creating technology to address the consequences of mass incarceration and clear criminal records across the country.'
           }
         ]
       },
