@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 export default ({ closeModal, text }) => {
   return (
     <Veil>
-      <div style={{ height: '100%', width: '100%', paddingLeft: '10%' }}>
+      <div style={{ height: '100%', width: '100%', textAlign: 'center' }}>
         <Container>
           <div
             style={{
@@ -39,17 +39,21 @@ const Veil = styled('div')`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 50px;
+  padding: 50px 20px;
   z-index: 100;
 `;
 
 const Container = styled('div')`
+  display: inline-block;
   position: relative;
   width: 90%;
   height: 100%;
+  max-width: 900px;
   background-color: white;
   border-radius: 6px;
   overflow-y: auto;
+  margin: 0 auto;
+  text-align: left;
 `;
 
 const ExitButton = styled('p')`
@@ -74,7 +78,7 @@ const ModalTextTitle = styled('h1')`
 
 const ModalTextSub = styled('h2')`
   font-size: 0.9em;
-  color: #303242B;
+  color: #303242;
   font-family: sans-serif;
   padding-left: 5vw;
   padding-right: 5vw;
