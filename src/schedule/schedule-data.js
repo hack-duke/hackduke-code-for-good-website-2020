@@ -35,7 +35,7 @@ export default [
           {
             title: 'Nonprofit Track',
             name: 'HD Team: Kyle Ryan, Rachel Dodell',
-            loc: 'Hudson 208'
+            loc: 'Hudson 201'
           }
         ]
       },
