@@ -25,7 +25,7 @@ export default [
         time: '12:30PM - 1:00PM',
         name: 'Track Talks',
         locations: [
-          'Schiciano A - Education, Schiciano B - Health, Hudson 207 - Energy, Hudson 208 - Inequality, Hudson 208 - Nonprofits'
+          'Schiciano A - Education, Schiciano B - Health, Hudson 207 - Energy, Hudson 208 - Inequality, Hudson 201 - Nonprofits'
         ],
         modalText: [
           {
