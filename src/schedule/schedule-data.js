@@ -64,16 +64,16 @@ export default [
         ]
       },
       {
+        time: '1:00PM - 1:30PM',
+        name: 'Team Formation Mixer',
+        locations: ['Track Talk Rooms']
+      },
+      {
         time: '1:00PM - 2:00PM',
         name: 'Lunch',
-        locations: ['CIEMAS 1st Floor']
-      },
-      { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
-      {
-        time: '2:00PM - 2:30PM',
-        name: 'Team Formation Mixer',
         locations: ['Schiciano Foyer']
       },
+      { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
       {
         time: '2:00PM - 8:00PM',
         name: 'Workshops',
