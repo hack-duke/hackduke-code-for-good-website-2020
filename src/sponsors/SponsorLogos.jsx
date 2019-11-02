@@ -40,6 +40,7 @@ import CIFLogo from './img/CIF.png';
 import CrossCommLogo from './img/crosscomm.png';
 import SmartcarLogo from './img/smartcar.svg';
 import GoogleCloudLogo from './img/google-cloud.svg';
+import GogoLogo from './img/gogo.svg';
 
 const LogoRow = styled('div')`
   display: flex;
@@ -209,12 +210,17 @@ export default () => (
         src={TastyTradeLogo}
         href="https://www.tastytrade.com"
       />
-    </LogoRow>
-    <LogoRow>
       <Logo
         alt="Coding it Forward"
         src={CIFLogo}
         href="https://www.codingitforward.com/fellowship"
+      />
+    </LogoRow>
+    <LogoRow>
+      <Logo
+        alt="GogoSqueeze"
+        src={GogoLogo}
+        href="https://www.gogosqueez.com"
       />
       <Logo alt="Smartcar" src={SmartcarLogo} href="https://www.smartcar.io/" />
       <Logo

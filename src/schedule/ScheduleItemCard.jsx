@@ -75,6 +75,7 @@ const EventDetailsText = styled('div')`
     props.hasModal &&
     css`
       cursor: pointer;
+      text-decoration: underline;
     `} ${props =>
     props.primary &&
     css`
