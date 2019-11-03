@@ -2,7 +2,7 @@ export default [
   {
     // Months are zero-indexed for whatever reason
     // This is a historical artifact from the Java (yes, Java) APIs
-    date: new Date(2019, 11, 2),
+    date: new Date(2019, 11 - 1, 2),
     events: [
       {
         time: '9:00AM - 10:45AM',
@@ -198,7 +198,7 @@ export default [
     ]
   },
   {
-    date: new Date(2019, 11, 3),
+    date: new Date(2019, 11 - 1, 3),
     events: [
       {
         time: '12:00AM - 8:00AM',
