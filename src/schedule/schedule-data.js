@@ -2,7 +2,7 @@ export default [
   {
     // Months are zero-indexed for whatever reason
     // This is a historical artifact from the Java (yes, Java) APIs
-    date: new Date(2019, 11, 2),
+    date: new Date(2019, 11 - 1, 2),
     events: [
       {
         time: '9:00AM - 10:45AM',
@@ -25,7 +25,7 @@ export default [
         time: '12:30PM - 1:00PM',
         name: 'Track Talks',
         locations: [
-          'Schiciano A - Education, Schiciano B - Health, Hudson 207 - Energy, Hudson 208 - Inequality, Hudson 208 - Nonprofits'
+          'Schiciano A - Education, Schiciano B - Health, Hudson 207 - Energy, Hudson 208 - Inequality, Hudson 201 - Nonprofits'
         ],
         modalText: [
           {
@@ -57,23 +57,23 @@ export default [
           {
             title: 'Nonprofit Track',
             name: 'HD Team, Kyle Ryan, Coding it Forward (track sponsor)',
-            loc: 'Location: Hudson 208',
+            loc: 'Location: Hudson 201',
             workshop:
               'We will spend time explaining the track and each of our nonprofit projects. Rachel Dodell from Coding it Forward, our track sponsor, will then talk about her work and the Civic Digital Fellowship. Lastly we will open up for Q&A.'
           }
         ]
       },
       {
+        time: '1:00PM - 1:30PM',
+        name: 'Team Formation Mixer',
+        locations: ['Track Talk Rooms']
+      },
+      {
         time: '1:00PM - 2:00PM',
         name: 'Lunch',
-        locations: ['CIEMAS 1st Floor']
-      },
-      { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
-      {
-        time: '2:00PM - 2:30PM',
-        name: 'Team Formation Mixer',
         locations: ['Schiciano Foyer']
       },
+      { time: '2:00PM', name: 'Hacking Commences', locations: ['-'] },
       {
         time: '2:00PM - 8:00PM',
         name: 'Workshops',
@@ -198,7 +198,7 @@ export default [
     ]
   },
   {
-    date: new Date(2019, 11, 3),
+    date: new Date(2019, 11 - 1, 3),
     events: [
       {
         time: '12:00AM - 8:00AM',
