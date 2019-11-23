@@ -13,7 +13,7 @@ const CardBase = styled('div')`
   flex-grow: 1;
   flex-basis: 0;
   float: right;
-  background: linear-gradient(90deg, #fdfdfd 33%, #f8f8f8) repeat-y;
+  background: linear-gradient(90deg, #fdfdfd 50%, #f8f8f8) repeat-y;
   ${ShadowItem};
   background-size: ${dateColSmWidth};
   width: 100%;
