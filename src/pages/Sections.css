@@ -1,0 +1,31 @@
+.all-sections {
+    background-color: #25262A;
+}
+
+.section-page-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content-container {
+    width: 70vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.section-header {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    color: #F5F4F1;
+
+    margin-bottom: 5vh;
+}
+
+/* TODO: REMOVE THIS ONCE FILLED WITH ACTUAL CONTENT */
+.section-filler {
+    color: #F5F4F1;
+    height: 50vh;
+    border: 1px solid #F5F4F1;
+}

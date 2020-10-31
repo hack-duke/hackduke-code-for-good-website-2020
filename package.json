@@ -1,44 +1,36 @@
 {
-  "name": "hackduke-code-for-good-website-2018",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "react-static start",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "build": "react-static build",
-    "stage": "react-static build --staging",
-    "heroku-postbuild": "npm run build",
-    "start": "serve ./dist/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hack-duke/hackduke-code-for-good-website-2018.git"
-  },
-  "author": "Yunyu Lin <mail@yunyul.in>",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-plugin-emotion": "^9.2.6",
-    "emotion-server": "^9.2.10",
-    "husky": "^1.1.2",
-    "prettier": "^1.14.3",
-    "pretty-quick": "^1.7.0",
-    "react-static": "^5.9.12"
-  },
+  "name": "hackduke2020",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "detect-passive-events": "^1.0.4",
-    "emotion": "^9.2.6",
-    "memoize-one": "^4.0.2",
-    "react": "^16.4.2",
-    "react-anchor-link-smooth-scroll": "^1.0.11",
-    "react-animate-height": "^2.0.15",
-    "react-dom": "^16.4.2",
-    "react-emotion": "^9.2.6",
-    "react-redux": "^7.1.1",
-    "redux": "^4.0.4",
-    "serve": "^10.1.2"
+    "@material-ui/core": "^4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-scripts": "3.4.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
