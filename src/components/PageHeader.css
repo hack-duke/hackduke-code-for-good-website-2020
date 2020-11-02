@@ -6,14 +6,16 @@
 
 .header-title {
     float: left;
+    padding-top: 15px;
 }
 
 .icon-section {
     float: right;
+    padding-top: 15px;
 }
 
 .social-icon {
-    padding: 15px;
+    padding: 0 15px;
 }
 
 a, a:visited {
@@ -22,4 +24,11 @@ a, a:visited {
 
 a:hover {
     color: #25262A;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .social-icon {
+        padding: 0 10px;
+    }
 }
