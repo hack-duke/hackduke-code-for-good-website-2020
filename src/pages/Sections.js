@@ -7,7 +7,6 @@ import FAQ from './sections/FAQ';
 import Sponsors from './sections/Sponsors';
 
 import yellowBottom from '../graphics/yellow-bottom.svg';
-import PageFooter from '../components/PageFooter';
 
 function Sections(props) {
     return (
@@ -16,12 +15,10 @@ function Sections(props) {
 
             <div>
                 <Tracks/>
-                <Schedule/>
-                <FAQ/>
-                <Sponsors/>
+                {/* <Schedule/> */}
+                {/* <FAQ/> */}
+                {/* <Sponsors/> */}
             </div>
-
-            <PageFooter/>
         </div>
     )
 }

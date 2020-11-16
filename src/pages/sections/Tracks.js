@@ -1,17 +1,17 @@
 import React from 'react';
-import '../Sections.css';
+import Slider from "../../components/Slider";
+
 
 function Tracks(props) {
 
     return (
         <div className={'section'}>
-
             <div className={'section-page-container'}>
                 <div className={'section-content-container'}>
                     <div className={'section-header'}>Tracks</div>
-                    <div className={'section-filler'}>Track information goes here</div>
                 </div>
             </div>
+            <Slider />
         </div>
     )
 }

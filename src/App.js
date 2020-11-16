@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-// import Sections from './pages/Sections';
+import Sections from './pages/Sections';
+import PageFooter from './components/PageFooter';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <HomePage/>
       <AboutPage/>
 
-      {/* <Sections/> */}
+      <Sections/>
+
+      {/* <PageFooter/> */}
     </div>
   );
 }
