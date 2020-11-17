@@ -5,6 +5,7 @@ import Tracks from './sections/Tracks';
 import Schedule from './sections/Schedule';
 import FAQ from './sections/FAQ';
 import Sponsors from './sections/Sponsors';
+import BottomInfo from './sections/BottomInfo';
 
 import yellowBottom from '../graphics/yellow-bottom.svg';
 
@@ -18,6 +19,7 @@ function Sections(props) {
                 {/* <Schedule/> */}
                 {/* <FAQ/> */}
                 {/* <Sponsors/> */}
+                <BottomInfo/>
             </div>
         </div>
     )

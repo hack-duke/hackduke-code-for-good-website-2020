@@ -7,6 +7,10 @@
     margin: 10vh 0 30vh 0;
 }
 
+.section:last-child {
+    margin-bottom: 5vh;
+}
+
 .section-page-container {
     width: 100vw;
     display: flex;
