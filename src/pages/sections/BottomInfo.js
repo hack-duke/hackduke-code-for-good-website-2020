@@ -3,8 +3,7 @@ import { Fab } from "@material-ui/core";
 import '../Sections.css';
 import './BottomInfo.css';
 
-function FAQ(props) {
-
+function BottomInfo(props) {
     return (
         <div className={'section'}>
             <div className={'bottom-container'}>
@@ -19,4 +18,4 @@ function FAQ(props) {
     )
 }
 
-export default FAQ;
+export default BottomInfo;

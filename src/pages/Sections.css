@@ -1,6 +1,11 @@
-.all-sections {
+.dark-sections {
     background-color: #25262A;
     color: #F5F4F1;
+}
+
+.light-sections {
+    background-color: #F5F4F1;
+    color: #25262A;
 }
 
 .section {
@@ -27,6 +32,27 @@
     font-size: 40px;
     line-height: 60px;
     margin-bottom: 5vh;
+}
+
+.colorfuls {
+    height: 300px;
+    background-repeat: repeat-x;
+    margin-top: -20em;
+}
+
+.spookys {
+    height: 300px;
+    background-repeat: repeat-x;
+    margin-top: -140px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .spookys {
+        height: 300px;
+        background-repeat: repeat-x;
+        margin-top: -70px;
+    }
 }
 
 /* TODO: REMOVE THIS ONCE FILLED WITH ACTUAL CONTENT */
