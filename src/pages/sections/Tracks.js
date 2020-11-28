@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from "../../components/Slider";
+import TrackSlider from "../../components/TrackSlider";
 
 
 function Tracks(props) {
@@ -11,7 +11,9 @@ function Tracks(props) {
                     <div className={'section-header'}>Tracks</div>
                 </div>
             </div>
-            <Slider />
+            <div className={"tracks"}>
+                <TrackSlider/>
+            </div>
         </div>
     )
 }

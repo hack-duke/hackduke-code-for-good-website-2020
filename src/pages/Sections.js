@@ -10,6 +10,8 @@ import BottomInfo from './sections/BottomInfo';
 import yellowBottom from '../graphics/yellow-bottom.svg';
 import colorfuls from '../graphics/colorfuls.svg';
 import spookys from '../graphics/transition.svg';
+import Speakers from "./sections/Speakers";
+import Sponsors from "./sections/Sponsors";
 
 function Sections(props) {
     return (
@@ -19,16 +21,16 @@ function Sections(props) {
                 <img src={yellowBottom} alt=''></img>
 
                 <Tracks/>
+                <Speakers/>
                 {/* <Schedule/> */}
                 <FAQ/>
-                {/* <Sponsors/> */}
             </div>
 
             <div className='colorfuls' style={{ backgroundImage: `url(${colorfuls})` }}></div>
             <div className='spookys' style={{ backgroundImage: `url(${spookys})` }}></div>
 
             <div className={'light-sections'}>
-
+            <Sponsors/>
                 <BottomInfo/>
             </div>
         </div>

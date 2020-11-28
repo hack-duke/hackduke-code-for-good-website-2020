@@ -1,8 +1,6 @@
 .about-page {
     width: 100vw;
     background-color: #F2C94C;
-    /* position: absolute; */
-    /* top: 100vh; */
 }
 
 .about-section {
@@ -11,12 +9,12 @@
 
 h3 {
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 54px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 30px;
 }
 
@@ -62,7 +60,7 @@ p {
 }
 
 .about-img {
-    width: 60%;
+    width: 40%;
 }
 
 /* Tablet */
