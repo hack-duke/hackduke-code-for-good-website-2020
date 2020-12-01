@@ -34,7 +34,7 @@ function FAQ(props) {
                         <div className={'questions-row'}>
                             <div className='question'>
                                 <div>What can I make?</div>
-                                <div>Because we are virtual, we expect most submissions will be software hacks that align with our tracks for impact. . However, if you want to make a hardware hack, please note that we cannot supply any supplies/tools.</div>
+                                <div>Because we are virtual, we expect most submissions will be software hacks that align with our tracks for impact. However, if you want to make a hardware hack, please note that we cannot supply any supplies/tools.</div>
                             </div>
                             <div className='question'>
                                 <div>Who can I work with?</div>
@@ -42,7 +42,7 @@ function FAQ(props) {
                             </div>
                             <div className='question'>
                                 <div>I want to volunteer or mentor! How can I help?</div>
-                                <div>To help with logistics day of, sign up to volunteer. If you're looking to mentor hackers with tech or track knowledge, come help out as a mentor. Both mentors and volunteers will get a special HackDuke T-shirt! (We are working on setting up the forms.)</div>
+                                <div>To help with logistics day of, sign up to volunteer. If you're looking to mentor hackers with tech or track knowledge, drop us an email at hackers@hackduke.org!</div>
                             </div>
                             <div className='question'>
                                 <div>How can I become a sponsor?</div>

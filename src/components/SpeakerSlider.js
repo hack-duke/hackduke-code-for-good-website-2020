@@ -29,23 +29,23 @@ SwiperCore.use([A11y, Autoplay]);
 
 function SpeakerSlider() {
 
-    //for changing CSS of active slides in slider
-    const [first, changeFirst] = useState(1);
-    const [last, changeLast] = useState(1);
-
-    const changeCSS = e => {
-        changeFirst(e.realIndex);
-        changeLast((e.activeIndex-1)%16);
-    }
-
-    const checkBetween = index => {
-        if (index > first && index < last) return true;
-        if (first > last) {
-            if (index > first) return true;
-            if (index < first && index < last) return true;
-        }
-        return false;
-    }
+    // //for changing CSS of active slides in slider
+    // const [first, changeFirst] = useState(1);
+    // const [last, changeLast] = useState(1);
+    //
+    // const changeCSS = e => {
+    //     changeFirst(e.realIndex);
+    //     changeLast((e.activeIndex-1)%16);
+    // }
+    //
+    // const checkBetween = index => {
+    //     if (index > first && index < last) return true;
+    //     if (first > last) {
+    //         if (index > first) return true;
+    //         if (index < first && index < last) return true;
+    //     }
+    //     return false;
+    // }
 
     return (
         <Swiper
@@ -55,11 +55,11 @@ function SpeakerSlider() {
             slidesPerView={1}
             spaceBetween={30}
             breakpoints={{768: {slidesPerView: 3}, 1024: {slidesPerView: 4}, 1260: {slidesPerView: 5}, 1600: {slidesPerView: 6}}}
-            onSlideChange={changeCSS}
+            //onSlideChange={changeCSS}
             loop
         >
             <SwiperSlide>
-                <div className={checkBetween(0) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker0} alt="" />
                     </div>
@@ -70,7 +70,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(1) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker1} alt="" />
                     </div>
@@ -81,7 +81,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(2) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker2} alt="" />
                     </div>
@@ -92,7 +92,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(3) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker3} alt="" />
                     </div>
@@ -103,18 +103,18 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(4) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker4} alt="" />
                     </div>
                     <div className={"speaker-textbox"}>
-                        <h1 className={"speaker-name"}>Jeff Maggiocancalda</h1>
+                        <h1 className={"speaker-name"}>Jeff Maggioncalda</h1>
                         <p className={"speaker-title"}>CEO, Coursera</p>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(5) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker5} alt="" />
                     </div>
@@ -125,7 +125,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(6) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker6} alt="" />
                     </div>
@@ -136,7 +136,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(7) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker7} alt="" />
                     </div>
@@ -147,7 +147,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(8) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker8} alt="" />
                     </div>
@@ -158,7 +158,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(9) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker9} alt="" />
                     </div>
@@ -169,7 +169,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(10) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker10} alt="" />
                     </div>
@@ -180,7 +180,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(11) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker11} alt="" />
                     </div>
@@ -191,7 +191,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(12) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker12} alt="" />
                     </div>
@@ -202,7 +202,7 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(13) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker13} alt="" />
                     </div>
@@ -213,18 +213,18 @@ function SpeakerSlider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(14) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker14} alt="" />
                     </div>
                     <div className={"speaker-textbox"}>
-                        <h1 className={"speaker-name"}>Rahul GS</h1>
-                        <p className={"speaker-title"}>Co-Founder, Cohere (YC W’20)</p>
+                        <h1 className={"speaker-name"}>Rahul Sengottuvelu</h1>
+                        <p className={"speaker-title"}>Co-Founder and CTO, Cohere (YC S20)</p>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className={checkBetween(15) ? "speaker-container" : "speaker-container inactive"}>
+                <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker15} alt="" />
                     </div>
