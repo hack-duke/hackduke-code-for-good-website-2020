@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SwiperCore, { A11y, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './SpeakerSlider.css';
