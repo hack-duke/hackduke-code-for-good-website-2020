@@ -9,7 +9,6 @@ import speaker3 from '../graphics/speaker-3.svg'
 import speaker4 from '../graphics/speaker-4.svg'
 import speaker5 from '../graphics/speaker-5.svg'
 import speaker6 from '../graphics/speaker-6.svg'
-import speaker7 from '../graphics/speaker-7.svg'
 import speaker8 from '../graphics/speaker-8.svg'
 import speaker9 from '../graphics/speaker-9.svg'
 import speaker10 from '../graphics/speaker-10.svg'
@@ -18,6 +17,7 @@ import speaker12 from '../graphics/speaker-12.svg'
 import speaker13 from '../graphics/speaker-13.svg'
 import speaker14 from '../graphics/speaker-14.svg'
 import speaker15 from '../graphics/speaker-15.svg'
+import tom from '../graphics/tom.svg'
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
@@ -83,6 +83,17 @@ function SpeakerSlider() {
             <SwiperSlide>
                 <div className={"speaker-container"}>
                     <div className={"speaker-imagebox"}>
+                        <img className={"speaker-image"} src={tom} alt="" />
+                    </div>
+                    <div className={"speaker-textbox"}>
+                        <h1 className={"speaker-name"}>Tom Rose</h1>
+                        <p className={"speaker-title"}>Founder and Former CEO, Testive</p>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className={"speaker-container"}>
+                    <div className={"speaker-imagebox"}>
                         <img className={"speaker-image"} src={speaker2} alt="" />
                     </div>
                     <div className={"speaker-textbox"}>
@@ -132,17 +143,6 @@ function SpeakerSlider() {
                     <div className={"speaker-textbox"}>
                         <h1 className={"speaker-name"}>Scott Cadora</h1>
                         <p className={"speaker-title"}>Founder and CEO, Medicare Pathfinder</p>
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={"speaker-container"}>
-                    <div className={"speaker-imagebox"}>
-                        <img className={"speaker-image"} src={speaker7} alt="" />
-                    </div>
-                    <div className={"speaker-textbox"}>
-                        <h1 className={"speaker-name"}>Kyle Mumma</h1>
-                        <p className={"speaker-title"}>Founder and CEO, NextPlay</p>
                     </div>
                 </div>
             </SwiperSlide>
