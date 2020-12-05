@@ -14,8 +14,8 @@ function HomePage(props) {
                     <div className={"home-circle"}></div>
                     <h3 className={"home-dates"}>December 5 - 6, 2020</h3>
                 </div>
-                <a style={{textDecoration: "none" }}href="https://hackduke.typeform.com/to/Dilr78Te" target="_blank" rel="noopener noreferrer">
-                    <Fab variant={"extended"} className={"home-button"}>Apply Now!</Fab>
+                <a style={{textDecoration: "none" }}href="https://tinyurl.com/hd-hacker-guide" target="_blank" rel="noopener noreferrer">
+                    <Fab variant={"extended"} className={"home-button"}>Hacker Guide Here!</Fab>
                 </a>
             </div>
         </div>
